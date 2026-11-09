@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Drone Pilot - demo</title>
+  <style>
+    body { font-family: system-ui, sans-serif; text-align: center; padding-top: 15vh; overflow: hidden; }
+    h1 {
+      font-size: 4rem;
+      display: inline-block;
+      animation: float 3s ease-in-out infinite, hue 6s linear infinite;
+      color: #e63946;
+    }
+    @keyframes float {
+      0%, 100% { transform: translate(-30vw, 0) rotate(-4deg); }
+      50%      { transform: translate(30vw, -20px) rotate(4deg); }
+    }
+    @keyframes hue {
+      from { filter: hue-rotate(0deg); }
+      to   { filter: hue-rotate(360deg); }
+    }
+    @media (prefers-reduced-motion: reduce) { h1 { animation: none; } }
+  </style>
+</head>
+<body>
+  <h1>Drone Pilot</h1>
+  <p>Front servi par nginx (docker compose).</p>
+</body>
+</html>
