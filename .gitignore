@@ -1,9 +1,6 @@
-build/
-cmake-build-*/
 .idea/
 *.iml
-*.o
-*.a
 .DS_Store
 .cache/
 .claude/
+Radar2460Calibration/out/

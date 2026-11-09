@@ -35,5 +35,5 @@ docker build --target firmware-export -o out .
 
 ## Fichiers
 
-- `Radar2460Calibration.ino`, `Config.h` : le croquis, inchangé.
+- `Radar2460Calibration.ino`, `Config.h` : le croquis.
 - `host/` : couche Arduino minimale (`Serial` vers stdout) et simulateur radar, pour l'exécution native.

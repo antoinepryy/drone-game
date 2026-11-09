@@ -5,6 +5,23 @@ Format: [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), versions follo
 
 ## [Unreleased]
 
+### Added
+- LD2460 radar calibration sketch (`Radar2460Calibration/`) for the ESP32-C3 XIAO,
+  built and run in Docker against a simulated radar (`SIM_FRAMES`, `SIM_TARGETS`,
+  `SIM_PERIOD_MS`, `SIM_FAULTS`).
+- `COMMANDES.md` beginner guide and `.vscode/tasks.json`.
+
+### Fixed
+- Radar frames are validated before parsing (length bounds, footer): a length
+  field of 2 made the parser read past its 128-byte buffer.
+
+### Changed
+- Radar output uses integer arithmetic and one serial write per frame.
+
+### Removed
+- Drone Pilot C/SDL2 application (`src/`, `tests/`, `missions/`, `CMakeLists.txt`).
+  Still available at tag `v0.3.0`.
+
 ## [0.3.0] - 2026-11-09
 
 ### Added

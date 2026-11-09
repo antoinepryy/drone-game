@@ -1,72 +1,35 @@
-# Drone Pilot
+# Radar LD2460
 
-Prototype C (SDL2) : une fenêtre graphique pour piloter un drone simulé.
-Sert de support pour une démonstration de versionning (git, tags, SemVer, changelog).
+Croquis Arduino de calibration X/Y du radar LD2460 sur carte ESP32-C3 XIAO, compilé et exécuté dans Docker.
+Sert de support pour une démonstration de versionning (git, branches, pull requests, SemVer, changelog).
 
-## Compiler et lancer
+## Démarrer
 
-Prérequis : un compilateur C, CMake 3.16+, SDL2 (`brew install sdl2` / `apt install libsdl2-dev`).
-
-```bash
-cmake -S . -B build
-cmake --build build
-./build/drone_pilot
-ctest --test-dir build      # tests unitaires
-```
-
-## Commandes (clavier AZERTY, flèches aussi acceptées)
-
-| Touche | Commande |
-|--------|----------|
-| T | Décollage |
-| L | Atterrissage |
-| Z / S | Avancer / reculer |
-| Q / D | Gauche / droite |
-| A / E | Rotation gauche / droite |
-| R / F | Monter / descendre |
-| H | Stationnaire |
-| P | Relancer le script |
-| Espace | Arrêt d'urgence |
-| Échap | Quitter |
-
-## Scripts de commandes
-
-Le drone peut suivre une mission écrite dans un fichier texte :
+Prérequis : Docker Desktop.
 
 ```bash
-./build/drone_pilot missions/carre.txt
+cd Radar2460Calibration
+docker build -t radar2460-calibration .
+docker run --rm radar2460-calibration
 ```
 
-Une commande par ligne, avec une durée optionnelle en secondes :
+Le `build` compile le vrai firmware ESP32-C3 et une version du même croquis qui tourne sur l'ordinateur. Le `run` exécute cette version contre un radar LD2460 simulé.
 
-```
-# commentaire
-TAKEOFF          # attend que le drone soit en vol
-UP 1.5
-FORWARD 1.2      # avancer pendant 1,2 s
-YAW_RIGHT 1      # 90° vers la droite
-WAIT 0.5
-LAND             # attend que le drone soit posé
-```
-
-Commandes : `TAKEOFF`, `LAND`, `UP`, `DOWN`, `FORWARD`, `BACKWARD`, `LEFT`, `RIGHT`,
-`YAW_LEFT`, `YAW_RIGHT`, `HOVER`, `EMERGENCY`, `WAIT`. Sans durée, les mouvements durent 1 s.
-Le clavier reste actif pendant le script ; un arrêt d'urgence l'interrompt.
+Détails et options : [`Radar2460Calibration/README.md`](Radar2460Calibration/README.md). Guide pas à pas de toutes les commandes : [`COMMANDES.md`](COMMANDES.md).
 
 ## Structure
 
 ```
-src/command.[ch]  liste des commandes, conversion nom <-> commande
-src/script.[ch]   lecture et exécution des scripts de mission
-src/font.[ch]     police bitmap intégrée
-src/drone.[ch]    modèle et simulation du drone (sans SDL, testable)
-src/render.[ch]   dessin SDL (carte, drone, jauges)
-src/main.c        fenêtre, boucle principale, clavier
-tests/            tests unitaires (vol, scripts)
-missions/         exemples de scripts
+Radar2460Calibration/
+  Radar2460Calibration.ino   croquis (lecture et décodage des trames radar)
+  Config.h                   broches et options de la carte
+  host/                      couche Arduino simulée et faux radar, pour l'exécution sur ordinateur
+  Dockerfile                 compilation du firmware et de la version ordinateur
+.vscode/tasks.json           commandes lançables depuis VS Code
+COMMANDES.md                 guide des commandes pour débutant
+CHANGELOG.md                 historique des versions
 ```
 
-## Version
+## Historique
 
-Le numéro de version est défini à un seul endroit : `project(... VERSION x.y.z)` dans `CMakeLists.txt`.
-Il est affiché dans le titre de la fenêtre et dans la sortie des tests.
+Les versions 0.1.0 à 0.3.0 (tags `v0.1.0` à `v0.3.0`) contenaient une application de pilotage de drone en C/SDL2, retirée depuis. Elle reste consultable avec `git switch --detach v0.3.0`.
