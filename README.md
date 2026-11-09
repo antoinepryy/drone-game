@@ -15,6 +15,8 @@ docker run --rm radar2460-calibration
 
 Le `build` compile le vrai firmware ESP32-C3 et une version du même croquis qui tourne sur l'ordinateur. Le `run` exécute cette version contre un radar LD2460 simulé.
 
+Pour voir les cibles en direct dans le navigateur : `docker compose up -d --build` dans `Radar2460Calibration/`, puis http://localhost:8080.
+
 Détails et options : [`Radar2460Calibration/README.md`](Radar2460Calibration/README.md). Guide pas à pas de toutes les commandes : [`COMMANDES.md`](COMMANDES.md).
 
 ## Structure
@@ -25,6 +27,7 @@ Radar2460Calibration/
   Config.h                   broches et options de la carte
   host/                      couche Arduino simulée et faux radar, pour l'exécution sur ordinateur
   Dockerfile                 compilation du firmware et de la version ordinateur
+  gui/, compose.yaml         visualisation des cibles en temps réel
 .vscode/tasks.json           commandes lançables depuis VS Code
 COMMANDES.md                 guide des commandes pour débutant
 ```

@@ -92,10 +92,11 @@ docker run --rm -e SIM_FRAMES=20 -e SIM_TARGETS=3 radar2460-calibration
 
 | Variable | Défaut | Rôle |
 |---|---|---|
-| `SIM_FRAMES` | 10 | Nombre de trames avant l'arrêt |
+| `SIM_FRAMES` | 10 | Nombre de trames avant l'arrêt (0 = sans fin, `Ctrl+C` pour arrêter) |
 | `SIM_TARGETS` | 2 | Nombre de cibles par trame (1 à 3) |
 | `SIM_PERIOD_MS` | 300 | Délai entre deux trames, en millisecondes (0 = le plus vite possible) |
 | `SIM_FAULTS` | 0 | `1` pour envoyer aussi des trames défectueuses |
+| `SIM_SCENARIO` | (aucun) | `walk` : des personnes entrent, traversent le champ et repartent, au lieu de cibles qui oscillent |
 
 ### 1.4 Tester la robustesse
 
@@ -105,7 +106,29 @@ docker run --rm -e SIM_FAULTS=1 -e SIM_FRAMES=12 radar2460-calibration
 
 Une trame sur deux est défectueuse : longueur fausse, trame vide, fin de trame abîmée, octet parasite. Le programme doit les rejeter avec un message `[RADAR] ...` et continuer normalement.
 
-### 1.5 Récupérer le firmware pour la carte
+### 1.5 Voir les cibles en direct (interface graphique)
+
+```bash
+docker compose up -d --build
+```
+
+Puis ouvrir http://localhost:8080 dans le navigateur. On y voit :
+
+- **le plan vu de dessus** : le radar en bas, son champ de vision, les cibles en couleur avec leur traînée, et la zone surveillée en pointillé ;
+- **le panneau de droite** : les coordonnées X/Y de chaque cible, l'état de la zone (présence, libre depuis X s, sûre après 10 s), le Y min/max imprimé par le programme et les compteurs de trames ;
+- **l'historique en bas** : la distance Y de chaque cible sur les 30 dernières secondes.
+
+En haut de la page : le nombre de personnes simulées (1 à 3), la case « Trames défectueuses », **Pause** pour figer l'image, **Effacer les traces**. Dans le panneau, les champs « Réglage de la zone » déplacent et redimensionnent la zone surveillée en direct.
+
+Pour arrêter :
+
+```bash
+docker compose down
+```
+
+Après une modification du programme (`.ino`) ou de l'interface (`gui/`), relancer `docker compose up -d --build` puis recharger la page.
+
+### 1.6 Récupérer le firmware pour la carte
 
 ```bash
 docker build --target firmware-export -o out .
@@ -179,5 +202,7 @@ Rien n'est perdu : un fichier supprimé aujourd'hui reste dans les commits plus 
 | `command not found: docker` (ou `git`) | Outil non installé | Voir « Installer les outils » |
 | `Cannot connect to the Docker daemon` | Docker Desktop n'est pas lancé | Lancer Docker Desktop, attendre la baleine fixe |
 | `Unable to find image 'radar2460-calibration'` | L'image n'a pas encore été construite | Lancer d'abord `docker build -t radar2460-calibration .` dans `Radar2460Calibration/` |
+| http://localhost:8080 ne répond pas | L'interface n'est pas lancée, ou le port 8080 est pris | `docker compose ps` dans `Radar2460Calibration/` ; si le port est pris, changer `"8080:8080"` en `"8081:8080"` dans `compose.yaml` et ouvrir http://localhost:8081 |
+| La page affiche « déconnecté » | Le conteneur s'est arrêté | `docker compose logs gui` puis `docker compose up -d` |
 | `docker build` très long | Premier téléchargement des outils ESP32 | Normal la première fois, ensuite c'est en cache |
 | `failed to read dockerfile` | La commande n'est pas lancée dans le bon dossier | `cd Radar2460Calibration` puis relancer |
