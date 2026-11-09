@@ -5,3 +5,4 @@ cmake-build-*/
 *.o
 *.a
 .DS_Store
+.cache/

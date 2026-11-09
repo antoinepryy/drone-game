@@ -48,15 +48,6 @@ static void apply_held_keys(Drone *d)
     if (k[SDL_SCANCODE_F]) drone_apply(d, CMD_DOWN);
 }
 
-static void update_title(SDL_Window *w, const Drone *d)
-{
-    char title[160];
-    snprintf(title, sizeof(title),
-             "Drone Pilot v%s | %s | alt %.1f m | heading %3.0f deg | battery %.0f%%",
-             APP_VERSION, drone_state_name(d->state), d->altitude, d->heading, d->battery);
-    SDL_SetWindowTitle(w, title);
-}
-
 int main(int argc, char *argv[])
 {
     (void)argc;
@@ -67,9 +58,9 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    SDL_Window *window = SDL_CreateWindow("Drone Pilot", SDL_WINDOWPOS_CENTERED,
+    SDL_Window *window = SDL_CreateWindow("Drone Pilot v" APP_VERSION, SDL_WINDOWPOS_CENTERED,
                                           SDL_WINDOWPOS_CENTERED, WINDOW_WIDTH,
-                                          WINDOW_HEIGHT, 0);
+                                          WINDOW_HEIGHT, SDL_WINDOW_ALLOW_HIGHDPI);
     SDL_Renderer *renderer = window ? SDL_CreateRenderer(window, -1,
         SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC) : NULL;
     if (!window || !renderer) {
@@ -77,15 +68,18 @@ int main(int argc, char *argv[])
         SDL_Quit();
         return 1;
     }
+    /* Draw in 900x600 units; on Retina screens SDL renders at full resolution. */
+    SDL_RenderSetLogicalSize(renderer, WINDOW_WIDTH, WINDOW_HEIGHT);
 
     print_help();
 
     Drone drone;
     drone_init(&drone);
     DroneState last_state = drone.state;
+    View view;
+    view_init(&view);
 
     Uint64 last = SDL_GetPerformanceCounter();
-    double title_timer = 0.0;
     int running = 1;
 
     while (running) {
@@ -120,13 +114,8 @@ int main(int argc, char *argv[])
             last_state = drone.state;
         }
 
-        title_timer += dt;
-        if (title_timer > 0.2) {
-            update_title(window, &drone);
-            title_timer = 0.0;
-        }
-
-        render_frame(renderer, &drone);
+        view_update(&view, &drone, dt);
+        render_frame(renderer, &drone, &view);
     }
 
     SDL_DestroyRenderer(renderer);

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 
 # Single source of truth for the version number: bump it here.
-project(drone_pilot VERSION 0.1.0 LANGUAGES C)
+project(drone_pilot VERSION 0.2.0 LANGUAGES C)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
@@ -21,7 +21,7 @@ endif()
 
 # Graphical application
 find_package(SDL2 REQUIRED)
-add_executable(drone_pilot src/main.c src/render.c)
+add_executable(drone_pilot src/main.c src/render.c src/font.c)
 target_link_libraries(drone_pilot PRIVATE dronecore SDL2::SDL2)
 
 # Tests

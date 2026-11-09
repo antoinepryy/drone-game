@@ -5,6 +5,16 @@ Format: [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), versions follo
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-09
+
+### Changed
+- New cockpit-style dark UI: cards with text (altitude, battery, heading, speed, position, controls).
+- Animated propellers, navigation lights, flight trail, radar sweep, state glow.
+- Sharp rendering on Retina / HiDPI screens.
+
+### Added
+- Built-in 5x7 bitmap font (no extra dependency).
+
 ## [0.1.0] - 2026-11-09
 
 ### Added
