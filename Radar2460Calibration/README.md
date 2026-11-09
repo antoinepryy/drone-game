@@ -27,6 +27,21 @@ docker run --rm -e SIM_FRAMES=20 -e SIM_TARGETS=3 radar2460-calibration
 docker run --rm -e SIM_FAULTS=1 -e SIM_FRAMES=12 radar2460-calibration
 ```
 
+## Tests automatisés
+
+```bash
+docker build --target tests .
+```
+
+Lance quatre suites, le build échoue si l'une d'elles échoue :
+
+- **unitaires** (`host/tests/unit_tests.cpp`) : `formatDm`, `processFrame`, `loop` et `setup` appelées une par une ;
+- **réception des trames** (`host/tests/frame_tests.cpp`) : flux de trames défectueuses (longueur fausse, footer corrompu, coupure de ligne, F4 parasite), nombre de trames décodées ;
+- **programme** (`host/tests/program_tests.sh`) : le binaire complet contre le radar simulé (dont le scénario `walk` et le mode sans fin), sortie comparée à `host/tests/expected/` ;
+- **décodeur de l'interface** (`gui/test_*.py`) : `SerialParser` sur des lignes choisies et sur les sorties de référence du vrai programme.
+
+Les suites C++ tournent sous AddressSanitizer et UBSan. La CI GitHub lance la même commande sur chaque PR. Mode d'emploi : [`.claude/skills/run-tests`](../.claude/skills/run-tests/SKILL.md) et [`.claude/skills/fault-tests`](../.claude/skills/fault-tests/SKILL.md).
+
 ## Visualisation en temps réel
 
 ```bash
@@ -51,5 +66,6 @@ docker build --target firmware-export -o out .
 
 - `Radar2460Calibration.ino`, `Config.h` : le croquis.
 - `host/` : couche Arduino minimale (`Serial` vers stdout) et simulateur radar, pour l'exécution native.
+- `host/tests/` : tests automatisés et sorties de référence.
 - `gui/` : interface de visualisation (serveur Python sans dépendance, page HTML, décodeur de la sortie série et ses tests).
 - `compose.yaml` : lance l'interface.
