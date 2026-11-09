@@ -54,9 +54,9 @@ int main() {
         {"longueur 2 (trop courte)",                           {0xF4, 0xF3, 0xF2, 0xF1, 0x04, 0x02, 0x00}, 3, 3, false},
         {"longueur 32767 (trop longue)",                       {0xF4, 0xF3, 0xF2, 0xF1, 0x04, 0xFF, 0x7F}, 3, 3, false},
         {"footer corrompu",                                    badFooter(targetsFrame(1)),        3, 3, false},
-        {"longueur corrompue mais plausible (60 au lieu de 19)", targetsFrame(2, 60),             3, 3, true},
-        {"trame tronquée (coupure de ligne)",                  truncated(targetsFrame(2), 10),    3, 3, true},
-        {"longueur hors format 11 + 4n (13)",                  targetsFrame(0, 13),               3, 3, true},
+        {"longueur corrompue mais plausible (60 au lieu de 19)", targetsFrame(2, 60),             3, 3, false},
+        {"trame tronquée (coupure de ligne)",                  truncated(targetsFrame(2), 10),    3, 3, false},
+        {"longueur hors format 11 + 4n (13)",                  targetsFrame(0, 13),               3, 3, false},
     };
 
     int failures = 0, knownFailures = 0, fixedKnown = 0;

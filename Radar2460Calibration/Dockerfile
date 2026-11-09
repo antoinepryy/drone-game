@@ -39,7 +39,8 @@ RUN cd gui && python -m unittest -v 2>&1 && touch /gui-tests.ok
 # ---------- Tests automatisés : docker build --target tests . ----------
 # 1. tests unitaires des fonctions du croquis, 2. tests de réception des trames,
 # compilés avec AddressSanitizer et UBSan (un débordement de tampon fait échouer le build) ;
-# 3. tests du programme complet (binaire de l'étape host) contre le radar simulé ;
+# 3. tests du programme complet (binaire de l'étape host) contre le radar simulé,
+#    puis tests de sortie du décodeur (golden_tests.sh, horloge virtuelle) ;
 # 4. tests du décodeur de l'interface (étape gui-tests), sur les sorties de référence.
 FROM gcc:14 AS tests
 WORKDIR /src
@@ -55,6 +56,7 @@ RUN set -e; for t in unit_tests frame_tests; do \
     && echo && echo "=== Tests de réception des trames ===" && /frame_tests \
     && echo && echo "=== Tests du programme ===" \
     && host/tests/program_tests.sh /usr/local/bin/radar-calibration host/tests/expected \
+    && echo && echo "=== Tests de sortie du décodeur ===" && host/tests/golden_tests.sh \
     && echo && echo "=== Tests du décodeur de l'interface : OK (étape gui-tests) ==="
 
 # ---------- Firmware export: docker build --target firmware-export -o out . ----------

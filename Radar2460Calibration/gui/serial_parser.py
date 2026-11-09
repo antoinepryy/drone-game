@@ -9,12 +9,16 @@ what the board would print on its serial monitor:
     Y min = 3.50 m | Y max = 3.70 m
     [RADAR] invalid length dropped: 2
     [RADAR] bad footer, frame dropped
+    [RADAR] invalid data size dropped: 6
+    [RADAR] frame timeout, dropped after 12 bytes
 """
 import re
 
 TARGET_RE = re.compile(r"^Target \S+ X=(-?\d+(?:\.\d+)?) m \| Y=(-?\d+(?:\.\d+)?) m$")
 YRANGE_RE = re.compile(r"^Y min = (-?\d+(?:\.\d+)?) m \| Y max = (-?\d+(?:\.\d+)?) m$")
 INVALID_LEN_RE = re.compile(r"^\[RADAR\] invalid length dropped: (\d+)$")
+INVALID_SIZE_RE = re.compile(r"^\[RADAR\] invalid data size dropped: (\d+)$")
+TIMEOUT_RE = re.compile(r"^\[RADAR\] frame timeout, dropped after (\d+) bytes$")
 BAD_FOOTER = "[RADAR] bad footer, frame dropped"
 FRAME_START = "--- TARGETS ---"
 NO_TARGET = "No target"
@@ -38,6 +42,14 @@ class SerialParser:
         if m:
             self._targets = None
             return {"type": "rejected", "reason": "invalid_length", "detail": int(m.group(1))}
+        m = INVALID_SIZE_RE.match(line)
+        if m:
+            self._targets = None
+            return {"type": "rejected", "reason": "invalid_data_size", "detail": int(m.group(1))}
+        m = TIMEOUT_RE.match(line)
+        if m:
+            self._targets = None
+            return {"type": "rejected", "reason": "timeout", "detail": int(m.group(1))}
         if line == BAD_FOOTER:
             self._targets = None
             return {"type": "rejected", "reason": "bad_footer"}

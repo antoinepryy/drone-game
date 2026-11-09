@@ -37,6 +37,13 @@ class SerialParserTest(unittest.TestCase):
             {"type": "rejected", "reason": "bad_footer"},
         ])
 
+    def test_new_rejection_reasons(self):
+        events = run(["[RADAR] invalid data size dropped: 6", "[RADAR] frame timeout, dropped after 12 bytes"])
+        self.assertEqual(events, [
+            {"type": "rejected", "reason": "invalid_data_size", "detail": 6},
+            {"type": "rejected", "reason": "timeout", "detail": 12},
+        ])
+
     def test_negative_values_between_zero_and_minus_one(self):
         events = run(["--- TARGETS ---", "Target → X=-0.10 m | Y=2.00 m", "Y min = 2.00 m | Y max = 2.00 m"])
         self.assertEqual(events[0]["targets"], [[-0.1, 2.0]])

@@ -234,7 +234,7 @@ function onFrame(ev) {
 
 function onRejected(ev) {
   counters.rejected++;
-  const labels = { invalid_length: `longueur ${ev.detail}`, bad_footer: "fin de trame", unparsed_line: "ligne illisible" };
+  const labels = { invalid_length: `longueur ${ev.detail}`, bad_footer: "fin de trame", invalid_data_size: `données ${ev.detail} octets`, timeout: `trame coupée (${ev.detail} octets)`, unparsed_line: "ligne illisible" };
   $("lastReject").textContent = labels[ev.reason] || ev.reason;
 }
 
