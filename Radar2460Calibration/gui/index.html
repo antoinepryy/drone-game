@@ -35,13 +35,18 @@ select, input[type=number], button {
   background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 6px;
   font: 13px var(--mono); padding: 4px 8px;
 }
-input[type=number] { width: 62px; }
+input[type=range] { accent-color: #79c0ff; width: 120px; }
+.val { font: 12px var(--mono); color: var(--ink); min-width: 3.2em; display: inline-block; font-variant-numeric: tabular-nums; }
+.sliders { display: grid; grid-template-columns: auto 1fr auto; gap: 8px 10px; align-items: center; font-size: 12px; color: var(--muted); }
+.sliders input[type=range] { width: 100%; }
+.sliders .val { text-align: right; }
 button { cursor: pointer; padding: 5px 12px; }
 button:hover, select:hover { border-color: var(--muted); }
 :focus-visible { outline: 2px solid #79c0ff; outline-offset: 2px; }
 .main { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 12px; min-height: 0; }
 .card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; min-height: 0; }
 .plan { position: relative; }
+#plan { cursor: crosshair; }
 canvas { display: block; width: 100%; height: 100%; }
 .side { display: grid; grid-auto-rows: min-content; gap: 14px; padding: 14px; overflow-y: auto; }
 .side h2 { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px; font-weight: 600; }
@@ -65,8 +70,6 @@ td:first-child, th:first-child { text-align: left; }
 .empty { color: var(--muted); font: 13px var(--mono); }
 .stats { display: grid; grid-template-columns: 1fr auto; gap: 3px 10px; font: 13px var(--mono); font-variant-numeric: tabular-nums; }
 .stats span:nth-child(odd) { color: var(--muted); font-family: var(--sans); font-size: 12px; }
-.zone-inputs { display: grid; grid-template-columns: auto 1fr 1fr; gap: 6px 8px; align-items: center; font-size: 12px; color: var(--muted); }
-.zone-inputs input { width: 100%; }
 .history { height: 190px; }
 .note { color: var(--muted); font-size: 11px; }
 @media (max-width: 900px) {
@@ -83,9 +86,8 @@ td:first-child, th:first-child { text-align: left; }
     <h1>Radar LD2460 en direct</h1>
     <span class="conn" id="conn"><span class="dot"></span><span id="connText">connexion…</span></span>
     <div class="controls">
-      <label for="targets">Personnes simulées
-        <select id="targets"><option>1</option><option>2</option><option selected>3</option></select>
-      </label>
+      <label for="targets">Personnes <input type="range" id="targets" min="1" max="8" step="1" value="5"> <span class="val" id="targetsVal">5</span></label>
+      <label for="speed">Vitesse <input type="range" id="speed" min="0.5" max="3" step="0.25" value="1"> <span class="val" id="speedVal">×1</span></label>
       <label for="faults"><input type="checkbox" id="faults"> Trames défectueuses</label>
       <button id="pause" type="button">Pause</button>
       <button id="clear" type="button">Effacer les traces</button>
@@ -96,7 +98,7 @@ td:first-child, th:first-child { text-align: left; }
     <div class="card plan"><canvas id="plan" aria-label="Vue de dessus du champ du radar"></canvas></div>
     <aside class="card side">
       <section>
-        <h2>Zone surveillée</h2>
+        <h2>Zone de danger</h2>
         <div class="zone-state" id="zoneState">
           <strong id="zoneTitle">En attente de données</strong>
           <div class="bar"><div id="zoneBar"></div></div>
@@ -126,13 +128,15 @@ td:first-child, th:first-child { text-align: left; }
         </div>
       </section>
       <section>
-        <h2>Réglage de la zone (m)</h2>
-        <div class="zone-inputs">
-          <span></span><span>min</span><span>max</span>
-          <label for="zxmin">X</label><input type="number" id="zxmin" step="0.1" value="-1.0"><input type="number" id="zxmax" step="0.1" value="1.0" aria-label="X max">
-          <label for="zymin">Y</label><input type="number" id="zymin" step="0.1" value="2.0"><input type="number" id="zymax" step="0.1" value="4.0" aria-label="Y max">
+        <h2>Réglage de la zone de danger</h2>
+        <div class="sliders">
+          <label for="zxmin">X min</label><input type="range" id="zxmin" min="-4" max="4" step="0.1" value="0"><span class="val" id="zxminVal"></span>
+          <label for="zxmax">X max</label><input type="range" id="zxmax" min="-4" max="4" step="0.1" value="4"><span class="val" id="zxmaxVal"></span>
+          <label for="zymin">Y min</label><input type="range" id="zymin" min="0" max="8" step="0.1" value="0"><span class="val" id="zyminVal"></span>
+          <label for="zymax">Y max</label><input type="range" id="zymax" min="0" max="8" step="0.1" value="8"><span class="val" id="zymaxVal"></span>
         </div>
-        <p class="note">X : gauche (−) / droite (+) du radar. Y : distance devant le radar.</p>
+        <p class="note">Par défaut : tout le côté X &gt; 0 (à droite du radar). X : gauche (−) / droite (+). Y : distance devant le radar.</p>
+        <button id="resetZone" type="button">Revenir à X &gt; 0</button>
       </section>
     </aside>
   </div>
@@ -151,7 +155,8 @@ const HISTORY_S = 30;
 const TRAIL_LEN = 25;
 const TRACK_GATE_M = 1.0;            // max jump between two frames to stay the same target
 const TRACK_TIMEOUT_MS = 1500;
-const COLORS = ["#ff7b72", "#79c0ff", "#d2a8ff", "#ffa657", "#7ee787", "#f2cc60"];
+const COLORS = ["#79c0ff", "#d2a8ff", "#ffa657", "#7ee787", "#f2cc60", "#56d4dd", "#ff9bce", "#c9d1d9"];
+const DEFAULT_ZONE = { zxmin: 0, zxmax: 4, zymin: 0, zymax: 8 };
 
 // --- State ----------------------------------------------------------------
 const tracks = new Map();   // id -> {id, color, x, y, seen, trail: [[x,y]], history: [[t,y]]}
@@ -166,9 +171,14 @@ const $ = id => document.getElementById(id);
 
 function zone() {
   const v = id => parseFloat($(id).value);
-  return { xmin: v("zxmin"), xmax: v("zxmax"), ymin: v("zymin"), ymax: v("zymax") };
+  const [xmin, xmax] = [v("zxmin"), v("zxmax")].sort((a, b) => a - b);
+  const [ymin, ymax] = [v("zymin"), v("zymax")].sort((a, b) => a - b);
+  return { xmin, xmax, ymin, ymax };
 }
-const inZone = (z, x, y) => x >= z.xmin && x <= z.xmax && y >= z.ymin && y <= z.ymax;
+// X min is exclusive so that the default zone is exactly "X > 0"
+const inZone = (z, x, y) => x > z.xmin && x <= z.xmax && y >= z.ymin && y <= z.ymax;
+let mouse = null;      // pointer position on the plan, in metres
+let planView = null;   // {ox, oy, scale} of the last drawn plan
 
 // --- Tracking: keep a stable colour per person across frames ---------------
 function associate(points, now) {
@@ -195,7 +205,7 @@ function associate(points, now) {
     t.x = p[0]; t.y = p[1]; t.seen = now;
     t.trail.push([p[0], p[1]]);
     if (t.trail.length > TRAIL_LEN) t.trail.shift();
-    t.history.push([now, p[1]]);
+    t.history.push([now, p[1], inZone(zone(), p[0], p[1])]);
   }
 }
 
@@ -239,7 +249,9 @@ function connect() {
     else if (ev.type === "injected_fault") counters.injected++;
     else if (ev.type === "config") {
       $("targets").value = String(ev.targets);
+      $("speed").value = String(ev.speed);
       $("faults").checked = ev.faults;
+      showSliderValues();
     }
   };
 }
@@ -289,13 +301,15 @@ function drawPlan(now) {
 
   // monitored zone
   const z = zone(), present = lastPresenceAt !== null && now - lastPresenceAt < 250;
-  ctx.fillStyle = present ? "rgba(229,83,75,.16)" : "rgba(63,185,80,.12)";
-  ctx.strokeStyle = present ? css("--present") : css("--zone");
+  ctx.fillStyle = present ? "rgba(229,83,75,.24)" : "rgba(229,83,75,.08)";
+  ctx.strokeStyle = css("--present");
   ctx.setLineDash([6, 4]); ctx.lineWidth = 1.5;
   ctx.fillRect(px(z.xmin), py(z.ymax), (z.xmax - z.xmin) * scale, (z.ymax - z.ymin) * scale);
   ctx.strokeRect(px(z.xmin), py(z.ymax), (z.xmax - z.xmin) * scale, (z.ymax - z.ymin) * scale);
   ctx.setLineDash([]);
-  ctx.fillStyle = ctx.strokeStyle; ctx.fillText("zone surveillée", px(z.xmin) + 4, py(z.ymax) + 14);
+  ctx.fillStyle = ctx.strokeStyle; ctx.fillText(present ? "zone de danger : PRÉSENCE" : "zone de danger", px(z.xmin) + 6, py(z.ymax) + 16);
+
+  planView = { ox, oy, scale };
 
   // radar
   ctx.fillStyle = css("--ink");
@@ -319,6 +333,22 @@ function drawPlan(now) {
   }
 }
 
+function drawCrosshair() {
+  if (!mouse || !planView) return;
+  const ctx = $("plan").getContext("2d");
+  const { ox, oy, scale } = planView;
+  const x = ox + mouse.x * scale, y = oy - mouse.y * scale;
+  ctx.strokeStyle = "rgba(227,235,242,.35)"; ctx.lineWidth = 1; ctx.setLineDash([3, 3]);
+  ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, $("plan").clientHeight); ctx.moveTo(0, y); ctx.lineTo($("plan").clientWidth, y); ctx.stroke();
+  ctx.setLineDash([]);
+  const label = `X ${mouse.x.toFixed(2)}  Y ${mouse.y.toFixed(2)} m${inZone(zone(), mouse.x, mouse.y) ? "  (danger)" : ""}`;
+  ctx.font = "12px " + css("--mono");
+  const w = ctx.measureText(label).width + 12;
+  const lx = Math.min(x + 12, $("plan").clientWidth - w - 4), ly = Math.max(y - 28, 4);
+  ctx.fillStyle = "rgba(11,17,23,.85)"; ctx.fillRect(lx, ly, w, 20);
+  ctx.fillStyle = css("--ink"); ctx.fillText(label, lx + 6, ly + 14);
+}
+
 function drawHistory(now) {
   const [ctx, W, H] = fit($("history"));
   ctx.clearRect(0, 0, W, H);
@@ -327,13 +357,13 @@ function drawHistory(now) {
   const ty = y => top + (1 - y / RANGE_M) * (H - top - bottom);
   ctx.font = "11px " + css("--mono");
   ctx.fillStyle = css("--muted");
-  ctx.fillText("Distance Y (m) de chaque cible, 30 dernières secondes", l, 14);
+  ctx.fillText("Distance Y (m) de chaque cible, 30 dernières secondes (trait rouge : dans la zone de danger)", l, 14);
 
   // zone band on Y
   const z = zone();
-  ctx.fillStyle = "rgba(63,185,80,.10)";
+  ctx.fillStyle = "rgba(229,83,75,.06)";
   ctx.fillRect(l, ty(z.ymax), W - l - r, ty(z.ymin) - ty(z.ymax));
-  ctx.strokeStyle = css("--zone"); ctx.setLineDash([5, 4]);
+  ctx.strokeStyle = css("--present"); ctx.setLineDash([5, 4]);
   for (const y of [z.ymin, z.ymax]) { ctx.beginPath(); ctx.moveTo(l, ty(y)); ctx.lineTo(W - r, ty(y)); ctx.stroke(); }
   ctx.setLineDash([]);
 
@@ -360,6 +390,9 @@ function drawHistory(now) {
       prev = time;
     }
     ctx.stroke();
+    // samples taken inside the danger zone get a red tick under the line
+    ctx.fillStyle = css("--present");
+    for (const [time, y, danger] of t.history) if (danger) ctx.fillRect(tx(time) - 1, ty(y) + 3, 2, 3);
     if (t.history.length && now - t.seen < TRACK_TIMEOUT_MS) {
       const [time, y] = t.history[t.history.length - 1];
       ctx.fillStyle = t.color; ctx.beginPath(); ctx.arc(tx(time), ty(y), 3.5, 0, 2 * Math.PI); ctx.fill();
@@ -374,7 +407,7 @@ function updatePanel(now) {
   const since = lastPresenceAt === null ? now - firstFrameAt : now - lastPresenceAt;
   const present = lastPresenceAt !== null && since < 250;
   box.className = "zone-state " + (present ? "present" : since >= RADAR_SAFE_DELAY_MS ? "safe" : "clearing");
-  $("zoneTitle").textContent = present ? "Présence dans la zone" : since >= RADAR_SAFE_DELAY_MS ? "Zone sûre" : "Zone libre";
+  $("zoneTitle").textContent = present ? "Présence dans la zone de danger" : since >= RADAR_SAFE_DELAY_MS ? "Zone sûre" : "Zone libre";
   $("zoneBar").style.width = Math.min(100, since / RADAR_SAFE_DELAY_MS * 100) + "%";
   $("zoneDetail").textContent = present ? "lampe à couper, compteur remis à zéro"
     : `libre depuis ${(since / 1000).toFixed(1)} s / ${RADAR_SAFE_DELAY_MS / 1000} s`;
@@ -403,6 +436,7 @@ function tick() {
   const now = Date.now();
   if (!paused) prune(now);
   drawPlan(paused ? pausedAt : now);
+  drawCrosshair();
   drawHistory(paused ? pausedAt : now);
   updatePanel(paused ? pausedAt : now);
   requestAnimationFrame(tick);
@@ -415,7 +449,28 @@ $("pause").onclick = () => {
   $("pause").textContent = paused ? "Reprendre" : "Pause";
 };
 $("clear").onclick = () => { tracks.clear(); };
+function showSliderValues() {
+  $("targetsVal").textContent = $("targets").value;
+  $("speedVal").textContent = "×" + Number($("speed").value).toLocaleString("fr-FR");
+  for (const id of ["zxmin", "zxmax", "zymin", "zymax"])
+    $(id + "Val").textContent = Number($(id).value).toFixed(1);
+}
+for (const id of ["targets", "speed", "zxmin", "zxmax", "zymin", "zymax"]) $(id).addEventListener("input", showSliderValues);
+$("resetZone").onclick = () => {
+  for (const [id, v] of Object.entries(DEFAULT_ZONE)) $(id).value = v;
+  showSliderValues();
+};
+const plan = $("plan");
+plan.addEventListener("mousemove", e => {
+  if (!planView) return;
+  const r = plan.getBoundingClientRect();
+  mouse = { x: (e.clientX - r.left - planView.ox) / planView.scale, y: (planView.oy - (e.clientY - r.top)) / planView.scale };
+});
+plan.addEventListener("mouseleave", () => { mouse = null; });
+showSliderValues();
+// restart the simulator only when the slider is released
 $("targets").onchange = e => sendConfig({ targets: Number(e.target.value) });
+$("speed").onchange = e => sendConfig({ speed: Number(e.target.value) });
 $("faults").onchange = e => sendConfig({ faults: e.target.checked });
 
 connect();
