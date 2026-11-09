@@ -33,6 +33,15 @@ RUN mkdir -p /out && g++ -std=c++17 -O2 -Wall -Wextra -Ihost -I. host/main.cpp h
 FROM scratch AS firmware-export
 COPY --from=firmware /out/ /
 
+# ---------- Real-time viewer: docker compose up --build (see compose.yaml) ----------
+FROM python:3.13-slim AS gui
+COPY --from=host /out/radar-calibration /usr/local/bin/radar-calibration
+WORKDIR /app
+COPY gui/serial_parser.py gui/server.py gui/index.html ./
+ENV SIM_PERIOD_MS=100 GUI_PORT=8080
+EXPOSE 8080
+CMD ["python", "-u", "server.py"]
+
 # ---------- 3. Runtime ----------
 FROM debian:bookworm-slim
 COPY --from=host /out/radar-calibration /usr/local/bin/radar-calibration

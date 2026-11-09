@@ -4,3 +4,5 @@
 .cache/
 .claude/
 Radar2460Calibration/out/
+.superpowers/
+__pycache__/
