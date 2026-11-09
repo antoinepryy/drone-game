@@ -2,5 +2,6 @@
 *.iml
 .DS_Store
 .cache/
-.claude/
+.claude/*
+!.claude/skills/
 Radar2460Calibration/out/
