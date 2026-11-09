@@ -53,8 +53,14 @@ static void apply_held_keys(Drone *d)
 
 int main(int argc, char *argv[])
 {
+    if (argc == 2 && (strcmp(argv[1], "-V") == 0 || strcmp(argv[1], "--version") == 0)) {
+        printf("drone_pilot %s\n", APP_VERSION);
+        return 0;
+    }
     if (argc > 2 || (argc == 2 && (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0))) {
         printf("usage: %s [script.txt]\n", argv[0]);
+        printf("       %s -V | --version   print version and exit\n", argv[0]);
+        printf("       %s -h | --help      print this help and exit\n", argv[0]);
         return argc > 2 ? 1 : 0;
     }
 
