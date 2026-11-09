@@ -1,0 +1,38 @@
+# Mission de démo : décollage, slalom entre 4 portes, retour au point de départ et atterrissage.
+# Format : COMMANDE [durée en secondes]   (# pour les commentaires)
+
+TAKEOFF
+UP 1.5           # monter à environ 4,5 m
+WAIT 0.5
+
+# Porte 1 : passer à droite
+FORWARD 0.6
+RIGHT 0.5        # décalage vers la droite
+HOVER
+
+# Porte 2 : passer à gauche
+FORWARD 0.6
+LEFT 1           # traverser vers la gauche
+HOVER
+
+# Porte 3 : passer à droite
+FORWARD 0.6
+RIGHT 1
+HOVER
+
+# Porte 4 : passer à gauche
+FORWARD 0.6
+LEFT 1
+HOVER
+
+FORWARD 0.6
+RIGHT 0.7        # revenir dans l'axe
+HOVER
+WAIT 0.5
+
+YAW_RIGHT 2      # demi-tour (180°)
+FORWARD 3        # retour vers la zone de décollage
+HOVER
+WAIT 0.5
+
+LAND
