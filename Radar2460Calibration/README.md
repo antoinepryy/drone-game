@@ -25,6 +25,14 @@ docker run --rm -e SIM_FRAMES=20 -e SIM_TARGETS=3 radar2460-calibration
 docker run --rm -e SIM_FAULTS=1 -e SIM_FRAMES=12 radar2460-calibration
 ```
 
+## Tester la réception des trames
+
+```bash
+docker build --target tests .
+```
+
+Envoie au croquis des flux de trames défectueuses (longueur fausse, footer corrompu, coupure de ligne, F4 parasite) et vérifie le nombre de trames décodées, sous AddressSanitizer et UBSan. Scénarios dans `host/tests/frame_tests.cpp`, mode d'emploi dans [`.claude/skills/fault-tests`](../.claude/skills/fault-tests/SKILL.md).
+
 ## Récupérer le firmware
 
 ```bash

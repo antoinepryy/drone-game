@@ -29,6 +29,16 @@ COPY Radar2460Calibration.ino Config.h ./
 COPY host/ host/
 RUN mkdir -p /out && g++ -std=c++17 -O2 -Wall -Wextra -Ihost -I. host/main.cpp host/radar_sim.cpp -static -o /out/radar-calibration
 
+# ---------- Tests de réception des trames : docker build --target tests . ----------
+# Compilés avec AddressSanitizer et UBSan : un débordement de tampon fait échouer le build.
+FROM gcc:14 AS tests
+WORKDIR /src
+COPY Radar2460Calibration.ino Config.h ./
+COPY host/ host/
+RUN g++ -std=c++17 -O1 -g -Wall -Wextra -fsanitize=address,undefined -fno-sanitize-recover=all \
+      -Ihost -I. host/tests/frame_tests.cpp -o /frame-tests \
+    && /frame-tests
+
 # ---------- Firmware export: docker build --target firmware-export -o out . ----------
 FROM scratch AS firmware-export
 COPY --from=firmware /out/ /
