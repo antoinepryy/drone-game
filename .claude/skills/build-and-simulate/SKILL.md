@@ -26,10 +26,16 @@ docker run --rm radar2460-calibration
 
 Variables du simulateur (`host/radar_sim.cpp`) :
 
-- `SIM_FRAMES` (10) : nombre de trames avant arrêt.
+- `SIM_FRAMES` (10) : nombre de trames avant arrêt, `0` pour tourner sans fin.
 - `SIM_PERIOD_MS` (300) : délai entre deux trames.
-- `SIM_TARGETS` (2) : cibles par trame, de 1 à 3.
+- `SIM_TARGETS` (2) : cibles par trame, de 1 à 3 (1 à 8 avec `SIM_SCENARIO=walk`).
 - `SIM_FAULTS` (0) : `1` intercale des trames défectueuses.
+- `SIM_SCENARIO` : `walk` pour des personnes qui entrent, traversent et repartent (boucle de 60 s), au lieu de cibles qui oscillent.
+- `SIM_SPEED` (1) : avec `walk`, facteur de vitesse des déplacements.
+
+Un changement du scénario `walk` modifie `host/tests/expected/walk.txt` et les comptages de `program_tests.sh` : mettre à jour les deux (skill `run-tests`).
+
+Interface temps réel : `docker compose up -d --build`, puis http://localhost:8080.
 
 ```bash
 docker run --rm -e SIM_FRAMES=20 -e SIM_TARGETS=3 radar2460-calibration

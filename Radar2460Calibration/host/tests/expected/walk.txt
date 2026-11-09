@@ -3,1261 +3,4021 @@
 [RADAR] UART started
 
 --- TARGETS ---
-Target → X=-3.00 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
+Target → X=-4.00 m | Y=3.00 m
+Target → X=-2.90 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.10 m
+
+--- TARGETS ---
+Target → X=-4.00 m | Y=3.00 m
+Target → X=-2.90 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.10 m
+
+--- TARGETS ---
+Target → X=-4.00 m | Y=3.00 m
+Target → X=-2.90 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.10 m
+
+--- TARGETS ---
+Target → X=-3.90 m | Y=3.00 m
+Target → X=-3.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-3.90 m | Y=3.00 m
+Target → X=-3.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-3.90 m | Y=3.10 m
+Target → X=-3.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-3.90 m | Y=3.10 m
+Target → X=-3.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-3.80 m | Y=3.10 m
+Target → X=-3.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-3.80 m | Y=3.10 m
+Target → X=-3.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-3.80 m | Y=3.10 m
+Target → X=-3.00 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-3.70 m | Y=3.00 m
+Target → X=-3.00 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-3.70 m | Y=3.00 m
+Target → X=-3.00 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-3.60 m | Y=3.00 m
+Target → X=-3.00 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-3.60 m | Y=3.00 m
+Target → X=-3.00 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-3.60 m | Y=3.00 m
+Target → X=-3.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-3.50 m | Y=3.00 m
+Target → X=-3.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-3.50 m | Y=3.00 m
+Target → X=-2.90 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-3.40 m | Y=3.00 m
+Target → X=-2.90 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-3.30 m | Y=2.90 m
+Target → X=-2.90 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.10 m
+
+--- TARGETS ---
+Target → X=-3.30 m | Y=2.90 m
+Target → X=-2.90 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.10 m
+
+--- TARGETS ---
+Target → X=-3.20 m | Y=2.90 m
+Target → X=-2.80 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.10 m
+
+--- TARGETS ---
+Target → X=-3.10 m | Y=2.90 m
+Target → X=-2.80 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.10 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=2.90 m
+Target → X=-2.80 m | Y=6.20 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.20 m
+
+--- TARGETS ---
+Target → X=-2.90 m | Y=2.90 m
+Target → X=-2.80 m | Y=6.20 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.20 m
 
 --- TARGETS ---
 Target → X=-2.90 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
+Target → X=-2.70 m | Y=6.20 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.20 m
 
 --- TARGETS ---
 Target → X=-2.80 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
+Target → X=-2.70 m | Y=6.20 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.20 m
 
 --- TARGETS ---
 Target → X=-2.70 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
-
---- TARGETS ---
-Target → X=-2.70 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
-
---- TARGETS ---
-Target → X=-2.60 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
-
---- TARGETS ---
-Target → X=-2.60 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
+Target → X=-2.70 m | Y=6.20 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.20 m
 
 --- TARGETS ---
 Target → X=-2.50 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
+Target → X=-2.70 m | Y=6.20 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.20 m
 
 --- TARGETS ---
 Target → X=-2.40 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
+Target → X=-2.70 m | Y=6.20 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.20 m
 
 --- TARGETS ---
 Target → X=-2.30 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
+Target → X=-2.60 m | Y=6.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.30 m
 
 --- TARGETS ---
 Target → X=-2.20 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
+Target → X=-2.60 m | Y=6.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.30 m
 
 --- TARGETS ---
 Target → X=-2.10 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
+Target → X=-2.60 m | Y=6.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.30 m
 
 --- TARGETS ---
-Target → X=-2.10 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
+Target → X=-2.00 m | Y=3.10 m
+Target → X=-2.60 m | Y=6.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.30 m
 
 --- TARGETS ---
-Target → X=-2.00 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
+Target → X=-1.90 m | Y=3.10 m
+Target → X=-2.60 m | Y=6.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.30 m
 
 --- TARGETS ---
-Target → X=-2.00 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
+Target → X=-1.80 m | Y=3.10 m
+Target → X=-2.60 m | Y=6.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.30 m
 
 --- TARGETS ---
-Target → X=-1.90 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
+Target → X=-1.70 m | Y=3.10 m
+Target → X=-2.60 m | Y=6.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.30 m
 
 --- TARGETS ---
-Target → X=-1.80 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
-
---- TARGETS ---
-Target → X=-1.80 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
-
---- TARGETS ---
-Target → X=-1.60 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
+Target → X=-1.60 m | Y=3.10 m
+Target → X=-2.60 m | Y=6.30 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.30 m
 
 --- TARGETS ---
 Target → X=-1.50 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
-
---- TARGETS ---
-Target → X=-1.50 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
+Target → X=-2.60 m | Y=6.30 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.30 m
 
 --- TARGETS ---
 Target → X=-1.40 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
+Target → X=-2.60 m | Y=6.30 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.30 m
 
 --- TARGETS ---
 Target → X=-1.30 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
-
---- TARGETS ---
-Target → X=-1.30 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
-
---- TARGETS ---
-Target → X=-1.20 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
+Target → X=-2.60 m | Y=6.30 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.30 m
 
 --- TARGETS ---
 Target → X=-1.20 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
+Target → X=-2.50 m | Y=6.30 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.30 m
 
 --- TARGETS ---
 Target → X=-1.10 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
+Target → X=-2.50 m | Y=6.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.30 m
+
+--- TARGETS ---
+Target → X=-1.10 m | Y=3.00 m
+Target → X=-2.50 m | Y=6.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.30 m
 
 --- TARGETS ---
 Target → X=-1.00 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
+Target → X=-2.50 m | Y=6.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.30 m
 
 --- TARGETS ---
 Target → X=-0.90 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
-
---- TARGETS ---
-Target → X=-0.80 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
-
---- TARGETS ---
-Target → X=-0.70 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
-
---- TARGETS ---
-Target → X=-0.70 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
-
---- TARGETS ---
-Target → X=-0.60 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
-
---- TARGETS ---
-Target → X=-0.60 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
-
---- TARGETS ---
-Target → X=-0.50 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
-
---- TARGETS ---
-Target → X=-0.40 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
-
---- TARGETS ---
-Target → X=-0.30 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
-
---- TARGETS ---
-Target → X=-0.20 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
-
---- TARGETS ---
-Target → X=-0.10 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
-
---- TARGETS ---
-Target → X=0.00 m | Y=3.00 m
-Y min = 3.00 m | Y max = 3.00 m
-
---- TARGETS ---
-Target → X=0.00 m | Y=3.00 m
-Target → X=2.50 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=0.10 m | Y=3.00 m
-Target → X=2.40 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=0.10 m | Y=3.00 m
-Target → X=2.40 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=0.20 m | Y=3.00 m
-Target → X=2.40 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=0.30 m | Y=3.00 m
-Target → X=2.40 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=0.40 m | Y=3.00 m
-Target → X=2.40 m | Y=6.10 m
-Y min = 3.00 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=0.50 m | Y=3.00 m
-Target → X=2.40 m | Y=6.10 m
-Y min = 3.00 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=0.60 m | Y=3.00 m
-Target → X=2.40 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=0.60 m | Y=3.00 m
-Target → X=2.30 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=0.70 m | Y=3.00 m
-Target → X=2.30 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=0.70 m | Y=3.00 m
-Target → X=2.20 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=0.80 m | Y=3.00 m
-Target → X=2.20 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=0.90 m | Y=3.00 m
-Target → X=2.20 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=0.90 m | Y=3.00 m
-Target → X=2.20 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=1.10 m | Y=3.00 m
-Target → X=2.20 m | Y=6.10 m
-Y min = 3.00 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.20 m | Y=3.00 m
-Target → X=2.20 m | Y=6.10 m
-Y min = 3.00 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.20 m | Y=3.00 m
-Target → X=2.20 m | Y=6.10 m
-Y min = 3.00 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.30 m | Y=3.00 m
-Target → X=2.10 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=1.40 m | Y=3.00 m
-Target → X=2.10 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=1.40 m | Y=3.00 m
-Target → X=2.00 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=1.50 m | Y=3.00 m
-Target → X=2.00 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=1.50 m | Y=3.00 m
-Target → X=2.00 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=1.60 m | Y=3.00 m
-Target → X=2.00 m | Y=6.10 m
-Y min = 3.00 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.70 m | Y=3.00 m
-Target → X=2.00 m | Y=6.10 m
-Y min = 3.00 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.80 m | Y=3.00 m
-Target → X=2.00 m | Y=6.10 m
-Y min = 3.00 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.90 m | Y=3.00 m
-Target → X=2.00 m | Y=6.10 m
-Y min = 3.00 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=2.00 m | Y=3.00 m
-Target → X=1.90 m | Y=6.10 m
-Y min = 3.00 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=2.00 m | Y=3.00 m
-Target → X=1.90 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=2.10 m | Y=3.00 m
-Target → X=1.80 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=2.10 m | Y=3.00 m
-Target → X=1.80 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=2.20 m | Y=3.00 m
-Target → X=1.80 m | Y=6.10 m
-Y min = 3.00 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=2.30 m | Y=3.00 m
-Target → X=1.80 m | Y=6.10 m
-Y min = 3.00 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=2.40 m | Y=3.00 m
-Target → X=1.80 m | Y=6.10 m
-Y min = 3.00 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=2.50 m | Y=3.00 m
-Target → X=1.80 m | Y=6.10 m
-Y min = 3.00 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=2.60 m | Y=3.00 m
-Target → X=1.80 m | Y=6.10 m
-Y min = 3.00 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=2.70 m | Y=3.00 m
-Target → X=1.70 m | Y=6.10 m
-Y min = 3.00 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=2.70 m | Y=3.00 m
-Target → X=1.60 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=2.80 m | Y=3.00 m
-Target → X=1.60 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=2.80 m | Y=3.00 m
-Target → X=1.60 m | Y=6.00 m
-Y min = 3.00 m | Y max = 6.00 m
-
---- TARGETS ---
-Target → X=2.90 m | Y=3.00 m
-Target → X=1.60 m | Y=6.10 m
-Y min = 3.00 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.60 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.60 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.60 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.60 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.50 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.40 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.40 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.40 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.40 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.40 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.40 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=1.40 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=1.30 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.30 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.20 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.20 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.20 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.20 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.20 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=1.20 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=1.20 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=1.10 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=1.10 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.00 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.00 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.00 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.00 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=1.00 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=1.00 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=1.00 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.90 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.90 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.80 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=0.80 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=0.80 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=0.80 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.80 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.80 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.80 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.70 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.70 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.60 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=0.60 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.10 m
-
---- TARGETS ---
-Target → X=0.60 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.60 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.60 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.60 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.60 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.50 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.50 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.40 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.40 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.40 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.40 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.40 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.40 m | Y=6.30 m
-Y min = 6.30 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=0.40 m | Y=6.30 m
-Y min = 6.30 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=0.30 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.30 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.20 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.20 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.20 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.20 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.20 m | Y=6.30 m
-Y min = 6.30 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=0.20 m | Y=6.30 m
-Y min = 6.30 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=0.20 m | Y=6.30 m
-Y min = 6.30 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=0.10 m | Y=6.30 m
-Y min = 6.30 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=0.10 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.00 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.00 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=0.00 m | Y=6.20 m
-Target → X=0.50 m | Y=7.00 m
-Y min = 6.20 m | Y max = 7.00 m
-
---- TARGETS ---
-Target → X=0.00 m | Y=6.20 m
-Target → X=0.50 m | Y=6.90 m
-Y min = 6.20 m | Y max = 6.90 m
-
---- TARGETS ---
-Target → X=0.00 m | Y=6.30 m
-Target → X=0.50 m | Y=6.90 m
-Y min = 6.30 m | Y max = 6.90 m
-
---- TARGETS ---
-Target → X=0.00 m | Y=6.30 m
-Target → X=0.50 m | Y=6.80 m
-Y min = 6.30 m | Y max = 6.80 m
-
---- TARGETS ---
-Target → X=0.00 m | Y=6.30 m
-Target → X=0.50 m | Y=6.60 m
-Y min = 6.30 m | Y max = 6.60 m
-
---- TARGETS ---
-Target → X=-0.10 m | Y=6.30 m
-Target → X=0.50 m | Y=6.50 m
-Y min = 6.30 m | Y max = 6.50 m
-
---- TARGETS ---
-Target → X=-0.10 m | Y=6.30 m
-Target → X=0.40 m | Y=6.40 m
-Y min = 6.30 m | Y max = 6.40 m
-
---- TARGETS ---
-Target → X=-0.20 m | Y=6.20 m
-Target → X=0.40 m | Y=6.30 m
-Y min = 6.20 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.20 m | Y=6.20 m
-Target → X=0.40 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=-0.20 m | Y=6.20 m
-Target → X=0.50 m | Y=6.20 m
-Y min = 6.20 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=-0.20 m | Y=6.30 m
-Target → X=0.50 m | Y=6.10 m
-Y min = 6.10 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.20 m | Y=6.30 m
-Target → X=0.50 m | Y=6.00 m
-Y min = 6.00 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.20 m | Y=6.30 m
-Target → X=0.50 m | Y=5.90 m
-Y min = 5.90 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.30 m | Y=6.30 m
-Target → X=0.50 m | Y=5.80 m
-Y min = 5.80 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.30 m | Y=6.30 m
-Target → X=0.40 m | Y=5.70 m
-Y min = 5.70 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.40 m | Y=6.30 m
-Target → X=0.40 m | Y=5.60 m
-Y min = 5.60 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.40 m | Y=6.20 m
-Target → X=0.40 m | Y=5.50 m
-Y min = 5.50 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=-0.40 m | Y=6.20 m
-Target → X=0.40 m | Y=5.40 m
-Y min = 5.40 m | Y max = 6.20 m
-
---- TARGETS ---
-Target → X=-0.40 m | Y=6.30 m
-Target → X=0.50 m | Y=5.40 m
-Y min = 5.40 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.40 m | Y=6.30 m
-Target → X=0.50 m | Y=5.30 m
-Y min = 5.30 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.40 m | Y=6.30 m
-Target → X=0.50 m | Y=5.20 m
-Y min = 5.20 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.40 m | Y=6.30 m
-Target → X=0.50 m | Y=5.10 m
-Y min = 5.10 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.50 m | Y=6.30 m
-Target → X=0.40 m | Y=5.00 m
-Y min = 5.00 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.50 m | Y=6.30 m
-Target → X=0.40 m | Y=4.90 m
-Y min = 4.90 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.60 m | Y=6.30 m
-Target → X=0.40 m | Y=4.80 m
-Y min = 4.80 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.60 m | Y=6.30 m
-Target → X=0.40 m | Y=4.70 m
-Y min = 4.70 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.60 m | Y=6.30 m
-Target → X=0.40 m | Y=4.60 m
-Y min = 4.60 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.60 m | Y=6.30 m
-Target → X=0.40 m | Y=4.50 m
-Y min = 4.50 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.60 m | Y=6.30 m
-Target → X=0.40 m | Y=4.50 m
-Y min = 4.50 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.60 m | Y=6.30 m
-Target → X=0.50 m | Y=4.40 m
-Y min = 4.40 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.60 m | Y=6.40 m
-Target → X=0.40 m | Y=4.30 m
-Y min = 4.30 m | Y max = 6.40 m
-
---- TARGETS ---
-Target → X=-0.70 m | Y=6.40 m
-Target → X=0.40 m | Y=4.20 m
-Y min = 4.20 m | Y max = 6.40 m
-
---- TARGETS ---
-Target → X=-0.70 m | Y=6.30 m
-Target → X=0.40 m | Y=4.00 m
-Y min = 4.00 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.80 m | Y=6.30 m
-Target → X=0.30 m | Y=3.90 m
-Y min = 3.90 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.80 m | Y=6.30 m
-Target → X=0.30 m | Y=3.80 m
-Y min = 3.80 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.80 m | Y=6.30 m
-Target → X=0.40 m | Y=3.80 m
-Y min = 3.80 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.90 m | Y=6.30 m
-Target → X=0.40 m | Y=3.70 m
-Y min = 3.70 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.80 m | Y=6.30 m
-Target → X=0.40 m | Y=3.60 m
-Y min = 3.60 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-0.80 m | Y=6.40 m
-Target → X=0.40 m | Y=3.60 m
-Y min = 3.60 m | Y max = 6.40 m
-
---- TARGETS ---
-Target → X=-0.80 m | Y=6.40 m
-Target → X=0.40 m | Y=3.50 m
-Y min = 3.50 m | Y max = 6.40 m
-
---- TARGETS ---
-Target → X=-0.90 m | Y=6.40 m
-Target → X=0.40 m | Y=3.30 m
-Y min = 3.30 m | Y max = 6.40 m
-
---- TARGETS ---
-Target → X=-0.90 m | Y=6.40 m
-Target → X=0.30 m | Y=3.20 m
-Y min = 3.20 m | Y max = 6.40 m
-
---- TARGETS ---
-Target → X=-1.00 m | Y=6.30 m
-Target → X=0.30 m | Y=3.10 m
-Y min = 3.10 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-1.00 m | Y=6.30 m
-Target → X=0.30 m | Y=3.00 m
-Y min = 3.00 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-1.00 m | Y=6.30 m
-Target → X=0.30 m | Y=2.90 m
-Y min = 2.90 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-1.10 m | Y=6.30 m
-Target → X=0.40 m | Y=2.90 m
-Y min = 2.90 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-1.00 m | Y=6.40 m
-Target → X=0.40 m | Y=2.80 m
-Y min = 2.80 m | Y max = 6.40 m
-
---- TARGETS ---
-Target → X=-1.00 m | Y=6.40 m
-Target → X=0.40 m | Y=2.70 m
-Y min = 2.70 m | Y max = 6.40 m
-
---- TARGETS ---
-Target → X=-1.00 m | Y=6.40 m
-Target → X=0.40 m | Y=2.60 m
-Y min = 2.60 m | Y max = 6.40 m
-
---- TARGETS ---
-Target → X=-1.10 m | Y=6.40 m
-Target → X=0.30 m | Y=2.50 m
-Y min = 2.50 m | Y max = 6.40 m
-
---- TARGETS ---
-Target → X=-1.10 m | Y=6.40 m
-Target → X=0.30 m | Y=2.40 m
-Y min = 2.40 m | Y max = 6.40 m
-
---- TARGETS ---
-Target → X=-1.20 m | Y=6.30 m
-Target → X=0.30 m | Y=2.30 m
-Y min = 2.30 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-1.20 m | Y=6.30 m
-Target → X=0.30 m | Y=2.20 m
-Y min = 2.20 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-1.30 m | Y=6.30 m
-Target → X=0.30 m | Y=2.10 m
-Y min = 2.10 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-1.30 m | Y=6.30 m
-Target → X=0.30 m | Y=2.10 m
-Y min = 2.10 m | Y max = 6.30 m
-
---- TARGETS ---
-Target → X=-1.30 m | Y=6.40 m
-Target → X=0.40 m | Y=2.00 m
-Y min = 2.00 m | Y max = 6.40 m
-
---- TARGETS ---
-Target → X=-1.20 m | Y=6.40 m
-Target → X=0.40 m | Y=1.90 m
-Y min = 1.90 m | Y max = 6.40 m
-
---- TARGETS ---
-Target → X=-1.20 m | Y=6.40 m
-Target → X=0.30 m | Y=1.80 m
+Target → X=-2.40 m | Y=6.40 m
+Target → X=-1.50 m | Y=1.80 m
 Y min = 1.80 m | Y max = 6.40 m
 
 --- TARGETS ---
-Target → X=-1.30 m | Y=6.40 m
-Target → X=0.30 m | Y=1.70 m
+Target → X=-0.80 m | Y=3.00 m
+Target → X=-2.40 m | Y=6.40 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-0.70 m | Y=2.90 m
+Target → X=-2.40 m | Y=6.40 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-0.60 m | Y=2.90 m
+Target → X=-2.30 m | Y=6.50 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-0.50 m | Y=2.90 m
+Target → X=-2.30 m | Y=6.50 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-0.40 m | Y=2.90 m
+Target → X=-2.20 m | Y=6.50 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-0.30 m | Y=2.90 m
+Target → X=-2.20 m | Y=6.50 m
+Target → X=4.00 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-0.20 m | Y=3.00 m
+Target → X=-2.20 m | Y=6.60 m
+Target → X=4.00 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.60 m
+
+--- TARGETS ---
+Target → X=-0.10 m | Y=3.00 m
+Target → X=-2.20 m | Y=6.60 m
+Target → X=4.00 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.60 m
+
+--- TARGETS ---
+Target → X=0.00 m | Y=3.00 m
+Target → X=-2.10 m | Y=6.60 m
+Target → X=4.00 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.60 m
+
+--- TARGETS ---
+Target → X=0.10 m | Y=3.00 m
+Target → X=-2.10 m | Y=6.60 m
+Target → X=4.00 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.60 m
+
+--- TARGETS ---
+Target → X=0.20 m | Y=3.00 m
+Target → X=-2.10 m | Y=6.60 m
+Target → X=4.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.60 m
+
+--- TARGETS ---
+Target → X=0.30 m | Y=3.00 m
+Target → X=-2.10 m | Y=6.60 m
+Target → X=3.90 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.60 m
+
+--- TARGETS ---
+Target → X=0.40 m | Y=3.00 m
+Target → X=-2.00 m | Y=6.70 m
+Target → X=3.90 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.70 m
+
+--- TARGETS ---
+Target → X=0.50 m | Y=3.00 m
+Target → X=-2.00 m | Y=6.70 m
+Target → X=3.90 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.70 m
+
+--- TARGETS ---
+Target → X=0.60 m | Y=3.10 m
+Target → X=-2.00 m | Y=6.70 m
+Target → X=3.90 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.70 m
+
+--- TARGETS ---
+Target → X=0.70 m | Y=3.10 m
+Target → X=-2.00 m | Y=6.70 m
+Target → X=3.80 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.70 m
+
+--- TARGETS ---
+Target → X=0.80 m | Y=3.10 m
+Target → X=-2.00 m | Y=6.70 m
+Target → X=3.80 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.70 m
+
+--- TARGETS ---
+Target → X=0.80 m | Y=3.10 m
+Target → X=-2.00 m | Y=6.70 m
+Target → X=3.80 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.70 m
+
+--- TARGETS ---
+Target → X=0.90 m | Y=3.10 m
+Target → X=-2.00 m | Y=6.70 m
+Target → X=3.80 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.70 m
+
+--- TARGETS ---
+Target → X=1.00 m | Y=3.10 m
+Target → X=-2.00 m | Y=6.70 m
+Target → X=3.80 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.70 m
+
+--- TARGETS ---
+Target → X=1.00 m | Y=3.00 m
+Target → X=-2.00 m | Y=6.70 m
+Target → X=3.70 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.70 m
+
+--- TARGETS ---
+Target → X=1.10 m | Y=3.00 m
+Target → X=-2.00 m | Y=6.70 m
+Target → X=3.70 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.70 m
+
+--- TARGETS ---
+Target → X=1.10 m | Y=3.00 m
+Target → X=-1.90 m | Y=6.70 m
+Target → X=3.70 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.70 m
+
+--- TARGETS ---
+Target → X=1.20 m | Y=3.00 m
+Target → X=-1.90 m | Y=6.70 m
+Target → X=3.70 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.70 m
+
+--- TARGETS ---
+Target → X=1.20 m | Y=3.00 m
+Target → X=-1.90 m | Y=6.70 m
+Target → X=3.70 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.70 m
+
+--- TARGETS ---
+Target → X=1.20 m | Y=3.00 m
+Target → X=-1.90 m | Y=6.70 m
+Target → X=3.60 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.70 m
+
+--- TARGETS ---
+Target → X=1.30 m | Y=3.00 m
+Target → X=-1.80 m | Y=6.80 m
+Target → X=3.60 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.80 m
+
+--- TARGETS ---
+Target → X=1.30 m | Y=3.00 m
+Target → X=-1.80 m | Y=6.80 m
+Target → X=3.60 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.80 m
+
+--- TARGETS ---
+Target → X=1.30 m | Y=2.90 m
+Target → X=-1.80 m | Y=6.80 m
+Target → X=3.60 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.80 m
+
+--- TARGETS ---
+Target → X=1.40 m | Y=2.90 m
+Target → X=-1.80 m | Y=6.80 m
+Target → X=3.50 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.80 m
+
+--- TARGETS ---
+Target → X=1.40 m | Y=2.90 m
+Target → X=-1.70 m | Y=6.80 m
+Target → X=3.50 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.80 m
+
+--- TARGETS ---
+Target → X=1.40 m | Y=2.90 m
+Target → X=-1.70 m | Y=6.90 m
+Target → X=3.40 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.90 m
+
+--- TARGETS ---
+Target → X=1.40 m | Y=2.90 m
+Target → X=-1.70 m | Y=6.90 m
+Target → X=3.40 m | Y=6.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.90 m
+
+--- TARGETS ---
+Target → X=1.40 m | Y=3.00 m
+Target → X=-1.60 m | Y=6.90 m
+Target → X=3.30 m | Y=6.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.90 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.00 m
+Target → X=-1.60 m | Y=6.90 m
+Target → X=3.20 m | Y=6.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.90 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.00 m
+Target → X=-1.60 m | Y=7.00 m
+Target → X=3.20 m | Y=6.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 7.00 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.00 m
+Target → X=-1.60 m | Y=7.00 m
+Target → X=3.10 m | Y=6.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 7.00 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.00 m
+Target → X=-1.60 m | Y=7.00 m
+Target → X=3.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 7.00 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.00 m
+Target → X=-1.60 m | Y=7.00 m
+Target → X=3.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 7.00 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.00 m
+Target → X=-1.60 m | Y=7.00 m
+Target → X=2.90 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 7.00 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.00 m
+Target → X=-1.60 m | Y=7.00 m
+Target → X=2.80 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 7.00 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.10 m
+Target → X=-1.60 m | Y=7.00 m
+Target → X=2.80 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 7.00 m
+
+--- TARGETS ---
+Target → X=1.60 m | Y=3.10 m
+Target → X=-1.60 m | Y=7.00 m
+Target → X=2.70 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 7.00 m
+
+--- TARGETS ---
+Target → X=1.60 m | Y=3.10 m
+Target → X=-1.60 m | Y=7.00 m
+Target → X=2.70 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 7.00 m
+
+--- TARGETS ---
+Target → X=1.60 m | Y=3.10 m
+Target → X=-1.60 m | Y=7.00 m
+Target → X=2.60 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 7.00 m
+
+--- TARGETS ---
+Target → X=1.60 m | Y=3.10 m
+Target → X=-1.60 m | Y=6.90 m
+Target → X=2.50 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.90 m
+
+--- TARGETS ---
+Target → X=1.60 m | Y=3.10 m
+Target → X=-1.60 m | Y=6.90 m
+Target → X=2.50 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.90 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.10 m
+Target → X=-1.60 m | Y=6.90 m
+Target → X=2.40 m | Y=6.10 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.90 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.10 m
+Target → X=-1.60 m | Y=6.90 m
+Target → X=2.40 m | Y=6.10 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.90 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.10 m
+Target → X=-1.60 m | Y=6.90 m
+Target → X=2.30 m | Y=6.10 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.90 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.10 m
+Target → X=-1.60 m | Y=6.90 m
+Target → X=2.30 m | Y=6.10 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.90 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.10 m
+Target → X=-1.60 m | Y=6.90 m
+Target → X=2.20 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.90 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.10 m
+Target → X=-1.60 m | Y=6.90 m
+Target → X=2.20 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.90 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.10 m
+Target → X=-1.50 m | Y=7.00 m
+Target → X=2.10 m | Y=6.20 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 7.00 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.10 m
+Target → X=-1.50 m | Y=7.00 m
+Target → X=2.00 m | Y=6.20 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 7.00 m
+
+--- TARGETS ---
+Target → X=1.40 m | Y=3.00 m
+Target → X=-1.50 m | Y=7.00 m
+Target → X=2.00 m | Y=6.20 m
+Target → X=2.00 m | Y=8.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 8.00 m
+
+--- TARGETS ---
+Target → X=1.40 m | Y=3.10 m
+Target → X=-1.50 m | Y=7.00 m
+Target → X=1.90 m | Y=6.20 m
+Target → X=2.00 m | Y=8.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 8.00 m
+
+--- TARGETS ---
+Target → X=1.40 m | Y=3.10 m
+Target → X=-1.50 m | Y=7.00 m
+Target → X=1.80 m | Y=6.20 m
+Target → X=2.00 m | Y=8.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 8.00 m
+
+--- TARGETS ---
+Target → X=1.40 m | Y=3.10 m
+Target → X=-1.50 m | Y=7.00 m
+Target → X=1.80 m | Y=6.20 m
+Target → X=2.00 m | Y=7.90 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 7.90 m
+
+--- TARGETS ---
+Target → X=1.40 m | Y=3.10 m
+Target → X=-1.50 m | Y=7.00 m
+Target → X=1.70 m | Y=6.20 m
+Target → X=2.00 m | Y=7.90 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 7.90 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.10 m
+Target → X=-1.50 m | Y=7.00 m
+Target → X=1.60 m | Y=6.20 m
+Target → X=1.90 m | Y=7.90 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 7.90 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.10 m
+Target → X=-1.50 m | Y=7.00 m
+Target → X=1.50 m | Y=6.20 m
+Target → X=1.90 m | Y=7.80 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 7.80 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.10 m
+Target → X=-1.50 m | Y=7.00 m
+Target → X=1.40 m | Y=6.20 m
+Target → X=1.90 m | Y=7.80 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 7.80 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.10 m
+Target → X=-1.50 m | Y=7.00 m
+Target → X=1.30 m | Y=6.20 m
+Target → X=1.90 m | Y=7.80 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 7.80 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.20 m
+Target → X=-1.50 m | Y=7.00 m
+Target → X=1.20 m | Y=6.20 m
+Target → X=1.90 m | Y=7.70 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 7.70 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.20 m
+Target → X=-1.50 m | Y=7.00 m
+Target → X=1.20 m | Y=6.20 m
+Target → X=1.90 m | Y=7.70 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 7.70 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.20 m
+Target → X=-1.50 m | Y=7.00 m
+Target → X=1.10 m | Y=6.10 m
+Target → X=1.90 m | Y=7.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 7.60 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.20 m
+Target → X=-1.50 m | Y=6.90 m
+Target → X=1.00 m | Y=6.10 m
+Target → X=1.90 m | Y=7.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 7.60 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.20 m
+Target → X=-1.50 m | Y=6.90 m
+Target → X=0.90 m | Y=6.10 m
+Target → X=1.90 m | Y=7.50 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 7.50 m
+
+--- TARGETS ---
+Target → X=1.60 m | Y=3.20 m
+Target → X=-1.50 m | Y=6.90 m
+Target → X=0.80 m | Y=6.10 m
+Target → X=1.90 m | Y=7.50 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 7.50 m
+
+--- TARGETS ---
+Target → X=1.60 m | Y=3.20 m
+Target → X=-1.60 m | Y=6.80 m
+Target → X=0.70 m | Y=6.10 m
+Target → X=1.90 m | Y=7.40 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 7.40 m
+
+--- TARGETS ---
+Target → X=1.60 m | Y=3.30 m
+Target → X=-1.60 m | Y=6.80 m
+Target → X=0.70 m | Y=6.10 m
+Target → X=1.90 m | Y=7.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 7.30 m
+
+--- TARGETS ---
+Target → X=1.60 m | Y=3.30 m
+Target → X=-1.60 m | Y=6.70 m
+Target → X=0.60 m | Y=6.20 m
+Target → X=1.90 m | Y=7.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 7.30 m
+
+--- TARGETS ---
+Target → X=1.60 m | Y=3.30 m
+Target → X=-1.60 m | Y=6.70 m
+Target → X=0.50 m | Y=6.20 m
+Target → X=1.90 m | Y=7.20 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 7.20 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.20 m
+Target → X=-1.60 m | Y=6.70 m
+Target → X=0.40 m | Y=6.20 m
+Target → X=1.90 m | Y=7.10 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 7.10 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.20 m
+Target → X=-1.70 m | Y=6.60 m
+Target → X=0.40 m | Y=6.20 m
+Target → X=1.90 m | Y=7.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 7.00 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.20 m
+Target → X=-1.70 m | Y=6.60 m
+Target → X=0.30 m | Y=6.20 m
+Target → X=1.90 m | Y=7.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 7.00 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.20 m
+Target → X=-1.70 m | Y=6.60 m
+Target → X=0.20 m | Y=6.20 m
+Target → X=1.80 m | Y=6.90 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.90 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.20 m
+Target → X=-1.70 m | Y=6.50 m
+Target → X=0.20 m | Y=6.30 m
+Target → X=1.80 m | Y=6.80 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.80 m
+
+--- TARGETS ---
+Target → X=1.50 m | Y=3.20 m
+Target → X=-1.70 m | Y=6.50 m
+Target → X=0.10 m | Y=6.30 m
+Target → X=1.80 m | Y=6.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.60 m
+
+--- TARGETS ---
+Target → X=1.40 m | Y=3.20 m
+Target → X=-1.70 m | Y=6.50 m
+Target → X=0.00 m | Y=6.30 m
+Target → X=1.80 m | Y=6.50 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=1.40 m | Y=3.20 m
+Target → X=-1.70 m | Y=6.50 m
+Target → X=0.00 m | Y=6.30 m
+Target → X=1.70 m | Y=6.40 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=1.40 m | Y=3.20 m
+Target → X=-1.70 m | Y=6.40 m
+Target → X=-0.10 m | Y=6.30 m
+Target → X=1.70 m | Y=6.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=1.30 m | Y=3.20 m
+Target → X=-1.70 m | Y=6.40 m
+Target → X=-0.20 m | Y=6.30 m
+Target → X=1.70 m | Y=6.20 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=1.30 m | Y=3.30 m
+Target → X=-1.70 m | Y=6.40 m
+Target → X=-0.30 m | Y=6.30 m
+Target → X=1.60 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=1.30 m | Y=3.30 m
+Target → X=-1.70 m | Y=6.40 m
+Target → X=-0.30 m | Y=6.30 m
+Target → X=1.60 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=1.20 m | Y=3.30 m
+Target → X=-1.70 m | Y=6.30 m
+Target → X=-0.40 m | Y=6.30 m
+Target → X=1.60 m | Y=5.80 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.30 m
+
+--- TARGETS ---
+Target → X=1.20 m | Y=3.30 m
+Target → X=-1.70 m | Y=6.30 m
+Target → X=-0.50 m | Y=6.30 m
+Target → X=1.50 m | Y=5.70 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.30 m
+
+--- TARGETS ---
+Target → X=1.20 m | Y=3.40 m
+Target → X=-1.70 m | Y=6.30 m
+Target → X=-0.60 m | Y=6.30 m
+Target → X=1.50 m | Y=5.50 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.30 m
+
+--- TARGETS ---
+Target → X=1.10 m | Y=3.40 m
+Target → X=-1.70 m | Y=6.20 m
+Target → X=-0.70 m | Y=6.30 m
+Target → X=1.50 m | Y=5.40 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.30 m
+
+--- TARGETS ---
+Target → X=1.10 m | Y=3.50 m
+Target → X=-1.70 m | Y=6.20 m
+Target → X=-0.80 m | Y=6.30 m
+Target → X=1.50 m | Y=5.30 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.30 m
+
+--- TARGETS ---
+Target → X=1.10 m | Y=3.50 m
+Target → X=-1.70 m | Y=6.20 m
+Target → X=-0.90 m | Y=6.30 m
+Target → X=1.40 m | Y=5.20 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.30 m
+
+--- TARGETS ---
+Target → X=1.00 m | Y=3.60 m
+Target → X=-1.80 m | Y=6.10 m
+Target → X=-1.00 m | Y=6.30 m
+Target → X=1.40 m | Y=5.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.30 m
+
+--- TARGETS ---
+Target → X=1.00 m | Y=3.60 m
+Target → X=-1.80 m | Y=6.10 m
+Target → X=-1.10 m | Y=6.30 m
+Target → X=1.40 m | Y=4.90 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.30 m
+
+--- TARGETS ---
+Target → X=0.90 m | Y=3.70 m
+Target → X=-1.80 m | Y=6.00 m
+Target → X=-1.20 m | Y=6.30 m
+Target → X=1.40 m | Y=4.80 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.30 m
+
+--- TARGETS ---
+Target → X=0.90 m | Y=3.70 m
+Target → X=-1.80 m | Y=6.00 m
+Target → X=-1.20 m | Y=6.30 m
+Target → X=1.40 m | Y=4.70 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.30 m
+
+--- TARGETS ---
+Target → X=0.80 m | Y=3.80 m
+Target → X=-1.80 m | Y=5.90 m
+Target → X=-1.30 m | Y=6.30 m
+Target → X=1.40 m | Y=4.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.30 m
+
+--- TARGETS ---
+Target → X=0.80 m | Y=3.80 m
+Target → X=-1.90 m | Y=5.90 m
+Target → X=-1.40 m | Y=6.30 m
+Target → X=1.40 m | Y=4.50 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.30 m
+
+--- TARGETS ---
+Target → X=0.70 m | Y=3.90 m
+Target → X=-1.90 m | Y=5.80 m
+Target → X=-1.50 m | Y=6.30 m
+Target → X=1.30 m | Y=4.40 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.30 m
+
+--- TARGETS ---
+Target → X=0.70 m | Y=3.90 m
+Target → X=-1.90 m | Y=5.80 m
+Target → X=-1.50 m | Y=6.30 m
+Target → X=1.30 m | Y=4.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.30 m
+
+--- TARGETS ---
+Target → X=0.60 m | Y=3.90 m
+Target → X=-2.00 m | Y=5.70 m
+Target → X=-1.60 m | Y=6.30 m
+Target → X=1.30 m | Y=4.20 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.30 m
+
+--- TARGETS ---
+Target → X=0.50 m | Y=4.00 m
+Target → X=-2.00 m | Y=5.60 m
+Target → X=-1.70 m | Y=6.30 m
+Target → X=1.30 m | Y=4.10 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.30 m
+
+--- TARGETS ---
+Target → X=0.50 m | Y=4.00 m
+Target → X=-2.00 m | Y=5.60 m
+Target → X=-1.70 m | Y=6.30 m
+Target → X=1.30 m | Y=4.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.30 m
+
+--- TARGETS ---
+Target → X=0.40 m | Y=4.00 m
+Target → X=-2.00 m | Y=5.50 m
+Target → X=-1.80 m | Y=6.30 m
+Target → X=1.30 m | Y=3.80 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.30 m
+
+--- TARGETS ---
+Target → X=0.30 m | Y=4.10 m
+Target → X=-2.00 m | Y=5.50 m
+Target → X=-1.90 m | Y=6.40 m
+Target → X=1.30 m | Y=3.70 m
+Target → X=-1.60 m | Y=1.70 m
 Y min = 1.70 m | Y max = 6.40 m
 
 --- TARGETS ---
-Target → X=-1.30 m | Y=6.40 m
-Target → X=0.30 m | Y=1.60 m
+Target → X=0.30 m | Y=4.10 m
+Target → X=-2.10 m | Y=5.40 m
+Target → X=-1.90 m | Y=6.40 m
+Target → X=1.20 m | Y=3.60 m
+Target → X=-3.00 m | Y=4.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=0.20 m | Y=4.10 m
+Target → X=-2.10 m | Y=5.40 m
+Target → X=-2.00 m | Y=6.40 m
+Target → X=1.20 m | Y=3.50 m
+Target → X=-3.00 m | Y=4.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=0.10 m | Y=4.20 m
+Target → X=-2.10 m | Y=5.40 m
+Target → X=-2.00 m | Y=6.40 m
+Target → X=1.20 m | Y=3.40 m
+Target → X=-3.00 m | Y=4.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=0.00 m | Y=4.20 m
+Target → X=-2.10 m | Y=5.30 m
+Target → X=-2.10 m | Y=6.40 m
+Target → X=1.10 m | Y=3.30 m
+Target → X=-3.00 m | Y=4.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=0.00 m | Y=4.20 m
+Target → X=-2.10 m | Y=5.30 m
+Target → X=-2.20 m | Y=6.40 m
+Target → X=1.10 m | Y=3.10 m
+Target → X=-2.90 m | Y=4.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-0.10 m | Y=4.30 m
+Target → X=-2.10 m | Y=5.30 m
+Target → X=-2.20 m | Y=6.50 m
+Target → X=1.10 m | Y=3.00 m
+Target → X=-2.90 m | Y=4.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-0.20 m | Y=4.30 m
+Target → X=-2.10 m | Y=5.20 m
+Target → X=-2.30 m | Y=6.50 m
+Target → X=1.10 m | Y=2.90 m
+Target → X=-2.80 m | Y=4.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-0.20 m | Y=4.30 m
+Target → X=-2.10 m | Y=5.20 m
+Target → X=-2.30 m | Y=6.50 m
+Target → X=1.00 m | Y=2.80 m
+Target → X=-2.70 m | Y=4.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-0.30 m | Y=4.40 m
+Target → X=-2.10 m | Y=5.20 m
+Target → X=-2.40 m | Y=6.50 m
+Target → X=1.00 m | Y=2.70 m
+Target → X=-2.60 m | Y=4.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-0.30 m | Y=4.40 m
+Target → X=-2.10 m | Y=5.10 m
+Target → X=-2.50 m | Y=6.50 m
+Target → X=1.00 m | Y=2.60 m
+Target → X=-2.50 m | Y=4.00 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-0.40 m | Y=4.50 m
+Target → X=-2.10 m | Y=5.10 m
+Target → X=-2.60 m | Y=6.40 m
+Target → X=0.90 m | Y=2.50 m
+Target → X=-2.40 m | Y=4.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-0.40 m | Y=4.50 m
+Target → X=-2.10 m | Y=5.10 m
+Target → X=-2.60 m | Y=6.40 m
+Target → X=0.90 m | Y=2.40 m
+Target → X=-2.30 m | Y=4.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-0.50 m | Y=4.60 m
+Target → X=-2.10 m | Y=5.00 m
+Target → X=-2.70 m | Y=6.40 m
+Target → X=0.90 m | Y=2.30 m
+Target → X=-2.10 m | Y=4.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-0.50 m | Y=4.60 m
+Target → X=-2.10 m | Y=5.00 m
+Target → X=-2.80 m | Y=6.40 m
+Target → X=0.90 m | Y=2.20 m
+Target → X=-2.00 m | Y=4.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-0.60 m | Y=4.70 m
+Target → X=-2.10 m | Y=4.90 m
+Target → X=-2.90 m | Y=6.40 m
+Target → X=0.90 m | Y=2.10 m
+Target → X=-1.80 m | Y=4.20 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-0.60 m | Y=4.70 m
+Target → X=-2.20 m | Y=4.90 m
+Target → X=-2.90 m | Y=6.40 m
+Target → X=0.90 m | Y=2.10 m
+Target → X=-1.70 m | Y=4.20 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-0.60 m | Y=4.80 m
+Target → X=-2.20 m | Y=4.90 m
+Target → X=-3.00 m | Y=6.40 m
+Target → X=0.90 m | Y=2.00 m
+Target → X=-1.50 m | Y=4.20 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-0.70 m | Y=4.80 m
+Target → X=-2.20 m | Y=4.80 m
+Target → X=-3.10 m | Y=6.40 m
+Target → X=0.90 m | Y=1.90 m
+Target → X=-1.40 m | Y=4.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-0.70 m | Y=4.90 m
+Target → X=-2.20 m | Y=4.80 m
+Target → X=-3.10 m | Y=6.40 m
+Target → X=0.90 m | Y=1.90 m
+Target → X=-1.20 m | Y=4.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-0.70 m | Y=4.90 m
+Target → X=-2.30 m | Y=4.70 m
+Target → X=-3.20 m | Y=6.40 m
+Target → X=0.90 m | Y=1.80 m
+Target → X=-1.10 m | Y=4.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-0.80 m | Y=4.90 m
+Target → X=-2.30 m | Y=4.70 m
+Target → X=-3.20 m | Y=6.40 m
+Target → X=0.90 m | Y=1.80 m
+Target → X=-0.90 m | Y=4.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-0.80 m | Y=5.00 m
+Target → X=-2.30 m | Y=4.60 m
+Target → X=-3.30 m | Y=6.40 m
+Target → X=0.90 m | Y=1.80 m
+Target → X=-0.80 m | Y=4.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-0.80 m | Y=5.00 m
+Target → X=-2.30 m | Y=4.50 m
+Target → X=-3.30 m | Y=6.40 m
+Target → X=0.90 m | Y=1.70 m
+Target → X=-0.70 m | Y=4.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.70 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-0.90 m | Y=5.00 m
+Target → X=-2.40 m | Y=4.50 m
+Target → X=-3.40 m | Y=6.40 m
+Target → X=0.90 m | Y=1.70 m
+Target → X=-0.50 m | Y=4.30 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-0.90 m | Y=5.00 m
+Target → X=-2.40 m | Y=4.50 m
+Target → X=-3.40 m | Y=6.40 m
+Target → X=0.90 m | Y=1.70 m
+Target → X=-0.40 m | Y=4.30 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-0.90 m | Y=5.00 m
+Target → X=-2.40 m | Y=4.40 m
+Target → X=-3.40 m | Y=6.40 m
+Target → X=0.90 m | Y=1.60 m
+Target → X=-0.30 m | Y=4.30 m
+Target → X=-1.60 m | Y=1.70 m
 Y min = 1.60 m | Y max = 6.40 m
 
 --- TARGETS ---
-Target → X=-1.40 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-0.90 m | Y=5.00 m
+Target → X=-2.40 m | Y=4.40 m
+Target → X=-3.50 m | Y=6.50 m
+Target → X=0.90 m | Y=1.60 m
+Target → X=-0.10 m | Y=4.30 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.60 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-1.00 m | Y=5.00 m
+Target → X=-2.40 m | Y=4.30 m
+Target → X=-3.50 m | Y=6.50 m
+Target → X=0.90 m | Y=1.60 m
+Target → X=0.00 m | Y=4.40 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.60 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-1.00 m | Y=5.00 m
+Target → X=-2.40 m | Y=4.30 m
+Target → X=-3.50 m | Y=6.50 m
+Target → X=0.90 m | Y=1.60 m
+Target → X=0.10 m | Y=4.40 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.60 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-1.00 m | Y=5.00 m
+Target → X=-2.40 m | Y=4.30 m
+Target → X=-3.50 m | Y=6.50 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=0.20 m | Y=4.40 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-1.00 m | Y=5.00 m
+Target → X=-2.40 m | Y=4.30 m
+Target → X=-3.60 m | Y=6.50 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=0.30 m | Y=4.40 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-1.00 m | Y=5.00 m
+Target → X=-2.40 m | Y=4.20 m
+Target → X=-3.60 m | Y=6.50 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=0.40 m | Y=4.40 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-1.10 m | Y=4.90 m
+Target → X=-2.40 m | Y=4.20 m
+Target → X=-3.60 m | Y=6.50 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=0.50 m | Y=4.40 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-1.10 m | Y=4.90 m
+Target → X=-2.40 m | Y=4.20 m
+Target → X=-3.70 m | Y=6.50 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=0.60 m | Y=4.40 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-1.10 m | Y=4.90 m
+Target → X=-2.40 m | Y=4.20 m
+Target → X=-3.70 m | Y=6.50 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=0.70 m | Y=4.40 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-1.10 m | Y=4.90 m
+Target → X=-2.40 m | Y=4.20 m
+Target → X=-3.70 m | Y=6.50 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=0.80 m | Y=4.40 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-1.10 m | Y=4.90 m
+Target → X=-2.40 m | Y=4.20 m
+Target → X=-3.80 m | Y=6.50 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=0.90 m | Y=4.40 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.50 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=5.00 m
+Target → X=-2.40 m | Y=4.20 m
+Target → X=-3.80 m | Y=6.50 m
+Target → X=0.70 m | Y=1.40 m
+Target → X=0.90 m | Y=4.50 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.40 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=5.00 m
+Target → X=-2.40 m | Y=4.20 m
+Target → X=-3.80 m | Y=6.50 m
+Target → X=0.70 m | Y=1.40 m
+Target → X=1.00 m | Y=4.50 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.40 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=5.00 m
+Target → X=-2.40 m | Y=4.20 m
+Target → X=-3.90 m | Y=6.50 m
+Target → X=0.70 m | Y=1.40 m
+Target → X=1.00 m | Y=4.50 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.40 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=5.00 m
+Target → X=-2.40 m | Y=4.10 m
+Target → X=-3.90 m | Y=6.50 m
+Target → X=0.70 m | Y=1.40 m
+Target → X=1.00 m | Y=4.50 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.40 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-1.30 m | Y=5.00 m
+Target → X=-2.40 m | Y=4.10 m
+Target → X=-3.90 m | Y=6.50 m
+Target → X=0.70 m | Y=1.40 m
+Target → X=1.00 m | Y=4.50 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.40 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-1.30 m | Y=5.00 m
+Target → X=-2.40 m | Y=4.10 m
+Target → X=-4.00 m | Y=6.50 m
+Target → X=0.70 m | Y=1.40 m
+Target → X=1.00 m | Y=4.50 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.40 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-1.30 m | Y=5.00 m
+Target → X=-2.40 m | Y=4.10 m
+Target → X=-4.00 m | Y=6.50 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=1.00 m | Y=4.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-1.40 m | Y=5.00 m
+Target → X=-2.40 m | Y=4.10 m
+Target → X=-4.00 m | Y=6.50 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=1.00 m | Y=4.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-1.40 m | Y=5.00 m
+Target → X=-2.50 m | Y=4.10 m
+Target → X=-4.00 m | Y=6.40 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=1.00 m | Y=4.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-1.50 m | Y=5.10 m
+Target → X=-2.50 m | Y=4.00 m
+Target → X=-4.00 m | Y=6.40 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=0.90 m | Y=4.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-1.50 m | Y=5.10 m
+Target → X=-2.50 m | Y=4.00 m
+Target → X=-4.10 m | Y=6.40 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=0.90 m | Y=4.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-1.60 m | Y=5.10 m
+Target → X=-2.50 m | Y=4.00 m
+Target → X=-4.10 m | Y=6.40 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=0.80 m | Y=4.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-1.70 m | Y=5.10 m
+Target → X=-2.50 m | Y=4.00 m
+Target → X=-4.10 m | Y=6.40 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=0.80 m | Y=4.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-1.70 m | Y=5.10 m
+Target → X=-2.50 m | Y=4.00 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=0.70 m | Y=4.60 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.50 m | Y max = 5.10 m
+
+--- TARGETS ---
+Target → X=-1.80 m | Y=5.00 m
+Target → X=-2.50 m | Y=4.00 m
+Target → X=0.90 m | Y=1.60 m
+Target → X=0.70 m | Y=4.60 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.60 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-1.90 m | Y=5.00 m
+Target → X=-2.50 m | Y=3.90 m
+Target → X=0.90 m | Y=1.60 m
+Target → X=0.60 m | Y=4.60 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.60 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-2.00 m | Y=5.00 m
+Target → X=-2.60 m | Y=3.90 m
+Target → X=0.90 m | Y=1.60 m
+Target → X=0.50 m | Y=4.60 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.60 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-2.00 m | Y=5.00 m
+Target → X=-2.60 m | Y=3.90 m
+Target → X=0.90 m | Y=1.60 m
+Target → X=0.40 m | Y=4.60 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.60 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-2.10 m | Y=5.00 m
+Target → X=-2.50 m | Y=3.90 m
+Target → X=0.90 m | Y=1.60 m
+Target → X=0.30 m | Y=4.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.60 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-2.20 m | Y=5.00 m
+Target → X=-2.50 m | Y=3.90 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=0.30 m | Y=4.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.00 m
+Target → X=-2.50 m | Y=3.90 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=0.20 m | Y=4.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-2.40 m | Y=5.00 m
+Target → X=-2.50 m | Y=3.90 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=0.10 m | Y=4.70 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-2.50 m | Y=5.00 m
+Target → X=-2.50 m | Y=3.90 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=0.00 m | Y=4.70 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-2.60 m | Y=4.90 m
+Target → X=-2.50 m | Y=3.90 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=-0.10 m | Y=4.70 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 4.90 m
+
+--- TARGETS ---
+Target → X=-2.60 m | Y=4.90 m
+Target → X=-2.50 m | Y=3.90 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=-0.10 m | Y=4.70 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 4.90 m
+
+--- TARGETS ---
+Target → X=-2.70 m | Y=4.90 m
+Target → X=-2.40 m | Y=4.00 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=-0.20 m | Y=4.70 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 4.90 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=4.90 m
+Target → X=-2.40 m | Y=4.00 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=-0.30 m | Y=4.80 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 4.90 m
+
+--- TARGETS ---
+Target → X=-2.90 m | Y=4.90 m
+Target → X=-2.40 m | Y=4.00 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=-0.30 m | Y=4.80 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.50 m | Y max = 4.90 m
+
+--- TARGETS ---
+Target → X=-2.90 m | Y=5.00 m
+Target → X=-2.40 m | Y=4.00 m
+Target → X=0.70 m | Y=1.40 m
+Target → X=-0.40 m | Y=4.80 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.40 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=5.00 m
+Target → X=-2.30 m | Y=4.00 m
+Target → X=0.70 m | Y=1.40 m
+Target → X=-0.40 m | Y=4.90 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.40 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=5.00 m
+Target → X=-2.30 m | Y=3.90 m
+Target → X=0.70 m | Y=1.40 m
+Target → X=-0.50 m | Y=4.90 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.40 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-3.10 m | Y=5.00 m
+Target → X=-2.30 m | Y=3.90 m
+Target → X=0.70 m | Y=1.40 m
+Target → X=-0.50 m | Y=4.90 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.40 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-3.10 m | Y=5.00 m
+Target → X=-2.30 m | Y=3.90 m
+Target → X=0.70 m | Y=1.40 m
+Target → X=-0.60 m | Y=4.90 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.40 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-3.20 m | Y=5.00 m
+Target → X=-2.30 m | Y=3.90 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=-0.60 m | Y=5.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-3.30 m | Y=5.00 m
+Target → X=-2.30 m | Y=3.90 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=-0.70 m | Y=5.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-3.30 m | Y=5.00 m
+Target → X=-2.30 m | Y=3.90 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=-0.70 m | Y=5.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-3.40 m | Y=5.10 m
+Target → X=-2.30 m | Y=3.80 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=-0.80 m | Y=5.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 5.10 m
+
+--- TARGETS ---
+Target → X=-3.40 m | Y=5.10 m
+Target → X=-2.30 m | Y=3.80 m
+Target → X=0.80 m | Y=1.50 m
+Target → X=-0.80 m | Y=5.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.50 m | Y max = 5.10 m
+
+--- TARGETS ---
+Target → X=-3.50 m | Y=5.10 m
+Target → X=-2.30 m | Y=3.80 m
+Target → X=0.80 m | Y=1.60 m
+Target → X=-0.90 m | Y=5.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.60 m | Y max = 5.10 m
+
+--- TARGETS ---
+Target → X=-3.50 m | Y=5.10 m
+Target → X=-2.30 m | Y=3.70 m
+Target → X=0.90 m | Y=1.60 m
+Target → X=-0.90 m | Y=5.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.60 m | Y max = 5.10 m
+
+--- TARGETS ---
+Target → X=-3.60 m | Y=5.10 m
+Target → X=-2.30 m | Y=3.70 m
+Target → X=0.90 m | Y=1.60 m
+Target → X=-0.90 m | Y=5.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.60 m | Y max = 5.10 m
+
+--- TARGETS ---
+Target → X=-3.60 m | Y=5.00 m
+Target → X=-2.30 m | Y=3.70 m
+Target → X=0.90 m | Y=1.70 m
+Target → X=-1.00 m | Y=5.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-3.70 m | Y=5.00 m
+Target → X=-2.20 m | Y=3.60 m
+Target → X=0.90 m | Y=1.70 m
+Target → X=-1.00 m | Y=5.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-3.70 m | Y=5.00 m
+Target → X=-2.20 m | Y=3.60 m
+Target → X=0.90 m | Y=1.70 m
+Target → X=-1.00 m | Y=5.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-3.80 m | Y=5.00 m
+Target → X=-2.20 m | Y=3.60 m
+Target → X=0.90 m | Y=1.80 m
+Target → X=-1.00 m | Y=5.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-3.90 m | Y=5.00 m
+Target → X=-2.20 m | Y=3.60 m
+Target → X=0.90 m | Y=1.80 m
+Target → X=-1.00 m | Y=5.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-3.90 m | Y=5.00 m
+Target → X=-2.20 m | Y=3.60 m
+Target → X=1.00 m | Y=1.90 m
+Target → X=-1.00 m | Y=5.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-3.90 m | Y=5.00 m
+Target → X=-2.10 m | Y=3.50 m
+Target → X=1.00 m | Y=1.90 m
+Target → X=-1.00 m | Y=5.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-4.00 m | Y=5.00 m
+Target → X=-2.10 m | Y=3.50 m
+Target → X=1.00 m | Y=1.90 m
+Target → X=-0.90 m | Y=5.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-4.00 m | Y=5.00 m
+Target → X=-2.10 m | Y=3.50 m
+Target → X=1.00 m | Y=2.00 m
+Target → X=-0.90 m | Y=5.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-4.00 m | Y=4.90 m
+Target → X=-2.10 m | Y=3.50 m
+Target → X=1.00 m | Y=2.00 m
+Target → X=-0.90 m | Y=5.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-4.00 m | Y=4.90 m
+Target → X=-2.00 m | Y=3.50 m
+Target → X=1.00 m | Y=2.00 m
+Target → X=-0.80 m | Y=5.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-4.10 m | Y=4.90 m
+Target → X=-2.00 m | Y=3.50 m
+Target → X=1.00 m | Y=2.10 m
+Target → X=-0.70 m | Y=5.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-2.00 m | Y=3.50 m
+Target → X=1.00 m | Y=2.10 m
+Target → X=-0.70 m | Y=5.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-1.90 m | Y=3.50 m
+Target → X=1.00 m | Y=2.20 m
+Target → X=-0.60 m | Y=5.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 5.10 m
+
+--- TARGETS ---
+Target → X=-1.90 m | Y=3.50 m
+Target → X=1.00 m | Y=2.30 m
+Target → X=-0.50 m | Y=5.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 5.10 m
+
+--- TARGETS ---
+Target → X=-1.90 m | Y=3.50 m
+Target → X=1.00 m | Y=2.30 m
+Target → X=-0.40 m | Y=5.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 5.10 m
+
+--- TARGETS ---
+Target → X=-1.80 m | Y=3.40 m
+Target → X=1.10 m | Y=2.40 m
+Target → X=-0.30 m | Y=5.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 5.10 m
+
+--- TARGETS ---
+Target → X=-1.80 m | Y=3.40 m
+Target → X=1.10 m | Y=2.50 m
+Target → X=-0.20 m | Y=5.20 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 5.20 m
+
+--- TARGETS ---
+Target → X=-1.80 m | Y=3.40 m
+Target → X=1.10 m | Y=2.50 m
+Target → X=-0.10 m | Y=5.20 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.20 m
+
+--- TARGETS ---
+Target → X=-1.80 m | Y=3.40 m
+Target → X=1.10 m | Y=2.60 m
+Target → X=0.00 m | Y=5.20 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.20 m
+
+--- TARGETS ---
+Target → X=-1.70 m | Y=3.30 m
+Target → X=1.20 m | Y=2.70 m
+Target → X=0.10 m | Y=5.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.30 m
+
+--- TARGETS ---
+Target → X=-1.70 m | Y=3.30 m
+Target → X=1.20 m | Y=2.80 m
+Target → X=0.20 m | Y=5.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.30 m
+
+--- TARGETS ---
+Target → X=-1.70 m | Y=3.30 m
+Target → X=1.30 m | Y=2.90 m
+Target → X=0.30 m | Y=5.30 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=-4.10 m | Y=1.90 m
+Y min = 1.80 m | Y max = 5.30 m
+
+--- TARGETS ---
+Target → X=-1.70 m | Y=3.20 m
+Target → X=1.30 m | Y=3.00 m
+Target → X=0.40 m | Y=5.30 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=-4.00 m | Y=1.90 m
+Y min = 1.80 m | Y max = 5.30 m
+
+--- TARGETS ---
+Target → X=-1.70 m | Y=3.20 m
+Target → X=1.30 m | Y=3.10 m
+Target → X=0.50 m | Y=5.30 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=-4.00 m | Y=2.00 m
+Y min = 1.80 m | Y max = 5.30 m
+
+--- TARGETS ---
+Target → X=-1.70 m | Y=3.20 m
+Target → X=1.40 m | Y=3.20 m
+Target → X=0.60 m | Y=5.40 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=-4.00 m | Y=2.00 m
+Y min = 1.80 m | Y max = 5.40 m
+
+--- TARGETS ---
+Target → X=-1.70 m | Y=3.10 m
+Target → X=1.40 m | Y=3.30 m
+Target → X=0.70 m | Y=5.40 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=-3.90 m | Y=2.00 m
+Y min = 1.80 m | Y max = 5.40 m
+
+--- TARGETS ---
+Target → X=-1.70 m | Y=3.10 m
+Target → X=1.50 m | Y=3.40 m
+Target → X=0.70 m | Y=5.40 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=-3.90 m | Y=2.00 m
+Y min = 1.70 m | Y max = 5.40 m
+
+--- TARGETS ---
+Target → X=-1.70 m | Y=3.10 m
+Target → X=1.50 m | Y=3.50 m
+Target → X=0.80 m | Y=5.40 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=-3.80 m | Y=2.00 m
+Y min = 1.70 m | Y max = 5.40 m
+
+--- TARGETS ---
+Target → X=-1.60 m | Y=3.00 m
+Target → X=1.50 m | Y=3.60 m
+Target → X=0.90 m | Y=5.40 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=-3.70 m | Y=2.00 m
+Y min = 1.70 m | Y max = 5.40 m
+
+--- TARGETS ---
+Target → X=-1.60 m | Y=3.00 m
+Target → X=1.60 m | Y=3.70 m
+Target → X=1.00 m | Y=5.40 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=-3.60 m | Y=2.10 m
+Y min = 1.70 m | Y max = 5.40 m
+
+--- TARGETS ---
+Target → X=-1.60 m | Y=3.00 m
+Target → X=1.60 m | Y=3.80 m
+Target → X=1.00 m | Y=5.40 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=-3.50 m | Y=2.10 m
+Y min = 1.70 m | Y max = 5.40 m
+
+--- TARGETS ---
+Target → X=-1.60 m | Y=3.00 m
+Target → X=1.60 m | Y=3.80 m
+Target → X=1.10 m | Y=5.40 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=-3.40 m | Y=2.10 m
+Y min = 1.80 m | Y max = 5.40 m
+
+--- TARGETS ---
+Target → X=-1.60 m | Y=3.00 m
+Target → X=1.70 m | Y=3.90 m
+Target → X=1.10 m | Y=5.40 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=-3.20 m | Y=2.10 m
+Y min = 1.80 m | Y max = 5.40 m
+
+--- TARGETS ---
+Target → X=-1.50 m | Y=2.90 m
+Target → X=1.70 m | Y=4.00 m
+Target → X=1.20 m | Y=5.40 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=-3.10 m | Y=2.20 m
+Y min = 1.80 m | Y max = 5.40 m
+
+--- TARGETS ---
+Target → X=-1.50 m | Y=2.90 m
+Target → X=1.70 m | Y=4.10 m
+Target → X=1.20 m | Y=5.40 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=-3.00 m | Y=2.20 m
+Y min = 1.80 m | Y max = 5.40 m
+
+--- TARGETS ---
+Target → X=-1.50 m | Y=2.90 m
+Target → X=1.70 m | Y=4.20 m
+Target → X=1.30 m | Y=5.40 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=-2.80 m | Y=2.20 m
+Y min = 1.80 m | Y max = 5.40 m
+
+--- TARGETS ---
+Target → X=-1.40 m | Y=2.90 m
+Target → X=1.70 m | Y=4.30 m
+Target → X=1.30 m | Y=5.40 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=-2.70 m | Y=2.20 m
+Y min = 1.80 m | Y max = 5.40 m
+
+--- TARGETS ---
+Target → X=-1.40 m | Y=2.90 m
+Target → X=1.80 m | Y=4.30 m
+Target → X=1.40 m | Y=5.40 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=-2.60 m | Y=2.20 m
+Y min = 1.80 m | Y max = 5.40 m
+
+--- TARGETS ---
+Target → X=-1.40 m | Y=2.90 m
+Target → X=1.80 m | Y=4.40 m
+Target → X=1.40 m | Y=5.40 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=-2.40 m | Y=2.20 m
+Y min = 1.80 m | Y max = 5.40 m
+
+--- TARGETS ---
+Target → X=-1.30 m | Y=2.90 m
+Target → X=1.80 m | Y=4.50 m
+Target → X=1.40 m | Y=5.50 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=-2.20 m | Y=2.20 m
+Y min = 1.90 m | Y max = 5.50 m
+
+--- TARGETS ---
+Target → X=-1.30 m | Y=2.90 m
+Target → X=1.80 m | Y=4.60 m
+Target → X=1.50 m | Y=5.50 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=-2.10 m | Y=2.20 m
+Y min = 1.90 m | Y max = 5.50 m
+
+--- TARGETS ---
+Target → X=-1.30 m | Y=2.90 m
+Target → X=1.80 m | Y=4.70 m
+Target → X=1.50 m | Y=5.50 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=-1.90 m | Y=2.30 m
+Y min = 1.90 m | Y max = 5.50 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.90 m
+Target → X=1.90 m | Y=4.80 m
+Target → X=1.50 m | Y=5.50 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=-1.80 m | Y=2.30 m
+Y min = 1.90 m | Y max = 5.50 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.80 m
+Target → X=1.90 m | Y=4.90 m
+Target → X=1.50 m | Y=5.50 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=-1.60 m | Y=2.30 m
+Y min = 1.90 m | Y max = 5.50 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.80 m
+Target → X=1.90 m | Y=5.00 m
+Target → X=1.50 m | Y=5.50 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=-1.40 m | Y=2.30 m
+Y min = 1.80 m | Y max = 5.50 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.80 m
+Target → X=2.00 m | Y=5.10 m
+Target → X=1.40 m | Y=5.60 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=-1.20 m | Y=2.30 m
+Y min = 1.80 m | Y max = 5.60 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.80 m
+Target → X=2.00 m | Y=5.20 m
+Target → X=1.40 m | Y=5.60 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=-1.00 m | Y=2.30 m
+Y min = 1.80 m | Y max = 5.60 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.80 m
+Target → X=2.10 m | Y=5.30 m
+Target → X=1.30 m | Y=5.60 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=-0.90 m | Y=2.30 m
+Y min = 1.80 m | Y max = 5.60 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.70 m
+Target → X=2.10 m | Y=5.40 m
+Target → X=1.30 m | Y=5.60 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=-0.70 m | Y=2.40 m
+Y min = 1.80 m | Y max = 5.60 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.70 m
+Target → X=2.20 m | Y=5.50 m
+Target → X=1.20 m | Y=5.60 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=-0.50 m | Y=2.40 m
+Y min = 1.80 m | Y max = 5.60 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.70 m
+Target → X=2.20 m | Y=5.60 m
+Target → X=1.10 m | Y=5.60 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=-0.30 m | Y=2.40 m
+Y min = 1.80 m | Y max = 5.60 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.60 m
+Target → X=2.20 m | Y=5.70 m
+Target → X=1.00 m | Y=5.60 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=0.00 m | Y=2.50 m
+Y min = 1.80 m | Y max = 5.70 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.60 m
+Target → X=2.30 m | Y=5.80 m
+Target → X=0.90 m | Y=5.60 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=0.20 m | Y=2.50 m
+Y min = 1.80 m | Y max = 5.80 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.60 m
+Target → X=2.30 m | Y=5.90 m
+Target → X=0.80 m | Y=5.60 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=0.40 m | Y=2.50 m
+Y min = 1.70 m | Y max = 5.90 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.60 m
+Target → X=2.40 m | Y=6.00 m
+Target → X=0.70 m | Y=5.60 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=0.60 m | Y=2.60 m
+Y min = 1.70 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.60 m
+Target → X=2.40 m | Y=6.10 m
+Target → X=0.50 m | Y=5.60 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=0.80 m | Y=2.60 m
+Y min = 1.70 m | Y max = 6.10 m
+
+--- TARGETS ---
+Target → X=-1.10 m | Y=2.50 m
+Target → X=2.40 m | Y=6.20 m
+Target → X=0.40 m | Y=5.70 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=1.00 m | Y=2.60 m
+Y min = 1.70 m | Y max = 6.20 m
+
+--- TARGETS ---
+Target → X=-1.10 m | Y=2.50 m
+Target → X=2.50 m | Y=6.30 m
+Target → X=0.20 m | Y=5.70 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=1.20 m | Y=2.70 m
+Y min = 1.70 m | Y max = 6.30 m
+
+--- TARGETS ---
+Target → X=-1.10 m | Y=2.50 m
+Target → X=2.50 m | Y=6.40 m
+Target → X=0.10 m | Y=5.70 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=1.40 m | Y=2.70 m
+Y min = 1.80 m | Y max = 6.40 m
+
+--- TARGETS ---
+Target → X=-1.10 m | Y=2.50 m
+Target → X=2.50 m | Y=6.50 m
+Target → X=0.00 m | Y=5.70 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=1.60 m | Y=2.70 m
+Y min = 1.80 m | Y max = 6.50 m
+
+--- TARGETS ---
+Target → X=-1.10 m | Y=2.50 m
+Target → X=2.50 m | Y=6.60 m
+Target → X=-0.20 m | Y=5.70 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=1.80 m | Y=2.80 m
+Y min = 1.80 m | Y max = 6.60 m
+
+--- TARGETS ---
+Target → X=-1.10 m | Y=2.50 m
+Target → X=2.60 m | Y=6.60 m
+Target → X=-0.30 m | Y=5.70 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.00 m | Y=2.80 m
+Y min = 1.80 m | Y max = 6.60 m
+
+--- TARGETS ---
+Target → X=-1.10 m | Y=2.50 m
+Target → X=2.60 m | Y=6.70 m
+Target → X=-0.40 m | Y=5.70 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.20 m | Y=2.80 m
+Y min = 1.80 m | Y max = 6.70 m
+
+--- TARGETS ---
+Target → X=-1.00 m | Y=2.50 m
+Target → X=2.60 m | Y=6.80 m
+Target → X=-0.60 m | Y=5.70 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.30 m | Y=2.80 m
+Y min = 1.80 m | Y max = 6.80 m
+
+--- TARGETS ---
+Target → X=-1.00 m | Y=2.50 m
+Target → X=2.60 m | Y=6.80 m
+Target → X=-0.70 m | Y=5.70 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.50 m | Y=2.90 m
+Y min = 1.80 m | Y max = 6.80 m
+
+--- TARGETS ---
+Target → X=-1.00 m | Y=2.50 m
+Target → X=2.60 m | Y=6.90 m
+Target → X=-0.80 m | Y=5.80 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.60 m | Y=2.90 m
+Y min = 1.80 m | Y max = 6.90 m
+
+--- TARGETS ---
+Target → X=-1.00 m | Y=2.50 m
+Target → X=2.60 m | Y=6.90 m
+Target → X=-0.90 m | Y=5.80 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.80 m | Y=2.90 m
+Y min = 1.80 m | Y max = 6.90 m
+
+--- TARGETS ---
+Target → X=-1.00 m | Y=2.50 m
+Target → X=2.60 m | Y=7.00 m
+Target → X=-1.00 m | Y=5.80 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=2.90 m | Y=2.90 m
+Y min = 1.90 m | Y max = 7.00 m
+
+--- TARGETS ---
+Target → X=-1.00 m | Y=2.60 m
+Target → X=2.60 m | Y=7.10 m
+Target → X=-1.10 m | Y=5.90 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=3.00 m | Y=2.90 m
+Y min = 1.90 m | Y max = 7.10 m
+
+--- TARGETS ---
+Target → X=-0.90 m | Y=2.60 m
+Target → X=2.70 m | Y=7.10 m
+Target → X=-1.20 m | Y=5.90 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=3.20 m | Y=2.90 m
+Y min = 1.90 m | Y max = 7.10 m
+
+--- TARGETS ---
+Target → X=-0.90 m | Y=2.60 m
+Target → X=2.70 m | Y=7.20 m
+Target → X=-1.30 m | Y=5.90 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=3.30 m | Y=2.90 m
+Y min = 1.90 m | Y max = 7.20 m
+
+--- TARGETS ---
+Target → X=-0.90 m | Y=2.60 m
+Target → X=2.70 m | Y=7.30 m
+Target → X=-1.40 m | Y=5.90 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=3.40 m | Y=2.90 m
+Target → X=3.00 m | Y=4.00 m
+Y min = 1.90 m | Y max = 7.30 m
+
+--- TARGETS ---
+Target → X=-0.90 m | Y=2.60 m
+Target → X=2.70 m | Y=7.30 m
+Target → X=-1.50 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.50 m | Y=2.90 m
+Target → X=3.00 m | Y=4.00 m
+Y min = 1.80 m | Y max = 7.30 m
+
+--- TARGETS ---
+Target → X=-0.90 m | Y=2.60 m
+Target → X=2.80 m | Y=7.40 m
+Target → X=-1.60 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.60 m | Y=2.90 m
+Target → X=3.00 m | Y=4.00 m
+Y min = 1.80 m | Y max = 7.40 m
+
+--- TARGETS ---
+Target → X=-1.00 m | Y=2.50 m
+Target → X=2.80 m | Y=7.50 m
+Target → X=-1.70 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.60 m | Y=2.90 m
+Target → X=3.00 m | Y=4.00 m
+Y min = 1.80 m | Y max = 7.50 m
+
+--- TARGETS ---
+Target → X=-1.00 m | Y=2.50 m
+Target → X=2.80 m | Y=7.50 m
+Target → X=-1.70 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.70 m | Y=2.90 m
+Target → X=3.00 m | Y=4.00 m
+Y min = 1.80 m | Y max = 7.50 m
+
+--- TARGETS ---
+Target → X=-1.00 m | Y=2.50 m
+Target → X=2.90 m | Y=7.60 m
+Target → X=-1.80 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.80 m | Y=2.90 m
+Target → X=3.00 m | Y=4.00 m
+Y min = 1.80 m | Y max = 7.60 m
+
+--- TARGETS ---
+Target → X=-1.00 m | Y=2.50 m
+Target → X=2.90 m | Y=7.70 m
+Target → X=-1.80 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.80 m | Y=2.90 m
+Target → X=3.00 m | Y=4.00 m
+Y min = 1.80 m | Y max = 7.70 m
+
+--- TARGETS ---
+Target → X=-1.00 m | Y=2.50 m
+Target → X=2.90 m | Y=7.70 m
+Target → X=-1.90 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.90 m | Y=2.90 m
+Target → X=3.00 m | Y=4.00 m
+Y min = 1.80 m | Y max = 7.70 m
+
+--- TARGETS ---
+Target → X=-1.10 m | Y=2.50 m
+Target → X=2.90 m | Y=7.80 m
+Target → X=-1.90 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.90 m | Y=3.00 m
+Target → X=3.00 m | Y=4.00 m
+Y min = 1.80 m | Y max = 7.80 m
+
+--- TARGETS ---
+Target → X=-1.10 m | Y=2.50 m
+Target → X=3.00 m | Y=7.80 m
+Target → X=-2.00 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=4.00 m | Y=3.00 m
+Target → X=3.00 m | Y=4.00 m
+Y min = 1.70 m | Y max = 7.80 m
+
+--- TARGETS ---
+Target → X=-1.10 m | Y=2.50 m
+Target → X=3.00 m | Y=7.90 m
+Target → X=-2.00 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=3.00 m | Y=3.90 m
+Y min = 1.70 m | Y max = 7.90 m
+
+--- TARGETS ---
+Target → X=-1.10 m | Y=2.50 m
+Target → X=3.00 m | Y=7.90 m
+Target → X=-2.00 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=3.00 m | Y=3.90 m
+Y min = 1.70 m | Y max = 7.90 m
+
+--- TARGETS ---
+Target → X=-1.10 m | Y=2.50 m
+Target → X=3.00 m | Y=7.90 m
+Target → X=-2.00 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=3.00 m | Y=3.90 m
+Y min = 1.70 m | Y max = 7.90 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.50 m
+Target → X=3.00 m | Y=8.00 m
+Target → X=-2.00 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=2.90 m | Y=3.90 m
+Y min = 1.70 m | Y max = 8.00 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.50 m
+Target → X=3.00 m | Y=8.00 m
+Target → X=-2.10 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.90 m | Y=3.80 m
+Y min = 1.80 m | Y max = 8.00 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.50 m
+Target → X=3.00 m | Y=8.00 m
+Target → X=-2.10 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.90 m | Y=3.80 m
+Y min = 1.80 m | Y max = 8.00 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.50 m
+Target → X=3.00 m | Y=8.00 m
+Target → X=-2.10 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.80 m | Y=3.80 m
+Y min = 1.80 m | Y max = 8.00 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.50 m
+Target → X=3.00 m | Y=8.00 m
+Target → X=-2.20 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.80 m | Y=3.70 m
+Y min = 1.80 m | Y max = 8.00 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.60 m
+Target → X=3.00 m | Y=8.00 m
+Target → X=-2.20 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.80 m | Y=3.70 m
+Y min = 1.80 m | Y max = 8.00 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.60 m
+Target → X=3.00 m | Y=8.00 m
+Target → X=-2.20 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.70 m | Y=3.60 m
+Y min = 1.80 m | Y max = 8.00 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.60 m
+Target → X=-2.30 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.70 m | Y=3.60 m
+Y min = 1.80 m | Y max = 5.90 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.60 m
+Target → X=-2.30 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.70 m | Y=3.50 m
+Y min = 1.80 m | Y max = 5.90 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.60 m
+Target → X=-2.30 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.60 m | Y=3.50 m
+Y min = 1.80 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.70 m
+Target → X=-2.40 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=2.60 m | Y=3.40 m
+Y min = 1.90 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-1.20 m | Y=2.70 m
+Target → X=-2.40 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=2.60 m | Y=3.40 m
+Y min = 1.90 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-1.30 m | Y=2.70 m
+Target → X=-2.40 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=2.60 m | Y=3.40 m
+Y min = 1.90 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-1.30 m | Y=2.70 m
+Target → X=-2.50 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=2.50 m | Y=3.30 m
+Y min = 1.90 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-1.30 m | Y=2.70 m
+Target → X=-2.50 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=2.50 m | Y=3.30 m
+Y min = 1.90 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-1.30 m | Y=2.80 m
+Target → X=-2.60 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.50 m | Y=3.30 m
+Y min = 1.80 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-1.40 m | Y=2.80 m
+Target → X=-2.60 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.50 m | Y=3.30 m
+Y min = 1.80 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-1.40 m | Y=2.80 m
+Target → X=-2.70 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.50 m | Y=3.20 m
+Y min = 1.80 m | Y max = 6.10 m
+
+--- TARGETS ---
+Target → X=-1.40 m | Y=2.80 m
+Target → X=-2.70 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.50 m | Y=3.20 m
+Y min = 1.80 m | Y max = 6.10 m
+
+--- TARGETS ---
+Target → X=-1.50 m | Y=2.80 m
+Target → X=-2.80 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.50 m | Y=3.20 m
+Y min = 1.80 m | Y max = 6.10 m
+
+--- TARGETS ---
+Target → X=-1.50 m | Y=2.80 m
+Target → X=-2.80 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.50 m | Y=3.20 m
+Y min = 1.80 m | Y max = 6.10 m
+
+--- TARGETS ---
+Target → X=-1.50 m | Y=2.80 m
+Target → X=-2.90 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.40 m | Y=3.10 m
+Y min = 1.80 m | Y max = 6.10 m
+
+--- TARGETS ---
+Target → X=-1.60 m | Y=2.80 m
+Target → X=-3.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.40 m | Y=3.10 m
+Y min = 1.80 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-1.60 m | Y=2.80 m
+Target → X=-3.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.40 m | Y=3.10 m
+Y min = 1.80 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-1.70 m | Y=2.80 m
+Target → X=-3.10 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=2.40 m | Y=3.10 m
+Y min = 1.70 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-1.70 m | Y=2.80 m
+Target → X=-3.20 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=2.40 m | Y=3.00 m
+Y min = 1.70 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-1.70 m | Y=2.80 m
+Target → X=-3.20 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=2.30 m | Y=3.00 m
+Y min = 1.70 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-1.80 m | Y=2.80 m
+Target → X=-3.30 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=2.30 m | Y=2.90 m
+Y min = 1.70 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-1.80 m | Y=2.80 m
+Target → X=-3.40 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=2.30 m | Y=2.90 m
+Y min = 1.70 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-1.80 m | Y=2.80 m
+Target → X=-3.40 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.20 m | Y=2.90 m
+Y min = 1.80 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-1.80 m | Y=2.80 m
+Target → X=-3.50 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.20 m | Y=2.80 m
+Y min = 1.80 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-1.90 m | Y=2.90 m
+Target → X=-3.60 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.20 m | Y=2.80 m
+Y min = 1.80 m | Y max = 5.90 m
+
+--- TARGETS ---
+Target → X=-1.90 m | Y=2.90 m
+Target → X=-3.60 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.10 m | Y=2.70 m
+Y min = 1.80 m | Y max = 5.90 m
+
+--- TARGETS ---
+Target → X=-1.90 m | Y=2.90 m
+Target → X=-3.70 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.10 m | Y=2.70 m
+Y min = 1.80 m | Y max = 5.90 m
+
+--- TARGETS ---
+Target → X=-1.90 m | Y=2.90 m
+Target → X=-3.70 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.10 m | Y=2.60 m
+Y min = 1.80 m | Y max = 5.90 m
+
+--- TARGETS ---
+Target → X=-1.90 m | Y=3.00 m
+Target → X=-3.80 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.10 m | Y=2.60 m
+Y min = 1.80 m | Y max = 5.90 m
+
+--- TARGETS ---
+Target → X=-2.00 m | Y=3.00 m
+Target → X=-3.80 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.00 m | Y=2.60 m
+Y min = 1.80 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-2.00 m | Y=3.00 m
+Target → X=-3.80 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=2.00 m | Y=2.60 m
+Y min = 1.90 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-2.00 m | Y=3.10 m
+Target → X=-3.90 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=2.00 m | Y=2.50 m
+Y min = 1.90 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-2.00 m | Y=3.10 m
+Target → X=-3.90 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=2.00 m | Y=2.50 m
+Y min = 1.90 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-2.00 m | Y=3.10 m
+Target → X=-3.90 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=2.00 m | Y=2.50 m
+Y min = 1.90 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-2.10 m | Y=3.10 m
+Target → X=-3.90 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=2.00 m | Y=2.50 m
+Y min = 1.90 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-2.10 m | Y=3.10 m
+Target → X=-3.90 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.00 m | Y=2.50 m
+Y min = 1.80 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-2.10 m | Y=3.10 m
+Target → X=-3.90 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.00 m | Y=2.50 m
+Y min = 1.80 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-2.20 m | Y=3.20 m
+Target → X=-3.90 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.00 m | Y=2.50 m
+Y min = 1.80 m | Y max = 6.00 m
+
+--- TARGETS ---
+Target → X=-2.20 m | Y=3.20 m
+Target → X=-3.90 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.00 m | Y=2.50 m
+Y min = 1.80 m | Y max = 6.10 m
+
+--- TARGETS ---
+Target → X=-2.20 m | Y=3.20 m
+Target → X=-3.90 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.00 m | Y=2.50 m
+Y min = 1.80 m | Y max = 6.10 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=3.20 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.00 m | Y=2.50 m
+Y min = 1.80 m | Y max = 3.20 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=3.20 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.00 m | Y=2.50 m
+Y min = 1.80 m | Y max = 3.20 m
+
+--- TARGETS ---
+Target → X=-2.40 m | Y=3.20 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.10 m | Y=2.50 m
+Y min = 1.80 m | Y max = 3.20 m
+
+--- TARGETS ---
+Target → X=-2.40 m | Y=3.20 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.10 m | Y=2.60 m
+Y min = 1.80 m | Y max = 3.20 m
+
+--- TARGETS ---
+Target → X=-2.40 m | Y=3.20 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=2.10 m | Y=2.60 m
+Y min = 1.70 m | Y max = 3.20 m
+
+--- TARGETS ---
+Target → X=-2.50 m | Y=3.20 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=2.10 m | Y=2.60 m
+Y min = 1.70 m | Y max = 3.20 m
+
+--- TARGETS ---
+Target → X=-2.50 m | Y=3.20 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=2.10 m | Y=2.60 m
+Y min = 1.70 m | Y max = 3.20 m
+
+--- TARGETS ---
+Target → X=-2.50 m | Y=3.20 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=2.10 m | Y=2.60 m
+Y min = 1.70 m | Y max = 3.20 m
+
+--- TARGETS ---
+Target → X=-2.60 m | Y=3.20 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=2.10 m | Y=2.60 m
+Y min = 1.70 m | Y max = 3.20 m
+
+--- TARGETS ---
+Target → X=-2.60 m | Y=3.20 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.10 m | Y=2.60 m
+Y min = 1.80 m | Y max = 3.20 m
+
+--- TARGETS ---
+Target → X=-2.60 m | Y=3.20 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.10 m | Y=2.60 m
+Y min = 1.80 m | Y max = 3.20 m
+
+--- TARGETS ---
+Target → X=-2.60 m | Y=3.20 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.10 m | Y=2.60 m
+Y min = 1.80 m | Y max = 3.20 m
+
+--- TARGETS ---
+Target → X=-2.70 m | Y=3.30 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.20 m | Y=2.50 m
+Y min = 1.80 m | Y max = 3.30 m
+
+--- TARGETS ---
+Target → X=-2.70 m | Y=3.30 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.20 m | Y=2.50 m
+Y min = 1.80 m | Y max = 3.30 m
+
+--- TARGETS ---
+Target → X=-2.70 m | Y=3.30 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.20 m | Y=2.50 m
+Y min = 1.80 m | Y max = 3.30 m
+
+--- TARGETS ---
+Target → X=-2.70 m | Y=3.30 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.20 m | Y=2.50 m
+Y min = 1.80 m | Y max = 3.30 m
+
+--- TARGETS ---
+Target → X=-2.70 m | Y=3.40 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.20 m | Y=2.50 m
+Y min = 1.80 m | Y max = 3.40 m
+
+--- TARGETS ---
+Target → X=-2.70 m | Y=3.40 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.20 m | Y=2.50 m
+Y min = 1.80 m | Y max = 3.40 m
+
+--- TARGETS ---
+Target → X=-2.70 m | Y=3.40 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=2.30 m | Y=2.50 m
+Y min = 1.90 m | Y max = 3.40 m
+
+--- TARGETS ---
+Target → X=-2.70 m | Y=3.40 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=2.30 m | Y=2.60 m
+Y min = 1.90 m | Y max = 3.40 m
+
+--- TARGETS ---
+Target → X=-2.70 m | Y=3.50 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=2.30 m | Y=2.60 m
+Y min = 1.90 m | Y max = 3.50 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=3.50 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=2.40 m | Y=2.60 m
+Y min = 1.90 m | Y max = 3.50 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=3.50 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=2.40 m | Y=2.60 m
+Y min = 1.90 m | Y max = 3.50 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=3.50 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.50 m | Y=2.60 m
+Y min = 1.80 m | Y max = 3.50 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=3.50 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.50 m | Y=2.70 m
+Y min = 1.80 m | Y max = 3.50 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=3.50 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.60 m | Y=2.70 m
+Y min = 1.80 m | Y max = 3.50 m
+
+--- TARGETS ---
+Target → X=-2.90 m | Y=3.50 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.60 m | Y=2.70 m
+Y min = 1.80 m | Y max = 3.50 m
+
+--- TARGETS ---
+Target → X=-2.90 m | Y=3.50 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.70 m | Y=2.70 m
+Y min = 1.80 m | Y max = 3.50 m
+
+--- TARGETS ---
+Target → X=-2.90 m | Y=3.50 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.70 m | Y=2.80 m
+Y min = 1.80 m | Y max = 3.50 m
+
+--- TARGETS ---
+Target → X=-2.90 m | Y=3.50 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.80 m | Y=2.80 m
+Y min = 1.80 m | Y max = 3.50 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.50 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=2.80 m | Y=2.80 m
+Y min = 1.80 m | Y max = 3.50 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.40 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=2.80 m | Y=2.80 m
+Y min = 1.70 m | Y max = 3.40 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.40 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=2.90 m | Y=2.80 m
+Y min = 1.70 m | Y max = 3.40 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.40 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=2.90 m | Y=2.80 m
+Y min = 1.70 m | Y max = 3.40 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.40 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=3.00 m | Y=2.90 m
+Y min = 1.70 m | Y max = 3.40 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.40 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=3.00 m | Y=2.90 m
+Y min = 1.70 m | Y max = 3.40 m
+
+--- TARGETS ---
+Target → X=-3.10 m | Y=3.40 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.00 m | Y=2.90 m
+Y min = 1.80 m | Y max = 3.40 m
+
+--- TARGETS ---
+Target → X=-3.10 m | Y=3.40 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.00 m | Y=2.90 m
+Y min = 1.80 m | Y max = 3.40 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.40 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.10 m | Y=2.90 m
+Y min = 1.80 m | Y max = 3.40 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.50 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.10 m | Y=2.90 m
+Y min = 1.80 m | Y max = 3.50 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.50 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.10 m | Y=2.90 m
+Y min = 1.80 m | Y max = 3.50 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.50 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.10 m | Y=2.90 m
+Y min = 1.80 m | Y max = 3.50 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.50 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.10 m | Y=2.90 m
+Y min = 1.80 m | Y max = 3.50 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.50 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.20 m | Y=2.90 m
+Y min = 1.80 m | Y max = 3.50 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.50 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.20 m | Y=2.90 m
+Y min = 1.80 m | Y max = 3.50 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.50 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=3.20 m | Y=2.90 m
+Y min = 1.90 m | Y max = 3.50 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.60 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=3.20 m | Y=2.90 m
+Y min = 1.90 m | Y max = 3.60 m
+
+--- TARGETS ---
+Target → X=-2.90 m | Y=3.60 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=3.30 m | Y=2.90 m
+Y min = 1.90 m | Y max = 3.60 m
+
+--- TARGETS ---
+Target → X=-2.90 m | Y=3.60 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=3.30 m | Y=2.90 m
+Y min = 1.90 m | Y max = 3.60 m
+
+--- TARGETS ---
+Target → X=-2.90 m | Y=3.60 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=3.30 m | Y=2.90 m
+Y min = 1.90 m | Y max = 3.60 m
+
+--- TARGETS ---
+Target → X=-2.90 m | Y=3.60 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.40 m | Y=2.90 m
+Y min = 1.80 m | Y max = 3.60 m
+
+--- TARGETS ---
+Target → X=-2.90 m | Y=3.60 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.40 m | Y=2.90 m
+Y min = 1.80 m | Y max = 3.60 m
+
+--- TARGETS ---
+Target → X=-2.90 m | Y=3.60 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.40 m | Y=3.00 m
+Y min = 1.80 m | Y max = 3.60 m
+
+--- TARGETS ---
+Target → X=-2.90 m | Y=3.60 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.40 m | Y=3.00 m
+Y min = 1.80 m | Y max = 3.60 m
+
+--- TARGETS ---
+Target → X=-2.90 m | Y=3.60 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.50 m | Y=3.00 m
+Y min = 1.80 m | Y max = 3.60 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.60 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.50 m | Y=3.00 m
+Y min = 1.80 m | Y max = 3.60 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.60 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.50 m | Y=3.00 m
+Y min = 1.80 m | Y max = 3.60 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.60 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.50 m | Y=3.00 m
+Y min = 1.80 m | Y max = 3.60 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.60 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.60 m | Y=3.10 m
+Y min = 1.80 m | Y max = 3.60 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.60 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=3.60 m | Y=3.10 m
+Y min = 1.70 m | Y max = 3.60 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.60 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=3.60 m | Y=3.10 m
+Y min = 1.70 m | Y max = 3.60 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.60 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=3.60 m | Y=3.10 m
+Y min = 1.70 m | Y max = 3.60 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.60 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=3.60 m | Y=3.10 m
+Y min = 1.70 m | Y max = 3.60 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.60 m
+Target → X=-1.60 m | Y=1.70 m
+Target → X=3.60 m | Y=3.00 m
+Y min = 1.70 m | Y max = 3.60 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.60 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.60 m | Y=3.00 m
+Y min = 1.80 m | Y max = 3.60 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.60 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.60 m | Y=3.00 m
+Y min = 1.80 m | Y max = 3.60 m
+
+--- TARGETS ---
+Target → X=-3.00 m | Y=3.70 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.60 m | Y=3.00 m
+Y min = 1.80 m | Y max = 3.70 m
+
+--- TARGETS ---
+Target → X=-2.90 m | Y=3.70 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.60 m | Y=3.00 m
+Y min = 1.80 m | Y max = 3.70 m
+
+--- TARGETS ---
+Target → X=-2.90 m | Y=3.70 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.70 m | Y=3.00 m
+Y min = 1.80 m | Y max = 3.70 m
+
+--- TARGETS ---
+Target → X=-2.90 m | Y=3.70 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.70 m | Y=3.00 m
+Y min = 1.80 m | Y max = 3.70 m
+
+--- TARGETS ---
+Target → X=-2.90 m | Y=3.80 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.70 m | Y=3.00 m
+Y min = 1.80 m | Y max = 3.80 m
+
+--- TARGETS ---
+Target → X=-2.90 m | Y=3.80 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.70 m | Y=2.90 m
+Y min = 1.80 m | Y max = 3.80 m
+
+--- TARGETS ---
+Target → X=-2.90 m | Y=3.80 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=3.80 m | Y=2.90 m
+Y min = 1.90 m | Y max = 3.80 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=3.90 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=3.80 m | Y=2.90 m
+Y min = 1.90 m | Y max = 3.90 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=3.90 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=3.80 m | Y=2.90 m
+Y min = 1.90 m | Y max = 3.90 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=3.90 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=3.90 m | Y=2.90 m
+Y min = 1.90 m | Y max = 3.90 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=3.90 m
+Target → X=-1.40 m | Y=1.90 m
+Target → X=3.90 m | Y=3.00 m
+Y min = 1.90 m | Y max = 3.90 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=3.90 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=3.90 m | Y=3.00 m
+Y min = 1.80 m | Y max = 3.90 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=4.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=4.00 m | Y=3.00 m
+Y min = 1.80 m | Y max = 4.00 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=4.00 m
+Target → X=-1.50 m | Y=1.80 m
+Target → X=4.00 m | Y=3.00 m
+Y min = 1.80 m | Y max = 4.00 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=4.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.00 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=4.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.00 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=4.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.00 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=4.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.00 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=4.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.00 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=4.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.00 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=4.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 4.00 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=4.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 4.00 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=4.10 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 4.10 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=4.10 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 4.10 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=4.10 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 4.10 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=4.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.10 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=4.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.10 m
+
+--- TARGETS ---
+Target → X=-2.80 m | Y=4.20 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.20 m
+
+--- TARGETS ---
+Target → X=-2.70 m | Y=4.20 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.20 m
+
+--- TARGETS ---
+Target → X=-2.70 m | Y=4.20 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.20 m
+
+--- TARGETS ---
+Target → X=-2.70 m | Y=4.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.30 m
+
+--- TARGETS ---
+Target → X=-2.70 m | Y=4.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.30 m
+
+--- TARGETS ---
+Target → X=-2.70 m | Y=4.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.30 m
+
+--- TARGETS ---
+Target → X=-2.60 m | Y=4.40 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.40 m
+
+--- TARGETS ---
+Target → X=-2.60 m | Y=4.40 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 4.40 m
+
+--- TARGETS ---
+Target → X=-2.60 m | Y=4.50 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 4.50 m
+
+--- TARGETS ---
+Target → X=-2.60 m | Y=4.50 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 4.50 m
+
+--- TARGETS ---
+Target → X=-2.60 m | Y=4.50 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 4.50 m
+
+--- TARGETS ---
+Target → X=-2.50 m | Y=4.50 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 4.50 m
+
+--- TARGETS ---
+Target → X=-2.50 m | Y=4.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.60 m
+
+--- TARGETS ---
+Target → X=-2.50 m | Y=4.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.60 m
+
+--- TARGETS ---
+Target → X=-2.50 m | Y=4.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.60 m
+
+--- TARGETS ---
+Target → X=-2.50 m | Y=4.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.60 m
+
+--- TARGETS ---
+Target → X=-2.50 m | Y=4.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.60 m
+
+--- TARGETS ---
+Target → X=-2.50 m | Y=4.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.60 m
+
+--- TARGETS ---
+Target → X=-2.50 m | Y=4.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.60 m
+
+--- TARGETS ---
+Target → X=-2.50 m | Y=4.70 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.70 m
+
+--- TARGETS ---
+Target → X=-2.60 m | Y=4.70 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 4.70 m
+
+--- TARGETS ---
+Target → X=-2.60 m | Y=4.70 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 4.70 m
+
+--- TARGETS ---
+Target → X=-2.60 m | Y=4.70 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 4.70 m
+
+--- TARGETS ---
+Target → X=-2.50 m | Y=4.70 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 4.70 m
+
+--- TARGETS ---
+Target → X=-2.50 m | Y=4.70 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 4.70 m
+
+--- TARGETS ---
+Target → X=-2.50 m | Y=4.80 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.80 m
+
+--- TARGETS ---
+Target → X=-2.50 m | Y=4.80 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.80 m
+
+--- TARGETS ---
+Target → X=-2.50 m | Y=4.80 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.80 m
+
+--- TARGETS ---
+Target → X=-2.50 m | Y=4.90 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.90 m
+
+--- TARGETS ---
+Target → X=-2.50 m | Y=4.90 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.90 m
+
+--- TARGETS ---
+Target → X=-2.40 m | Y=4.90 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 4.90 m
+
+--- TARGETS ---
+Target → X=-2.40 m | Y=5.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-2.40 m | Y=5.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-2.40 m | Y=5.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.00 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 5.10 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 5.10 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 5.10 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.20 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 5.20 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.20 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 5.20 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.20 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.20 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.20 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.20 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.30 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.30 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.30 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.30 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.30 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.30 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.30 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.30 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.30 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 5.30 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.30 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 5.30 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.40 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 5.40 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.40 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 5.40 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.40 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 5.40 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.40 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.40 m
+
+--- TARGETS ---
+Target → X=-2.30 m | Y=5.40 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.40 m
+
+--- TARGETS ---
+Target → X=-2.20 m | Y=5.50 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.50 m
+
+--- TARGETS ---
+Target → X=-2.20 m | Y=5.50 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.50 m
+
+--- TARGETS ---
+Target → X=-2.20 m | Y=5.50 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.50 m
 
 --- TARGETS ---
-Target → X=-1.40 m | Y=6.30 m
-Y min = 6.30 m | Y max = 6.30 m
+Target → X=-2.20 m | Y=5.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.60 m
 
 --- TARGETS ---
-Target → X=-1.50 m | Y=6.30 m
-Y min = 6.30 m | Y max = 6.30 m
+Target → X=-2.20 m | Y=5.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.60 m
 
 --- TARGETS ---
-Target → X=-1.50 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.10 m | Y=5.60 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.60 m
 
 --- TARGETS ---
-Target → X=-1.50 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.10 m | Y=5.70 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 5.70 m
 
 --- TARGETS ---
-Target → X=-1.40 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.10 m | Y=5.70 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 5.70 m
 
 --- TARGETS ---
-Target → X=-1.50 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.10 m | Y=5.70 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 5.70 m
 
 --- TARGETS ---
-Target → X=-1.50 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.10 m | Y=5.70 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 5.70 m
 
 --- TARGETS ---
-Target → X=-1.50 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.10 m | Y=5.80 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 5.80 m
 
 --- TARGETS ---
-Target → X=-1.60 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.10 m | Y=5.80 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.80 m
 
 --- TARGETS ---
-Target → X=-1.60 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.00 m | Y=5.80 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.80 m
 
 --- TARGETS ---
-Target → X=-1.70 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.00 m | Y=5.80 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.80 m
 
 --- TARGETS ---
-Target → X=-1.70 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.10 m | Y=5.80 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.80 m
 
 --- TARGETS ---
-Target → X=-1.70 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.10 m | Y=5.80 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.80 m
 
 --- TARGETS ---
-Target → X=-1.60 m | Y=6.50 m
-Y min = 6.50 m | Y max = 6.50 m
+Target → X=-2.10 m | Y=5.80 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.80 m
 
 --- TARGETS ---
-Target → X=-1.70 m | Y=6.50 m
-Y min = 6.50 m | Y max = 6.50 m
+Target → X=-2.10 m | Y=5.80 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.80 m
 
 --- TARGETS ---
-Target → X=-1.70 m | Y=6.50 m
-Y min = 6.50 m | Y max = 6.50 m
+Target → X=-2.10 m | Y=5.80 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.80 m
 
 --- TARGETS ---
-Target → X=-1.70 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.10 m | Y=5.80 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.80 m
 
 --- TARGETS ---
-Target → X=-1.80 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.10 m | Y=5.80 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 5.80 m
 
 --- TARGETS ---
-Target → X=-1.80 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.10 m | Y=5.80 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 5.80 m
 
 --- TARGETS ---
-Target → X=-1.90 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.10 m | Y=5.80 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 5.80 m
 
 --- TARGETS ---
-Target → X=-1.90 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.10 m | Y=5.80 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 5.80 m
 
 --- TARGETS ---
-Target → X=-1.90 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.10 m | Y=5.80 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 5.80 m
 
 --- TARGETS ---
-Target → X=-1.90 m | Y=6.50 m
-Y min = 6.50 m | Y max = 6.50 m
+Target → X=-2.10 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.90 m
 
 --- TARGETS ---
-Target → X=-1.90 m | Y=6.50 m
-Y min = 6.50 m | Y max = 6.50 m
+Target → X=-2.10 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.90 m
 
 --- TARGETS ---
-Target → X=-1.90 m | Y=6.50 m
-Y min = 6.50 m | Y max = 6.50 m
+Target → X=-2.10 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.90 m
 
 --- TARGETS ---
-Target → X=-1.90 m | Y=6.50 m
-Y min = 6.50 m | Y max = 6.50 m
+Target → X=-2.10 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.90 m
 
 --- TARGETS ---
-Target → X=-2.00 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.00 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.90 m
 
 --- TARGETS ---
-Target → X=-2.00 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.00 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.90 m
 
 --- TARGETS ---
-Target → X=-2.10 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-Target → X=-2.10 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-Target → X=-2.10 m | Y=6.50 m
-Y min = 6.50 m | Y max = 6.50 m
+Target → X=-2.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-Target → X=-2.10 m | Y=6.50 m
-Y min = 6.50 m | Y max = 6.50 m
+Target → X=-2.00 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.00 m
 
 --- TARGETS ---
-Target → X=-2.10 m | Y=6.50 m
-Y min = 6.50 m | Y max = 6.50 m
+Target → X=-2.00 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.00 m
 
 --- TARGETS ---
-Target → X=-2.10 m | Y=6.50 m
-Y min = 6.50 m | Y max = 6.50 m
+Target → X=-1.90 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.00 m
 
 --- TARGETS ---
-Target → X=-2.10 m | Y=6.50 m
-Y min = 6.50 m | Y max = 6.50 m
+Target → X=-1.90 m | Y=6.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.10 m
 
 --- TARGETS ---
-Target → X=-2.20 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-1.90 m | Y=6.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.10 m
 
 --- TARGETS ---
-Target → X=-2.20 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-1.90 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.10 m
 
 --- TARGETS ---
-Target → X=-2.30 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-1.90 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.10 m
 
 --- TARGETS ---
-Target → X=-2.30 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-Target → X=-2.30 m | Y=6.50 m
-Y min = 6.50 m | Y max = 6.50 m
+Target → X=-2.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-Target → X=-2.30 m | Y=6.50 m
-Y min = 6.50 m | Y max = 6.50 m
+Target → X=-2.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-Target → X=-2.30 m | Y=6.50 m
-Y min = 6.50 m | Y max = 6.50 m
+Target → X=-2.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-Target → X=-2.30 m | Y=6.50 m
-Y min = 6.50 m | Y max = 6.50 m
+Target → X=-2.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-Target → X=-2.40 m | Y=6.50 m
-Y min = 6.50 m | Y max = 6.50 m
+Target → X=-2.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-Target → X=-2.40 m | Y=6.50 m
-Y min = 6.50 m | Y max = 6.50 m
+Target → X=-2.10 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.00 m
 
 --- TARGETS ---
-Target → X=-2.50 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.10 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.00 m
 
 --- TARGETS ---
-Target → X=-2.50 m | Y=6.40 m
-Y min = 6.40 m | Y max = 6.40 m
+Target → X=-2.10 m | Y=5.90 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 5.90 m
 
 --- TARGETS ---
-Target → X=-2.50 m | Y=6.50 m
-Y min = 6.50 m | Y max = 6.50 m
+Target → X=-2.10 m | Y=5.90 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 5.90 m
 
 --- TARGETS ---
-Target → X=-2.50 m | Y=6.50 m
-Y min = 6.50 m | Y max = 6.50 m
+Target → X=-2.10 m | Y=5.90 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 5.90 m
 
 --- TARGETS ---
-No target
+Target → X=-2.20 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.90 m
 
 --- TARGETS ---
-No target
+Target → X=-2.20 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.90 m
 
 --- TARGETS ---
-No target
+Target → X=-2.20 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.90 m
 
 --- TARGETS ---
-No target
+Target → X=-2.20 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-2.20 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-2.20 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-2.20 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-2.30 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-2.30 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-2.30 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-2.30 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-2.30 m | Y=6.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.10 m
 
 --- TARGETS ---
-No target
+Target → X=-2.40 m | Y=6.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.10 m
 
 --- TARGETS ---
-No target
+Target → X=-2.40 m | Y=6.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.10 m
 
 --- TARGETS ---
-No target
+Target → X=-2.40 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.10 m
 
 --- TARGETS ---
-No target
+Target → X=-2.40 m | Y=6.10 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.10 m
 
 --- TARGETS ---
-No target
+Target → X=-2.50 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-2.50 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-2.60 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-2.60 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-2.60 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-2.70 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-2.70 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-2.80 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-2.80 m | Y=6.00 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-2.80 m | Y=5.90 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 5.90 m
 
 --- TARGETS ---
-No target
+Target → X=-2.90 m | Y=5.90 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 5.90 m
 
 --- TARGETS ---
-No target
+Target → X=-2.90 m | Y=5.90 m
+Target → X=-1.60 m | Y=1.70 m
+Y min = 1.70 m | Y max = 5.90 m
 
 --- TARGETS ---
-No target
+Target → X=-2.90 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.90 m
 
 --- TARGETS ---
-No target
+Target → X=-2.90 m | Y=5.90 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 5.90 m
 
 --- TARGETS ---
-No target
+Target → X=-2.90 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-2.90 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-3.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-3.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-3.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-3.00 m | Y=6.00 m
+Target → X=-1.50 m | Y=1.80 m
+Y min = 1.80 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-3.00 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-2.90 m | Y=6.00 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.00 m
 
 --- TARGETS ---
-No target
+Target → X=-2.90 m | Y=6.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.10 m
 
 --- TARGETS ---
-No target
+Target → X=-2.90 m | Y=6.10 m
+Target → X=-1.40 m | Y=1.90 m
+Y min = 1.90 m | Y max = 6.10 m

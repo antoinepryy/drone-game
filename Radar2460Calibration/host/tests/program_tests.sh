@@ -82,15 +82,22 @@ check "longueurs rejetées" "$(count '[RADAR] invalid length dropped' "$WORK/fau
 check "footer rejeté" "$(count '[RADAR] bad footer, frame dropped' "$WORK/faults.out")" 1
 golden faults
 
-echo "Programme : scénario walk (SIM_SCENARIO=walk, 3 personnes, un cycle de 300 trames)"
-# #0 trames 0-80, #1 trames 40-260, #2 trames 150-210 : 80 + 220 + 60 = 360 cibles,
-# et les trames 260-299 sont vides (40 trames « No target »).
-run walk SIM_SCENARIO=walk SIM_TARGETS=3 SIM_FRAMES=300
+echo "Programme : scénario walk (SIM_SCENARIO=walk, 8 personnes, une boucle de 60 s = 600 trames)"
+# Durées de présence (s) : 24 + 60 + 15 + 22 + 21 + 60 + 6 + 14 = 222 s, soit 2220 cibles.
+# Les personnes 1 et 5 sont là toute la boucle : aucune trame vide.
+# De 44 s à 60 s, personne côté X > 0 (zone surveillée de l'interface).
+run walk SIM_SCENARIO=walk SIM_TARGETS=8 SIM_FRAMES=600
 check "code retour" "$(cat "$WORK/walk.code")" 0
-check "trames décodées" "$(count '--- TARGETS ---' "$WORK/walk.out")" 300
-check "cibles affichées" "$(count 'Target → X=' "$WORK/walk.out")" 360
-check "trames vides" "$(count 'No target' "$WORK/walk.out")" 40
+check "trames décodées" "$(count '--- TARGETS ---' "$WORK/walk.out")" 600
+check "cibles affichées" "$(count 'Target → X=' "$WORK/walk.out")" 2220
+check "trames vides" "$(count 'No target' "$WORK/walk.out")" 0
+check "cibles à X > 0 après 44 s" \
+    "$(awk '/--- TARGETS ---/ { f++ } /Target → X=[0-9]/ { if (f > 440) n++ } END { print n + 0 }' "$WORK/walk.out")" 0
 golden walk
+
+echo "Programme : scénario walk, SIM_TARGETS plafonné à 8"
+run walk20 SIM_SCENARIO=walk SIM_TARGETS=20 SIM_FRAMES=600
+check "SIM_TARGETS=20 donne la même sortie que 8" "$(cmp -s "$WORK/walk.out" "$WORK/walk20.out" && echo identique)" identique
 
 echo "Programme : mode sans fin (SIM_FRAMES=0)"
 # Toujours en marche après 1 s : timeout l'arrête, code retour 124.

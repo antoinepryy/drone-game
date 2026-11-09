@@ -39,9 +39,11 @@ class ProgramOutputTest(unittest.TestCase):
 
     def test_walk_scenario(self):
         events = parse("walk")
-        self.assertEqual(kinds(events), {"frame": 300})
-        self.assertEqual(sum(len(e["targets"]) for e in events), 360)
-        self.assertEqual(sum(1 for e in events if not e["targets"]), 40)
+        self.assertEqual(kinds(events), {"frame": 600})
+        self.assertEqual(sum(len(e["targets"]) for e in events), 2220)
+        self.assertEqual(max(len(e["targets"]) for e in events), 6)
+        # From 44 s on (frame 440), the X > 0 side stays clear.
+        self.assertFalse(any(x > 0 for e in events[440:] for x, _ in e["targets"]))
 
 
 if __name__ == "__main__":
