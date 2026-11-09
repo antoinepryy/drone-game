@@ -18,9 +18,11 @@ Variables du simulateur :
 | `SIM_FRAMES` | 10 | Nombre de trames envoyées avant arrêt |
 | `SIM_PERIOD_MS` | 300 | Délai entre deux trames |
 | `SIM_TARGETS` | 2 | Cibles par trame (1 à 3) |
+| `SIM_FAULTS` | 0 | `1` intercale des trames défectueuses (longueur 2 ou 32767, trame sans cible, footer corrompu, F4 parasite avant le header) |
 
 ```bash
 docker run --rm -e SIM_FRAMES=20 -e SIM_TARGETS=3 radar2460-calibration
+docker run --rm -e SIM_FAULTS=1 -e SIM_FRAMES=12 radar2460-calibration
 ```
 
 ## Récupérer le firmware
