@@ -1,0 +1,87 @@
+
+=== LD2460 X / Y CALIBRATION ===
+[RADAR] UART started
+
+## valid frame, two targets
+
+--- TARGETS ---
+Target → X=-0.60 m | Y=3.50 m
+Target → X=1.20 m | Y=5.00 m
+Y min = 3.50 m | Y max = 5.00 m
+
+## valid frame, no target
+
+--- TARGETS ---
+No target
+
+## length field = 2, then valid frame
+[RADAR] invalid length dropped: 2
+
+--- TARGETS ---
+Target → X=1.80 m | Y=3.70 m
+Y min = 3.70 m | Y max = 3.70 m
+
+## length field = 32767, then valid frame
+[RADAR] invalid length dropped: 32767
+
+--- TARGETS ---
+Target → X=1.80 m | Y=3.70 m
+Y min = 3.70 m | Y max = 3.70 m
+
+## stray F4 before header
+
+--- TARGETS ---
+Target → X=1.80 m | Y=3.70 m
+Y min = 3.70 m | Y max = 3.70 m
+
+## garbage then valid frame
+
+--- TARGETS ---
+Target → X=1.80 m | Y=3.70 m
+Y min = 3.70 m | Y max = 3.70 m
+
+## corrupted footer, then valid frame
+[RADAR] bad footer, frame dropped
+
+--- TARGETS ---
+Target → X=1.80 m | Y=3.70 m
+Y min = 3.70 m | Y max = 3.70 m
+
+## truncated frame, then valid frame
+[RADAR] bad footer, frame dropped
+
+--- TARGETS ---
+Target → X=1.80 m | Y=3.70 m
+Y min = 3.70 m | Y max = 3.70 m
+
+## wrong length 40, then two valid frames
+[RADAR] bad footer, frame dropped
+
+--- TARGETS ---
+Target → X=1.80 m | Y=3.70 m
+Y min = 3.70 m | Y max = 3.70 m
+
+--- TARGETS ---
+Target → X=-0.60 m | Y=3.50 m
+Target → X=1.20 m | Y=5.00 m
+Y min = 3.50 m | Y max = 5.00 m
+
+## target data not a multiple of 4 bytes
+[RADAR] invalid data size dropped: 6
+
+--- TARGETS ---
+Target → X=1.80 m | Y=3.70 m
+Y min = 3.70 m | Y max = 3.70 m
+
+## frame cut, radar silent, then valid frame
+[RADAR] frame timeout, dropped after 12 bytes
+
+--- TARGETS ---
+Target → X=1.80 m | Y=3.70 m
+Y min = 3.70 m | Y max = 3.70 m
+
+## slow but continuous frame
+
+--- TARGETS ---
+Target → X=1.80 m | Y=3.70 m
+Y min = 3.70 m | Y max = 3.70 m

@@ -16,6 +16,10 @@ static const uint8_t  FRAME_TYPE_TARGETS = 0x04;
 // Attente max du port série USB au démarrage (la carte doit tourner sans PC)
 static const unsigned long SERIAL_WAIT_TIMEOUT_MS = 2000UL;
 
+// Silence max entre deux octets d'une même trame. Une trame de 128 octets passe en
+// ~11 ms à 115200 bauds, les octets se suivent donc à moins de 1 ms.
+static const unsigned long RADAR_BYTE_TIMEOUT_MS = 50UL;
+
 void processFrame(uint8_t* buf, uint16_t len);
 
 // ===============================
@@ -68,58 +72,107 @@ void setup() {
 }
 
 // ===============================
+// RÉCEPTION TRAME
+// ===============================
+enum ParseResult { PARSE_MORE, PARSE_DONE, PARSE_DROPPED };
+
+// Ajoute un octet à la trame en cours. Sur PARSE_DROPPED, frame[0..frameIndex)
+// contient encore les octets rejetés : l'appelant les rejoue avant de remettre à zéro.
+ParseResult parseByte(uint8_t b) {
+
+    // Synchronisation header F4 F3 F2 F1.
+    // Sur erreur, un F4 peut être le début du vrai header : on repart de lui.
+    if (frameIndex < sizeof(FRAME_HEADER)) {
+        if (b == FRAME_HEADER[frameIndex]) {
+            frame[frameIndex++] = b;
+        } else if (b == FRAME_HEADER[0]) {
+            frame[0] = b;
+            frameIndex = 1;
+        } else {
+            frameIndex = 0;
+        }
+        return PARSE_MORE;
+    }
+
+    frame[frameIndex++] = b;
+
+    // Longueur connue à partir des octets 5/6
+    if (frameIndex < FRAME_HEADER_LEN) return PARSE_MORE;
+
+    uint16_t len = frame[5] | (frame[6] << 8);
+
+    // Longueur impossible : bruit sur la ligne
+    if (len < FRAME_MIN_LEN || len > sizeof(frame)) {
+#if DEBUG_SERIAL
+        Serial.print("[RADAR] invalid length dropped: ");
+        Serial.println((int)len);
+#endif
+        return PARSE_DROPPED;
+    }
+
+    if (frameIndex < len) return PARSE_MORE;
+
+    // Trame complète : on ne la traite que si le footer est intact
+    if (memcmp(&frame[len - sizeof(FRAME_FOOTER)], FRAME_FOOTER, sizeof(FRAME_FOOTER)) != 0) {
+#if DEBUG_SERIAL
+        Serial.println("[RADAR] bad footer, frame dropped");
+#endif
+        return PARSE_DROPPED;
+    }
+
+    processFrame(frame, len);
+    frameIndex = 0;
+    return PARSE_DONE;
+}
+
+// Octets d'une trame rejetée, à analyser de nouveau
+static uint8_t replayBuf[sizeof(frame)];
+
+// Une trame rejetée peut contenir le header de la suivante (trame tronquée,
+// longueur fausse mais plausible) : on rejoue ses octets à partir du deuxième.
+// Itératif et borné : à chaque rejet, l'octet de tête est abandonné, donc la file
+// raccourcit et ne dépasse jamais sizeof(frame) - 1 octets.
+void receiveRadarByte(uint8_t b) {
+    uint16_t replayLen = 0, replayPos = 0;
+    for (;;) {
+        if (parseByte(b) == PARSE_DROPPED) {
+            uint16_t keep = frameIndex - 1;
+            uint16_t left = replayLen - replayPos;
+            memmove(replayBuf + keep, replayBuf + replayPos, left);
+            memcpy(replayBuf, frame + 1, keep);
+            replayLen = keep + left;
+            replayPos = 0;
+            frameIndex = 0;
+        }
+        if (replayPos >= replayLen) return;
+        b = replayBuf[replayPos++];
+    }
+}
+
+// ===============================
 // LOOP
 // ===============================
 void loop() {
 
 #if USE_RADAR
-    while (radarSerial.available()) {
+    static unsigned long lastByteMs = 0;
 
-        uint8_t b = radarSerial.read();
-
-        // Synchronisation header F4 F3 F2 F1.
-        // Sur erreur, un F4 peut être le début du vrai header : on repart de lui.
-        if (frameIndex < sizeof(FRAME_HEADER)) {
-            if (b == FRAME_HEADER[frameIndex]) {
-                frame[frameIndex++] = b;
-            } else if (b == FRAME_HEADER[0]) {
-                frame[0] = b;
-                frameIndex = 1;
-            } else {
-                frameIndex = 0;
-            }
-            continue;
-        }
-
-        frame[frameIndex++] = b;
-
-        // Longueur connue à partir des octets 5/6
-        if (frameIndex < FRAME_HEADER_LEN) continue;
-
-        uint16_t len = frame[5] | (frame[6] << 8);
-
-        // Longueur impossible : bruit sur la ligne, on jette et on resynchronise
-        if (len < FRAME_MIN_LEN || len > sizeof(frame)) {
+    // Trame commencée puis plus rien : le radar s'est arrêté au milieu d'une trame.
+    // Contrôlé seulement quand le tampon UART est vide, sinon un affichage lent
+    // ferait expirer une trame dont les octets attendent déjà dans le tampon.
+    if (frameIndex > 0 && !radarSerial.available()
+            && millis() - lastByteMs > RADAR_BYTE_TIMEOUT_MS) {
 #if DEBUG_SERIAL
-            Serial.print("[RADAR] invalid length dropped: ");
-            Serial.println((int)len);
-#endif
-            frameIndex = 0;
-            continue;
-        }
-
-        if (frameIndex < len) continue;
-
-        // Trame complète : on ne la traite que si le footer est intact
-        if (memcmp(&frame[len - sizeof(FRAME_FOOTER)], FRAME_FOOTER, sizeof(FRAME_FOOTER)) == 0) {
-            processFrame(frame, len);
-        }
-#if DEBUG_SERIAL
-        else {
-            Serial.println("[RADAR] bad footer, frame dropped");
-        }
+        Serial.print("[RADAR] frame timeout, dropped after ");
+        Serial.print((int)frameIndex);
+        Serial.println(" bytes");
 #endif
         frameIndex = 0;
+    }
+
+    while (radarSerial.available()) {
+        receiveRadarByte(radarSerial.read());
+        lastByteMs = millis();
     }
 #endif
 }
@@ -132,9 +185,18 @@ void processFrame(uint8_t* buf, uint16_t len) {
     // 0x04 = targets
     if (buf[4] != FRAME_TYPE_TARGETS) return;
 
-    // len est garanti >= FRAME_MIN_LEN et <= sizeof(frame) par loop()
+    // len est garanti >= FRAME_MIN_LEN et <= sizeof(frame) par parseByte()
     uint16_t dataStart = FRAME_HEADER_LEN;
     uint16_t dataEnd   = len - sizeof(FRAME_FOOTER);
+
+    // 4 octets par cible : un reste signifie une trame corrompue
+    if ((dataEnd - dataStart) % 4 != 0) {
+#if DEBUG_SERIAL
+        Serial.print("[RADAR] invalid data size dropped: ");
+        Serial.println((int)(dataEnd - dataStart));
+#endif
+        return;
+    }
     uint16_t targetCount = 0;
 
     // Tout en décimètres entiers : l'ESP32-C3 n'a pas d'unité flottante

@@ -115,9 +115,9 @@ docker compose up -d --build
 
 Puis ouvrir http://localhost:8080 dans le navigateur. On y voit :
 
-- **le plan vu de dessus** : le radar en bas, son champ de vision, les cibles en couleur avec leur traînée, et la **zone de danger** en rouge (par défaut tout le côté X > 0, à droite du radar). En passant la souris sur le plan, un réticule affiche les coordonnées X/Y du point visé ;
+- **le plan vu de dessus** : Y (la distance devant le radar) à l'horizontale, X à la verticale, positif vers le haut. Le radar est à gauche et regarde vers la droite. On y voit son champ de vision, les cibles en couleur avec leur traînée, et la **zone de danger** en rouge (par défaut tout le côté X > 0, la moitié haute du plan). En passant la souris sur le plan, un réticule affiche les coordonnées X/Y du point visé ;
 - **le panneau de droite** : les coordonnées X/Y de chaque cible, l'état de la zone (présence, libre depuis X s, sûre après 10 s), le Y min/max imprimé par le programme et les compteurs de trames ;
-- **l'historique en bas** : la distance Y de chaque cible sur les 30 dernières secondes, soulignée en rouge quand la cible était dans la zone de danger.
+- **l'historique en bas** : la position X de chaque cible sur les 30 dernières secondes, avec X vers le haut comme sur le plan : la bande rouge du haut est le côté danger, et un trait rouge souligne les moments où la cible était dans la zone.
 
 En haut de la page, deux curseurs : **Personnes** (1 à 8 personnes qui se déplacent) et **Vitesse** (×0,5 à ×3). Puis la case « Trames défectueuses », **Pause** pour figer l'image et **Effacer les traces**. Dans le panneau, les curseurs « Réglage de la zone de danger » (X min, X max, Y min, Y max) déplacent la zone en direct ; **Revenir à X > 0** remet la zone par défaut.
 
