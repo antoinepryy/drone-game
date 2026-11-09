@@ -93,10 +93,11 @@ docker run --rm -e SIM_FRAMES=20 -e SIM_TARGETS=3 radar2460-calibration
 | Variable | Défaut | Rôle |
 |---|---|---|
 | `SIM_FRAMES` | 10 | Nombre de trames avant l'arrêt (0 = sans fin, `Ctrl+C` pour arrêter) |
-| `SIM_TARGETS` | 2 | Nombre de cibles par trame (1 à 3) |
+| `SIM_TARGETS` | 2 | Nombre de cibles par trame (1 à 3, ou 1 à 8 avec `SIM_SCENARIO=walk`) |
 | `SIM_PERIOD_MS` | 300 | Délai entre deux trames, en millisecondes (0 = le plus vite possible) |
 | `SIM_FAULTS` | 0 | `1` pour envoyer aussi des trames défectueuses |
-| `SIM_SCENARIO` | (aucun) | `walk` : des personnes entrent, traversent le champ et repartent, au lieu de cibles qui oscillent |
+| `SIM_SCENARIO` | (aucun) | `walk` : jusqu'à 8 personnes entrent, traversent le champ et repartent, au lieu de cibles qui oscillent |
+| `SIM_SPEED` | 1 | Avec `walk` : vitesse des déplacements (2 = deux fois plus vite) |
 
 ### 1.4 Tester la robustesse
 
@@ -114,11 +115,13 @@ docker compose up -d --build
 
 Puis ouvrir http://localhost:8080 dans le navigateur. On y voit :
 
-- **le plan vu de dessus** : le radar en bas, son champ de vision, les cibles en couleur avec leur traînée, et la zone surveillée en pointillé ;
+- **le plan vu de dessus** : le radar en bas, son champ de vision, les cibles en couleur avec leur traînée, et la **zone de danger** en rouge (par défaut tout le côté X > 0, à droite du radar). En passant la souris sur le plan, un réticule affiche les coordonnées X/Y du point visé ;
 - **le panneau de droite** : les coordonnées X/Y de chaque cible, l'état de la zone (présence, libre depuis X s, sûre après 10 s), le Y min/max imprimé par le programme et les compteurs de trames ;
-- **l'historique en bas** : la distance Y de chaque cible sur les 30 dernières secondes.
+- **l'historique en bas** : la distance Y de chaque cible sur les 30 dernières secondes, soulignée en rouge quand la cible était dans la zone de danger.
 
-En haut de la page : le nombre de personnes simulées (1 à 3), la case « Trames défectueuses », **Pause** pour figer l'image, **Effacer les traces**. Dans le panneau, les champs « Réglage de la zone » déplacent et redimensionnent la zone surveillée en direct.
+En haut de la page, deux curseurs : **Personnes** (1 à 8 personnes qui se déplacent) et **Vitesse** (×0,5 à ×3). Puis la case « Trames défectueuses », **Pause** pour figer l'image et **Effacer les traces**. Dans le panneau, les curseurs « Réglage de la zone de danger » (X min, X max, Y min, Y max) déplacent la zone en direct ; **Revenir à X > 0** remet la zone par défaut.
+
+Les réglages Personnes, Vitesse et Trames défectueuses sont communs à tous ceux qui ont la page ouverte. La zone de danger, elle, est propre à chaque navigateur.
 
 Pour arrêter :
 

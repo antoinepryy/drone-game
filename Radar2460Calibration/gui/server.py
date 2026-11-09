@@ -6,7 +6,7 @@ output and streams it to the browser with Server-Sent Events. Standard library o
     GET  /             viewer page
     GET  /events       SSE stream: frame, rejected, injected_fault, config events
     GET  /api/config   current simulator settings
-    POST /api/config   {"targets": 1-3, "faults": bool} restarts the simulator
+    POST /api/config   {"targets": 1-8, "faults": bool, "speed": 0.25-4} restarts the simulator
 """
 import json
 import os
@@ -58,7 +58,7 @@ class Radar:
 
     def __init__(self, hub):
         self.hub = hub
-        self.config = {"targets": 3, "faults": False}
+        self.config = {"targets": 5, "faults": False, "speed": 1.0}
         self._proc = None
         self._lock = threading.Lock()
 
@@ -73,7 +73,8 @@ class Radar:
                        SIM_SCENARIO="walk",
                        SIM_PERIOD_MS=str(PERIOD_MS),
                        SIM_TARGETS=str(self.config["targets"]),
-                       SIM_FAULTS="1" if self.config["faults"] else "0")
+                       SIM_FAULTS="1" if self.config["faults"] else "0",
+                       SIM_SPEED=str(self.config["speed"]))
             proc = subprocess.Popen([RADAR_BIN], env=env, stdout=subprocess.PIPE,
                                     stderr=subprocess.PIPE, text=True, bufsize=1)
             self._proc = proc
@@ -119,9 +120,14 @@ class Handler(BaseHTTPRequestHandler):
             changes = {}
             if "targets" in body:
                 targets = int(body["targets"])
-                if not 1 <= targets <= 3:
-                    raise ValueError("targets must be 1, 2 or 3")
+                if not 1 <= targets <= 8:
+                    raise ValueError("targets must be between 1 and 8")
                 changes["targets"] = targets
+            if "speed" in body:
+                speed = float(body["speed"])
+                if not 0.25 <= speed <= 4:
+                    raise ValueError("speed must be between 0.25 and 4")
+                changes["speed"] = speed
             if "faults" in body:
                 changes["faults"] = bool(body["faults"])
         except (ValueError, TypeError) as exc:
