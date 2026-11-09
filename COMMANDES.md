@@ -30,6 +30,8 @@ Les commandes principales sont aussi enregistrées comme **tâches VS Code** (fi
 2. Taper `Run Task` puis Entrée.
 3. Choisir la tâche dans la liste, par exemple « Radar : exécuter ».
 
+La tâche « Radar : tests automatisés » lance tous les tests (voir 1.5).
+
 `Cmd+Shift+B` lance directement la compilation.
 
 ### Installer les outils (une seule fois)
@@ -105,7 +107,23 @@ docker run --rm -e SIM_FAULTS=1 -e SIM_FRAMES=12 radar2460-calibration
 
 Une trame sur deux est défectueuse : longueur fausse, trame vide, fin de trame abîmée, octet parasite. Le programme doit les rejeter avec un message `[RADAR] ...` et continuer normalement.
 
-### 1.5 Récupérer le firmware pour la carte
+### 1.5 Lancer les tests automatisés
+
+```bash
+docker build --target tests .
+```
+
+Trois séries de tests s'enchaînent :
+
+- **tests unitaires** : chaque fonction du programme est appelée seule avec des valeurs connues (conversion des distances, décodage d'une trame, bannière de démarrage) ;
+- **tests de réception** : des trames abîmées sont envoyées au programme, qui doit retrouver les bonnes ;
+- **tests du programme** : le programme complet tourne contre le faux radar, et sa sortie est comparée à une sortie de référence enregistrée dans `host/tests/expected/`.
+
+Chaque ligne commence par `[OK]` ou `[ÉCHEC]`. Si un test échoue, la commande s'arrête en erreur. `[ÉCHEC CONNU]` signale un défaut déjà repéré et pas encore corrigé : il ne bloque pas.
+
+Les mêmes tests tournent automatiquement sur GitHub à chaque pull request (onglet **Checks** de la PR).
+
+### 1.6 Récupérer le firmware pour la carte
 
 ```bash
 docker build --target firmware-export -o out .
@@ -180,4 +198,5 @@ Rien n'est perdu : un fichier supprimé aujourd'hui reste dans les commits plus 
 | `Cannot connect to the Docker daemon` | Docker Desktop n'est pas lancé | Lancer Docker Desktop, attendre la baleine fixe |
 | `Unable to find image 'radar2460-calibration'` | L'image n'a pas encore été construite | Lancer d'abord `docker build -t radar2460-calibration .` dans `Radar2460Calibration/` |
 | `docker build` très long | Premier téléchargement des outils ESP32 | Normal la première fois, ensuite c'est en cache |
+| `docker build --target tests .` s'arrête sur `[ÉCHEC]` | Une modification a changé le comportement du programme | Lire la ligne `[ÉCHEC]` : elle indique la valeur obtenue et la valeur attendue |
 | `failed to read dockerfile` | La commande n'est pas lancée dans le bon dossier | `cd Radar2460Calibration` puis relancer |

@@ -29,15 +29,23 @@ COPY Radar2460Calibration.ino Config.h ./
 COPY host/ host/
 RUN mkdir -p /out && g++ -std=c++17 -O2 -Wall -Wextra -Ihost -I. host/main.cpp host/radar_sim.cpp -static -o /out/radar-calibration
 
-# ---------- Tests de réception des trames : docker build --target tests . ----------
-# Compilés avec AddressSanitizer et UBSan : un débordement de tampon fait échouer le build.
+# ---------- Tests automatisés : docker build --target tests . ----------
+# 1. tests unitaires des fonctions du croquis, 2. tests de réception des trames,
+# compilés avec AddressSanitizer et UBSan (un débordement de tampon fait échouer le build) ;
+# 3. tests du programme complet (binaire de l'étape host) contre le radar simulé.
 FROM gcc:14 AS tests
 WORKDIR /src
 COPY Radar2460Calibration.ino Config.h ./
 COPY host/ host/
-RUN g++ -std=c++17 -O1 -g -Wall -Wextra -fsanitize=address,undefined -fno-sanitize-recover=all \
-      -Ihost -I. host/tests/frame_tests.cpp -o /frame-tests \
-    && /frame-tests
+COPY --from=host /out/radar-calibration /usr/local/bin/radar-calibration
+RUN set -e; for t in unit_tests frame_tests; do \
+      g++ -std=c++17 -O1 -g -Wall -Wextra -Werror -fsanitize=address,undefined -fno-sanitize-recover=all \
+        -Ihost -I. host/tests/$t.cpp -o /$t; \
+    done \
+    && echo "=== Tests unitaires ===" && /unit_tests \
+    && echo && echo "=== Tests de réception des trames ===" && /frame_tests \
+    && echo && echo "=== Tests du programme ===" \
+    && host/tests/program_tests.sh /usr/local/bin/radar-calibration host/tests/expected
 
 # ---------- Firmware export: docker build --target firmware-export -o out . ----------
 FROM scratch AS firmware-export

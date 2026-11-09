@@ -1,0 +1,57 @@
+---
+name: run-tests
+description: Lancer et faire évoluer les tests automatisés du radar LD2460 (tests unitaires des fonctions du croquis, tests de réception des trames, tests du programme complet contre le radar simulé). À utiliser après toute modification du croquis, du simulateur ou de la couche host/, avant d'ouvrir une PR, et quand un test échoue en CI.
+---
+
+# Tests automatisés
+
+Une seule commande lance les trois suites, depuis `Radar2460Calibration/` :
+
+```bash
+docker build --target tests .
+```
+
+Le build échoue si une suite échoue. La CI GitHub (`.github/workflows/tests.yml`) lance la même commande sur chaque PR et sur `main`, plus la compilation du firmware ESP32-C3.
+
+## Les trois suites
+
+| Suite | Fichier | Ce qu'elle vérifie |
+|---|---|---|
+| Unitaires | `host/tests/unit_tests.cpp` | `formatDm`, `processFrame`, `loop`, `setup` appelées une par une, sortie comparée au caractère près |
+| Réception des trames | `host/tests/frame_tests.cpp` | nombre de trames retrouvées après un défaut de ligne série (skill `fault-tests`) |
+| Programme | `host/tests/program_tests.sh` | binaire complet contre le radar simulé : code retour, comptages, rejets, sortie identique à `host/tests/expected/*.txt` |
+
+Les deux suites C++ sont compilées avec `-Werror`, AddressSanitizer et UBSan : une lecture hors tampon ou un débordement d'entier arrête le build avec la ligne fautive. Elles incluent le croquis tel quel ; `host/tests/test_support.h` remplace le radar par un flux d'octets choisi par le test (`test::feed`), capture la sortie série (`test::capture`) et construit des trames (`test::targetsFrame`).
+
+## Lire un échec
+
+- Unitaire : `[ÉCHEC] ligne N : expression`, suivi de la valeur obtenue et de la valeur attendue.
+- Trames : `[ÉCHEC] scénario : x/y trames` (voir `fault-tests` pour `ÉCHEC CONNU` et `CORRIGÉ`).
+- Programme : `[ÉCHEC] description : obtenu '…', attendu '…'`, ou un `diff -u` entre la sortie de référence et la sortie obtenue.
+
+## Ajouter un test unitaire
+
+1. Écrire une fonction `testXxx()` dans `unit_tests.cpp` avec `CHECK_EQ(chaîne, attendu)` ou `CHECK_INT(entier, attendu)`.
+2. L'ajouter à la liste `tests` de `main()` avec un nom lisible.
+3. Pour `loop()`, passer par `runLoop(octets)` ; pour `processFrame`, par `process(trame)`.
+4. Une nouvelle fonction du croquis arrive avec son test unitaire dans la même PR.
+
+## Sorties de référence du programme
+
+`host/tests/expected/default.txt` et `faults.txt` sont la sortie exacte du programme (réglages par défaut, puis `SIM_FAULTS=1 SIM_FRAMES=12`). Si un changement modifie la sortie **volontairement**, les régénérer puis relire le diff :
+
+```bash
+docker build --target host -t radar2460-host .
+docker run --rm -v "$PWD/host/tests:/t" -e UPDATE_EXPECTED=1 radar2460-host \
+  /t/program_tests.sh /out/radar-calibration /t/expected
+git diff host/tests/expected/
+```
+
+Le diff fait partie de la PR et s'explique dans sa description.
+
+## Règles
+
+- Ne jamais régénérer les sorties de référence ni modifier une valeur attendue pour faire passer un test sans avoir compris pourquoi la sortie a changé.
+- Un nouveau réglage du simulateur (`SIM_…`) ou un nouveau scénario arrive avec son bloc dans `program_tests.sh`.
+- Un bug corrigé devient d'abord un test qui échoue, puis passe.
+- Ne pas annoncer « tests OK » sans avoir lu la dernière ligne de chaque suite (`0 test(s) en échec`, `0 échec(s)`).

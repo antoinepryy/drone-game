@@ -37,6 +37,16 @@
       "problemMatcher": []
     },
     {
+      "label": "Radar : tests automatisés",
+      "type": "shell",
+      "command": "docker build --progress=plain --target tests .",
+      "options": {
+        "cwd": "${workspaceFolder}/Radar2460Calibration"
+      },
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
       "label": "Radar : exporter le firmware",
       "type": "shell",
       "command": "docker build --target firmware-export -o out . && ls -l out",

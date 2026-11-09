@@ -24,7 +24,7 @@ Les UV germicides sont dangereux pour les yeux et la peau. Le radar sert à coup
 3. **Pas de rallumage automatique après une erreur** tant que `SAFETY_NO_AUTO_RESTART` vaut 1. Le rallumage demande une action humaine et `RADAR_SAFE_DELAY_MS` sans détection.
 4. **Ne jamais affaiblir une valeur de sécurité** (délai plus court, seuil plus bas, drapeau à 0) sans accord écrit du responsable du produit, noté dans la PR.
 5. **Relais bistable : il garde sa position sans courant.** Après une perte d'alimentation, ne pas supposer son état : le commander explicitement à l'arrêt au retour du courant.
-6. **Chaque cas de sécurité a son test** dans `host/tests/` (skill `fault-tests`) : radar muet, trames corrompues en continu, perte puis retour d'alimentation, détection pendant le fonctionnement.
+6. **Chaque cas de sécurité a son test** dans `host/tests/` : test unitaire de la décision dans `unit_tests.cpp`, scénario de flux dans `frame_tests.cpp` (skills `run-tests` et `fault-tests`). Cas minimum : radar muet, trames corrompues en continu, perte puis retour d'alimentation, détection pendant le fonctionnement. Le temps est piloté par le `millis()` de `host/tests/test_support.h` : le rendre réglable par le test plutôt que d'attendre réellement.
 7. **Revue humaine obligatoire.** Une PR qui touche à ces points le dit dans son titre et n'est pas fusionnée sans relecture par une personne.
 
 ## Ce qu'il faut écrire dans la PR

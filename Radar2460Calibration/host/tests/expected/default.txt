@@ -1,0 +1,53 @@
+
+=== LD2460 X / Y CALIBRATION ===
+[RADAR] UART started
+
+--- TARGETS ---
+Target → X=0.00 m | Y=4.00 m
+Target → X=2.20 m | Y=4.00 m
+Y min = 4.00 m | Y max = 4.00 m
+
+--- TARGETS ---
+Target → X=1.00 m | Y=3.90 m
+Target → X=1.50 m | Y=3.70 m
+Y min = 3.70 m | Y max = 3.90 m
+
+--- TARGETS ---
+Target → X=1.80 m | Y=3.70 m
+Target → X=0.60 m | Y=3.50 m
+Y min = 3.50 m | Y max = 3.70 m
+
+--- TARGETS ---
+Target → X=2.30 m | Y=3.40 m
+Target → X=-0.40 m | Y=3.50 m
+Y min = 3.40 m | Y max = 3.50 m
+
+--- TARGETS ---
+Target → X=2.50 m | Y=3.00 m
+Target → X=-1.30 m | Y=3.70 m
+Y min = 3.00 m | Y max = 3.70 m
+
+--- TARGETS ---
+Target → X=2.30 m | Y=2.60 m
+Target → X=-2.00 m | Y=3.90 m
+Y min = 2.60 m | Y max = 3.90 m
+
+--- TARGETS ---
+Target → X=1.70 m | Y=2.30 m
+Target → X=-2.40 m | Y=4.30 m
+Y min = 2.30 m | Y max = 4.30 m
+
+--- TARGETS ---
+Target → X=0.80 m | Y=2.10 m
+Target → X=-2.50 m | Y=4.70 m
+Y min = 2.10 m | Y max = 4.70 m
+
+--- TARGETS ---
+Target → X=-0.10 m | Y=2.00 m
+Target → X=-2.10 m | Y=5.10 m
+Y min = 2.00 m | Y max = 5.10 m
+
+--- TARGETS ---
+Target → X=-1.10 m | Y=2.10 m
+Target → X=-1.40 m | Y=5.30 m
+Y min = 2.10 m | Y max = 5.30 m

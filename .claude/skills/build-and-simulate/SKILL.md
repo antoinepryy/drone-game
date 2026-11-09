@@ -52,6 +52,8 @@ Compter les blocs `--- TARGETS ---` donne le nombre de trames décodées. Compar
 
 ## Vérifier qu'un changement ne modifie pas la sortie
 
+C'est automatique : `docker build --target tests .` compare la sortie du programme à `host/tests/expected/default.txt` et `faults.txt` (skill `run-tests`). Pour comparer à la main un autre réglage du simulateur :
+
 ```bash
 docker run --rm radar2460-calibration > avant.txt    # sur main
 docker run --rm radar2460-calibration > apres.txt    # sur la branche
@@ -63,4 +65,5 @@ Sur des trames valides, le diff doit être vide, sauf si le changement vise just
 ## Pièges
 
 - Le flash USB de la carte ne marche pas depuis Docker Desktop sur Mac : exporter le binaire (`docker build --target firmware-export -o out .`) puis flasher depuis le Mac avec `esptool.py` à l'adresse `0x0`.
-- `host/Arduino.h` n'implémente que ce que le croquis utilise. Une nouvelle fonction Arduino dans le croquis doit y être ajoutée, sinon la version ordinateur ne compile plus.
+- `host/Arduino.h` n'implémente que ce que le croquis utilise. Une nouvelle fonction Arduino dans le croquis doit y être ajoutée, sinon la version ordinateur ne compile plus. Les tests utilisent le même `Arduino.h` : si `available()`, `read()`, `begin()` ou `millis()` changent de signature, mettre à jour `host/tests/test_support.h`.
+- Après un changement, lancer les tests (`docker build --target tests .`), pas seulement la simulation.

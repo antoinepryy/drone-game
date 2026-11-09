@@ -24,9 +24,10 @@ Radar2460Calibration/
   Radar2460Calibration.ino   croquis (lecture et décodage des trames radar)
   Config.h                   broches et options de la carte
   host/                      couche Arduino simulée et faux radar, pour l'exécution sur ordinateur
-  host/tests/                tests de réception des trames (docker build --target tests .)
+  host/tests/                tests unitaires, de trames et du programme (docker build --target tests .)
   Dockerfile                 compilation du firmware et de la version ordinateur
 .vscode/tasks.json           commandes lançables depuis VS Code
+.github/workflows/tests.yml  CI : tests et compilation du firmware sur chaque PR
 .claude/skills/              skills pour piloter le projet avec Claude Code
 CLAUDE.md                    commandes et règles du projet, lues par Claude Code
 COMMANDES.md                 guide des commandes pour débutant

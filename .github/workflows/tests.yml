@@ -1,0 +1,25 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  tests:
+    name: Tests (unitaires, trames, programme)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: docker build --target tests
+        working-directory: Radar2460Calibration
+        run: docker build --progress=plain --target tests .
+
+  firmware:
+    name: Compilation du firmware ESP32-C3
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: docker build --target firmware-export
+        working-directory: Radar2460Calibration
+        run: docker build --progress=plain --target firmware-export -o out . && ls -l out
