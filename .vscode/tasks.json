@@ -37,6 +37,34 @@
       "problemMatcher": []
     },
     {
+      "label": "Radar : visualisation en direct (démarrer)",
+      "type": "shell",
+      "command": "docker compose up -d --build && echo && echo 'Ouvrir http://localhost:8080'",
+      "options": {
+        "cwd": "${workspaceFolder}/Radar2460Calibration"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Radar : visualisation en direct (arrêter)",
+      "type": "shell",
+      "command": "docker compose down",
+      "options": {
+        "cwd": "${workspaceFolder}/Radar2460Calibration"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Radar : tests du décodeur",
+      "type": "shell",
+      "command": "python3 -m unittest -v",
+      "options": {
+        "cwd": "${workspaceFolder}/Radar2460Calibration/gui"
+      },
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
       "label": "Radar : tests automatisés",
       "type": "shell",
       "command": "docker build --progress=plain --target tests .",

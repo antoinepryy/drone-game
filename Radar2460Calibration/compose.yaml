@@ -1,0 +1,8 @@
+# Real-time radar viewer: docker compose up --build, then open http://localhost:8080
+services:
+  gui:
+    build:
+      context: .
+      target: gui
+    ports:
+      - "8080:8080"

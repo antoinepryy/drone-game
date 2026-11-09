@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar LD2460 en direct</title>
+<style>
+:root {
+  --bg: #0b1117;
+  --panel: #131c25;
+  --line: #243241;
+  --ink: #e3ebf2;
+  --muted: #8a9aab;
+  --grid: #1d2a37;
+  --fov: #10202d;
+  --zone: #3fb950;
+  --present: #e5534b;
+  --clearing: #d29922;
+  --safe: #3fb950;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font: 14px/1.45 var(--sans); }
+.app { display: grid; grid-template-rows: auto 1fr auto; gap: 12px; height: 100%; padding: 12px 16px 16px; min-height: 640px; }
+header { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+h1 { font-size: 1.05rem; margin: 0; font-weight: 600; }
+.conn { font: 12px var(--mono); color: var(--muted); display: flex; align-items: center; gap: 6px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--present); }
+.conn.ok .dot { background: var(--safe); }
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-left: auto; }
+label { color: var(--muted); font-size: 12px; display: flex; align-items: center; gap: 6px; }
+select, input[type=number], button {
+  background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 6px;
+  font: 13px var(--mono); padding: 4px 8px;
+}
+input[type=number] { width: 62px; }
+button { cursor: pointer; padding: 5px 12px; }
+button:hover, select:hover { border-color: var(--muted); }
+:focus-visible { outline: 2px solid #79c0ff; outline-offset: 2px; }
+.main { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 12px; min-height: 0; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; min-height: 0; }
+.plan { position: relative; }
+canvas { display: block; width: 100%; height: 100%; }
+.side { display: grid; grid-auto-rows: min-content; gap: 14px; padding: 14px; overflow-y: auto; }
+.side h2 { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px; font-weight: 600; }
+.zone-state { border-radius: 6px; padding: 10px 12px; display: grid; gap: 6px; background: #1a232d; border-left: 4px solid var(--muted); }
+.zone-state strong { font-size: 1.05rem; }
+.zone-state.present { border-color: var(--present); }
+.zone-state.present strong { color: var(--present); }
+.zone-state.clearing { border-color: var(--clearing); }
+.zone-state.clearing strong { color: var(--clearing); }
+.zone-state.safe { border-color: var(--safe); }
+.zone-state.safe strong { color: var(--safe); }
+.bar { height: 6px; background: #0b1117; border-radius: 3px; overflow: hidden; }
+.bar > div { height: 100%; width: 0; background: var(--clearing); transition: width .1s linear; }
+.zone-state.safe .bar > div { background: var(--safe); }
+.zone-state small { color: var(--muted); font: 12px var(--mono); }
+table { width: 100%; border-collapse: collapse; font: 13px var(--mono); font-variant-numeric: tabular-nums; }
+td, th { padding: 3px 0; text-align: right; }
+th { color: var(--muted); font-weight: 400; font-size: 11px; }
+td:first-child, th:first-child { text-align: left; }
+.swatch { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+.empty { color: var(--muted); font: 13px var(--mono); }
+.stats { display: grid; grid-template-columns: 1fr auto; gap: 3px 10px; font: 13px var(--mono); font-variant-numeric: tabular-nums; }
+.stats span:nth-child(odd) { color: var(--muted); font-family: var(--sans); font-size: 12px; }
+.zone-inputs { display: grid; grid-template-columns: auto 1fr 1fr; gap: 6px 8px; align-items: center; font-size: 12px; color: var(--muted); }
+.zone-inputs input { width: 100%; }
+.history { height: 190px; }
+.note { color: var(--muted); font-size: 11px; }
+@media (max-width: 900px) {
+  .app { height: auto; }
+  .main { grid-template-columns: 1fr; }
+  .plan { height: 60vh; min-height: 360px; }
+}
+@media (prefers-reduced-motion: reduce) { .bar > div { transition: none; } }
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Radar LD2460 en direct</h1>
+    <span class="conn" id="conn"><span class="dot"></span><span id="connText">connexion…</span></span>
+    <div class="controls">
+      <label for="targets">Personnes simulées
+        <select id="targets"><option>1</option><option>2</option><option selected>3</option></select>
+      </label>
+      <label for="faults"><input type="checkbox" id="faults"> Trames défectueuses</label>
+      <button id="pause" type="button">Pause</button>
+      <button id="clear" type="button">Effacer les traces</button>
+    </div>
+  </header>
+
+  <div class="main">
+    <div class="card plan"><canvas id="plan" aria-label="Vue de dessus du champ du radar"></canvas></div>
+    <aside class="card side">
+      <section>
+        <h2>Zone surveillée</h2>
+        <div class="zone-state" id="zoneState">
+          <strong id="zoneTitle">En attente de données</strong>
+          <div class="bar"><div id="zoneBar"></div></div>
+          <small id="zoneDetail">sortie d'erreur après 10 s sans présence</small>
+        </div>
+      </section>
+      <section>
+        <h2>Cibles</h2>
+        <div id="targetsList" class="empty">aucune</div>
+      </section>
+      <section>
+        <h2>Trame (sortie du programme)</h2>
+        <div class="stats">
+          <span>Y min</span><span id="ymin">–</span>
+          <span>Y max</span><span id="ymax">–</span>
+        </div>
+      </section>
+      <section>
+        <h2>Compteurs</h2>
+        <div class="stats">
+          <span>Trames reçues</span><span id="nFrames">0</span>
+          <span>Trames par seconde</span><span id="fps">–</span>
+          <span>Trames sans cible</span><span id="nEmpty">0</span>
+          <span>Défauts injectés</span><span id="nInjected">0</span>
+          <span>Trames rejetées</span><span id="nRejected">0</span>
+          <span>Dernier rejet</span><span id="lastReject">–</span>
+        </div>
+      </section>
+      <section>
+        <h2>Réglage de la zone (m)</h2>
+        <div class="zone-inputs">
+          <span></span><span>min</span><span>max</span>
+          <label for="zxmin">X</label><input type="number" id="zxmin" step="0.1" value="-1.0"><input type="number" id="zxmax" step="0.1" value="1.0" aria-label="X max">
+          <label for="zymin">Y</label><input type="number" id="zymin" step="0.1" value="2.0"><input type="number" id="zymax" step="0.1" value="4.0" aria-label="Y max">
+        </div>
+        <p class="note">X : gauche (−) / droite (+) du radar. Y : distance devant le radar.</p>
+      </section>
+    </aside>
+  </div>
+
+  <div class="card history"><canvas id="history" aria-label="Distance Y de chaque cible sur les 30 dernières secondes"></canvas></div>
+</div>
+
+<script>
+"use strict";
+// --- Settings -------------------------------------------------------------
+const RADAR_SAFE_DELAY_MS = 10000;   // same as Config.h
+const RANGE_M = 8;                   // plan depth shown
+const HALF_WIDTH_M = 4;              // plan half width shown
+const FOV_DEG = 60;                  // half-angle drawn for the field of view (indicative)
+const HISTORY_S = 30;
+const TRAIL_LEN = 25;
+const TRACK_GATE_M = 1.0;            // max jump between two frames to stay the same target
+const TRACK_TIMEOUT_MS = 1500;
+const COLORS = ["#ff7b72", "#79c0ff", "#d2a8ff", "#ffa657", "#7ee787", "#f2cc60"];
+
+// --- State ----------------------------------------------------------------
+const tracks = new Map();   // id -> {id, color, x, y, seen, trail: [[x,y]], history: [[t,y]]}
+let nextId = 1;
+let paused = false;
+let lastFrame = null;
+let lastPresenceAt = null;  // ms
+let firstFrameAt = null;
+const frameTimes = [];
+const counters = { frames: 0, empty: 0, injected: 0, rejected: 0 };
+const $ = id => document.getElementById(id);
+
+function zone() {
+  const v = id => parseFloat($(id).value);
+  return { xmin: v("zxmin"), xmax: v("zxmax"), ymin: v("zymin"), ymax: v("zymax") };
+}
+const inZone = (z, x, y) => x >= z.xmin && x <= z.xmax && y >= z.ymin && y <= z.ymax;
+
+// --- Tracking: keep a stable colour per person across frames ---------------
+function associate(points, now) {
+  const live = [...tracks.values()].filter(t => now - t.seen < TRACK_TIMEOUT_MS);
+  const pairs = [];
+  points.forEach((p, i) => live.forEach(t => {
+    const d = Math.hypot(p[0] - t.x, p[1] - t.y);
+    if (d <= TRACK_GATE_M) pairs.push([d, i, t]);
+  }));
+  pairs.sort((a, b) => a[0] - b[0]);
+  const usedP = new Set(), usedT = new Set(), result = [];
+  for (const [, i, t] of pairs) {
+    if (usedP.has(i) || usedT.has(t.id)) continue;
+    usedP.add(i); usedT.add(t.id); result.push([t, points[i]]);
+  }
+  points.forEach((p, i) => {
+    if (usedP.has(i)) return;
+    const id = nextId++;
+    const t = { id, color: COLORS[(id - 1) % COLORS.length], x: p[0], y: p[1], seen: now, trail: [], history: [] };
+    tracks.set(id, t);
+    result.push([t, p]);
+  });
+  for (const [t, p] of result) {
+    t.x = p[0]; t.y = p[1]; t.seen = now;
+    t.trail.push([p[0], p[1]]);
+    if (t.trail.length > TRAIL_LEN) t.trail.shift();
+    t.history.push([now, p[1]]);
+  }
+}
+
+function prune(now) {
+  for (const t of tracks.values()) {
+    while (t.history.length && now - t.history[0][0] > HISTORY_S * 1000) t.history.shift();
+    if (now - t.seen > TRACK_TIMEOUT_MS) t.trail.length = 0;
+    if (!t.history.length && now - t.seen > TRACK_TIMEOUT_MS) tracks.delete(t.id);
+  }
+}
+
+// --- Events from the server -------------------------------------------------
+function onFrame(ev) {
+  const now = Date.now();
+  counters.frames++;
+  if (!ev.targets.length) counters.empty++;
+  frameTimes.push(now);
+  while (frameTimes.length && now - frameTimes[0] > 2000) frameTimes.shift();
+  if (firstFrameAt === null) firstFrameAt = now;
+  if (paused) return;
+  lastFrame = ev;
+  associate(ev.targets, now);
+  const z = zone();
+  if (ev.targets.some(([x, y]) => inZone(z, x, y))) lastPresenceAt = now;
+}
+
+function onRejected(ev) {
+  counters.rejected++;
+  const labels = { invalid_length: `longueur ${ev.detail}`, bad_footer: "fin de trame", unparsed_line: "ligne illisible" };
+  $("lastReject").textContent = labels[ev.reason] || ev.reason;
+}
+
+function connect() {
+  const es = new EventSource("/events");
+  es.onopen = () => { $("conn").classList.add("ok"); $("connText").textContent = "en direct"; };
+  es.onerror = () => { $("conn").classList.remove("ok"); $("connText").textContent = "déconnecté, nouvelle tentative…"; };
+  es.onmessage = msg => {
+    const ev = JSON.parse(msg.data);
+    if (ev.type === "frame") onFrame(ev);
+    else if (ev.type === "rejected") onRejected(ev);
+    else if (ev.type === "injected_fault") counters.injected++;
+    else if (ev.type === "config") {
+      $("targets").value = String(ev.targets);
+      $("faults").checked = ev.faults;
+    }
+  };
+}
+
+async function sendConfig(changes) {
+  const res = await fetch("/api/config", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(changes) });
+  if (!res.ok) $("connText").textContent = "réglage refusé : " + (await res.json()).error;
+}
+
+// --- Drawing ----------------------------------------------------------------
+function fit(canvas) {
+  const dpr = window.devicePixelRatio || 1;
+  const r = canvas.getBoundingClientRect();
+  const w = Math.max(1, Math.round(r.width * dpr)), h = Math.max(1, Math.round(r.height * dpr));
+  if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; }
+  const ctx = canvas.getContext("2d");
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  return [ctx, r.width, r.height];
+}
+const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+function drawPlan(now) {
+  const [ctx, W, H] = fit($("plan"));
+  ctx.clearRect(0, 0, W, H);
+  const pad = 28;
+  const scale = Math.min((W - 2 * pad) / (2 * HALF_WIDTH_M), (H - 2 * pad) / RANGE_M);
+  const ox = W / 2, oy = H - pad;
+  const px = x => ox + x * scale, py = y => oy - y * scale;
+
+  // field of view
+  const a = FOV_DEG * Math.PI / 180;
+  ctx.fillStyle = css("--fov");
+  ctx.beginPath(); ctx.moveTo(ox, oy);
+  ctx.arc(ox, oy, RANGE_M * scale, -Math.PI / 2 - a, -Math.PI / 2 + a); ctx.closePath(); ctx.fill();
+
+  // range rings and X grid
+  ctx.strokeStyle = css("--grid"); ctx.lineWidth = 1;
+  ctx.fillStyle = css("--muted"); ctx.font = "11px " + css("--mono");
+  for (let r = 1; r <= RANGE_M; r++) {
+    ctx.beginPath(); ctx.arc(ox, oy, r * scale, Math.PI, 2 * Math.PI); ctx.stroke();
+    ctx.fillText(r + " m", ox + 4, py(r) - 3);
+  }
+  for (let x = -HALF_WIDTH_M; x <= HALF_WIDTH_M; x++) {
+    ctx.beginPath(); ctx.moveTo(px(x), oy); ctx.lineTo(px(x), py(RANGE_M)); ctx.stroke();
+    if (x) ctx.fillText((x > 0 ? "+" : "") + x, px(x) - 6, oy + 16);
+  }
+
+  // monitored zone
+  const z = zone(), present = lastPresenceAt !== null && now - lastPresenceAt < 250;
+  ctx.fillStyle = present ? "rgba(229,83,75,.16)" : "rgba(63,185,80,.12)";
+  ctx.strokeStyle = present ? css("--present") : css("--zone");
+  ctx.setLineDash([6, 4]); ctx.lineWidth = 1.5;
+  ctx.fillRect(px(z.xmin), py(z.ymax), (z.xmax - z.xmin) * scale, (z.ymax - z.ymin) * scale);
+  ctx.strokeRect(px(z.xmin), py(z.ymax), (z.xmax - z.xmin) * scale, (z.ymax - z.ymin) * scale);
+  ctx.setLineDash([]);
+  ctx.fillStyle = ctx.strokeStyle; ctx.fillText("zone surveillée", px(z.xmin) + 4, py(z.ymax) + 14);
+
+  // radar
+  ctx.fillStyle = css("--ink");
+  ctx.fillRect(ox - 12, oy - 4, 24, 8);
+  ctx.fillStyle = css("--muted"); ctx.fillText("radar", ox + 16, oy + 4);
+
+  // trails and targets
+  for (const t of tracks.values()) {
+    if (now - t.seen > TRACK_TIMEOUT_MS) continue;
+    ctx.strokeStyle = t.color; ctx.lineWidth = 2;
+    for (let i = 1; i < t.trail.length; i++) {
+      ctx.globalAlpha = i / t.trail.length * 0.6;
+      ctx.beginPath(); ctx.moveTo(px(t.trail[i - 1][0]), py(t.trail[i - 1][1])); ctx.lineTo(px(t.trail[i][0]), py(t.trail[i][1])); ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+    const stale = now - t.seen > 300;
+    ctx.fillStyle = t.color; ctx.globalAlpha = stale ? 0.35 : 1;
+    ctx.beginPath(); ctx.arc(px(t.x), py(t.y), 7, 0, 2 * Math.PI); ctx.fill();
+    ctx.fillStyle = css("--ink"); ctx.fillText("#" + t.id, px(t.x) + 10, py(t.y) - 8);
+    ctx.globalAlpha = 1;
+  }
+}
+
+function drawHistory(now) {
+  const [ctx, W, H] = fit($("history"));
+  ctx.clearRect(0, 0, W, H);
+  const l = 44, r = 12, top = 22, bottom = 24;
+  const tx = t => l + (1 - (now - t) / (HISTORY_S * 1000)) * (W - l - r);
+  const ty = y => top + (1 - y / RANGE_M) * (H - top - bottom);
+  ctx.font = "11px " + css("--mono");
+  ctx.fillStyle = css("--muted");
+  ctx.fillText("Distance Y (m) de chaque cible, 30 dernières secondes", l, 14);
+
+  // zone band on Y
+  const z = zone();
+  ctx.fillStyle = "rgba(63,185,80,.10)";
+  ctx.fillRect(l, ty(z.ymax), W - l - r, ty(z.ymin) - ty(z.ymax));
+  ctx.strokeStyle = css("--zone"); ctx.setLineDash([5, 4]);
+  for (const y of [z.ymin, z.ymax]) { ctx.beginPath(); ctx.moveTo(l, ty(y)); ctx.lineTo(W - r, ty(y)); ctx.stroke(); }
+  ctx.setLineDash([]);
+
+  // grid
+  ctx.strokeStyle = css("--grid"); ctx.fillStyle = css("--muted");
+  for (let y = 0; y <= RANGE_M; y += 2) {
+    ctx.beginPath(); ctx.moveTo(l, ty(y)); ctx.lineTo(W - r, ty(y)); ctx.stroke();
+    ctx.fillText(y + " m", 6, ty(y) + 4);
+  }
+  for (let s = 0; s <= HISTORY_S; s += 10) {
+    const x = tx(now - s * 1000);
+    ctx.fillText(s ? `-${s} s` : "maintenant", x - (s ? 14 : 60), H - 6);
+  }
+
+  // series: break the line when a target was not seen between two points
+  for (const t of tracks.values()) {
+    ctx.strokeStyle = t.color; ctx.lineWidth = 1.8;
+    ctx.beginPath();
+    let prev = null;
+    for (const [time, y] of t.history) {
+      if (prev && time - prev > 600) ctx.moveTo(tx(time), ty(y));
+      else if (!prev) ctx.moveTo(tx(time), ty(y));
+      else ctx.lineTo(tx(time), ty(y));
+      prev = time;
+    }
+    ctx.stroke();
+    if (t.history.length && now - t.seen < TRACK_TIMEOUT_MS) {
+      const [time, y] = t.history[t.history.length - 1];
+      ctx.fillStyle = t.color; ctx.beginPath(); ctx.arc(tx(time), ty(y), 3.5, 0, 2 * Math.PI); ctx.fill();
+    }
+  }
+}
+
+function updatePanel(now) {
+  // zone state
+  const box = $("zoneState");
+  if (firstFrameAt === null) return;
+  const since = lastPresenceAt === null ? now - firstFrameAt : now - lastPresenceAt;
+  const present = lastPresenceAt !== null && since < 250;
+  box.className = "zone-state " + (present ? "present" : since >= RADAR_SAFE_DELAY_MS ? "safe" : "clearing");
+  $("zoneTitle").textContent = present ? "Présence dans la zone" : since >= RADAR_SAFE_DELAY_MS ? "Zone sûre" : "Zone libre";
+  $("zoneBar").style.width = Math.min(100, since / RADAR_SAFE_DELAY_MS * 100) + "%";
+  $("zoneDetail").textContent = present ? "lampe à couper, compteur remis à zéro"
+    : `libre depuis ${(since / 1000).toFixed(1)} s / ${RADAR_SAFE_DELAY_MS / 1000} s`;
+
+  // targets
+  const live = [...tracks.values()].filter(t => now - t.seen < 300).sort((a, b) => a.id - b.id);
+  const z = zone();
+  $("targetsList").className = live.length ? "" : "empty";
+  $("targetsList").innerHTML = live.length
+    ? `<table><tr><th>cible</th><th>X</th><th>Y</th><th>zone</th></tr>${live.map(t =>
+        `<tr><td><span class="swatch" style="background:${t.color}"></span>#${t.id}</td><td>${t.x.toFixed(2)}</td><td>${t.y.toFixed(2)}</td><td>${inZone(z, t.x, t.y) ? "dedans" : "–"}</td></tr>`).join("")}</table>`
+    : "aucune";
+
+  if (lastFrame) {
+    $("ymin").textContent = lastFrame.ymin === null ? "pas de cible" : lastFrame.ymin.toFixed(2) + " m";
+    $("ymax").textContent = lastFrame.ymax === null ? "pas de cible" : lastFrame.ymax.toFixed(2) + " m";
+  }
+  $("nFrames").textContent = counters.frames.toLocaleString("fr-FR");
+  $("fps").textContent = frameTimes.length > 1 ? ((frameTimes.length - 1) / ((frameTimes.at(-1) - frameTimes[0]) / 1000)).toFixed(1) : "–";
+  $("nEmpty").textContent = counters.empty.toLocaleString("fr-FR");
+  $("nInjected").textContent = counters.injected.toLocaleString("fr-FR");
+  $("nRejected").textContent = counters.rejected.toLocaleString("fr-FR");
+}
+
+function tick() {
+  const now = Date.now();
+  if (!paused) prune(now);
+  drawPlan(paused ? pausedAt : now);
+  drawHistory(paused ? pausedAt : now);
+  updatePanel(paused ? pausedAt : now);
+  requestAnimationFrame(tick);
+}
+
+// --- Controls -------------------------------------------------------------
+let pausedAt = 0;
+$("pause").onclick = () => {
+  paused = !paused; pausedAt = Date.now();
+  $("pause").textContent = paused ? "Reprendre" : "Pause";
+};
+$("clear").onclick = () => { tracks.clear(); };
+$("targets").onchange = e => sendConfig({ targets: Number(e.target.value) });
+$("faults").onchange = e => sendConfig({ faults: e.target.checked });
+
+connect();
+requestAnimationFrame(tick);
+</script>
+</body>
+</html>
