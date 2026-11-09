@@ -33,7 +33,7 @@ docker run --rm -e SIM_FAULTS=1 -e SIM_FRAMES=12 radar2460-calibration
 docker compose up -d --build     # puis http://localhost:8080
 ```
 
-Le conteneur `gui` lance le croquis (version ordinateur, faux radar en mode `walk`, 10 trames/s) et lit sa sortie série telle que la carte l'imprimerait. La page affiche le plan vu de dessus avec un réticule de coordonnées sous la souris, les coordonnées des cibles, l'état de la zone de danger (par défaut X > 0 ; délai de 10 s de `RADAR_SAFE_DELAY_MS`) et l'historique des distances. Des curseurs règlent le nombre de personnes (1 à 8), leur vitesse et les bornes de la zone ; une case active les trames défectueuses.
+Le conteneur `gui` lance le croquis (version ordinateur, faux radar en mode `walk`, 10 trames/s) et lit sa sortie série telle que la carte l'imprimerait. La page affiche le plan vu de dessus (Y à l'horizontale, X à la verticale positif vers le haut, radar à gauche) avec un réticule de coordonnées sous la souris, les coordonnées des cibles, l'état de la zone de danger (par défaut X > 0 ; délai de 10 s de `RADAR_SAFE_DELAY_MS`) et l'historique de la position X de chaque cible. Des curseurs règlent le nombre de personnes (1 à 8), leur vitesse et les bornes de la zone ; une case active les trames défectueuses.
 
 Les couleurs suivent chaque personne d'une trame à l'autre (association au plus proche, 1 m maximum) : le radar, lui, ne numérote pas les cibles. Le champ de vision dessiné (±60°, 8 m) est indicatif.
 
