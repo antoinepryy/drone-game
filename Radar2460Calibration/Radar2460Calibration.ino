@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include "Config.h"   // pour PIN_RADAR_RX / TX et USE_RADAR
-#include <float.h>
+#include <stdio.h>
 #include <string.h>
 
 // ===============================
@@ -30,6 +30,24 @@ uint8_t frame[128];
 uint16_t frameIndex = 0;
 
 // ===============================
+// SORTIE SÉRIE
+// ===============================
+// Pire cas : (128 - 11) / 4 = 29 cibles de ~40 octets, plus en-tête et min/max
+char outBuf[1536];
+
+// Tampon de réception radar : absorbe les trames reçues pendant l'affichage
+static const size_t RADAR_RX_BUFFER_SIZE = 512;
+
+// Décimètres -> texte en mètres, au même format que print(float, 2) : -1 -> "-0.10", 25 -> "2.50"
+static const size_t DM_TEXT_LEN = 12;
+void formatDm(int16_t dm, char* out) {
+    int v = dm;
+    const char* sign = v < 0 ? "-" : "";
+    if (v < 0) v = -v;
+    snprintf(out, DM_TEXT_LEN, "%s%d.%d0", sign, v / 10, v % 10);
+}
+
+// ===============================
 // SETUP
 // ===============================
 void setup() {
@@ -41,6 +59,7 @@ void setup() {
     Serial.println("\n=== LD2460 X / Y CALIBRATION ===");
 
 #if USE_RADAR
+    radarSerial.setRxBufferSize(RADAR_RX_BUFFER_SIZE);   // avant begin()
     radarSerial.begin(115200, SERIAL_8N1, PIN_RADAR_RX, PIN_RADAR_TX);
     Serial.println("[RADAR] UART started");
 #else
@@ -118,10 +137,13 @@ void processFrame(uint8_t* buf, uint16_t len) {
     uint16_t dataEnd   = len - sizeof(FRAME_FOOTER);
     uint16_t targetCount = 0;
 
-    float yMin = FLT_MAX;
-    float yMax = -FLT_MAX;
+    // Tout en décimètres entiers : l'ESP32-C3 n'a pas d'unité flottante
+    int16_t yMin = INT16_MAX;
+    int16_t yMax = INT16_MIN;
 
-    Serial.println("\n--- TARGETS ---");
+    // Sortie de la trame construite en mémoire puis envoyée en une écriture
+    size_t n = 0;
+    n += snprintf(outBuf + n, sizeof(outBuf) - n, "\n--- TARGETS ---\n");
 
     for (uint16_t i = dataStart; i + 3 < dataEnd; i += 4) {
 
@@ -129,28 +151,24 @@ void processFrame(uint8_t* buf, uint16_t len) {
         int16_t x_dm = buf[i]     | (buf[i + 1] << 8);
         int16_t y_dm = buf[i + 2] | (buf[i + 3] << 8);
 
-        float x_m = x_dm / 10.0f;
-        float y_m = y_dm / 10.0f;
+        char x_txt[DM_TEXT_LEN], y_txt[DM_TEXT_LEN];
+        formatDm(x_dm, x_txt);
+        formatDm(y_dm, y_txt);
+        n += snprintf(outBuf + n, sizeof(outBuf) - n, "Target → X=%s m | Y=%s m\n", x_txt, y_txt);
 
-        Serial.print("Target → X=");
-        Serial.print(x_m, 2);
-        Serial.print(" m | Y=");
-        Serial.print(y_m, 2);
-        Serial.println(" m");
-
-        if (y_m < yMin) yMin = y_m;
-        if (y_m > yMax) yMax = y_m;
+        if (y_dm < yMin) yMin = y_dm;
+        if (y_dm > yMax) yMax = y_dm;
         targetCount++;
     }
 
     if (targetCount == 0) {
-        Serial.println("No target");
-        return;
+        n += snprintf(outBuf + n, sizeof(outBuf) - n, "No target\n");
+    } else {
+        char min_txt[DM_TEXT_LEN], max_txt[DM_TEXT_LEN];
+        formatDm(yMin, min_txt);
+        formatDm(yMax, max_txt);
+        n += snprintf(outBuf + n, sizeof(outBuf) - n, "Y min = %s m | Y max = %s m\n", min_txt, max_txt);
     }
 
-    Serial.print("Y min = ");
-    Serial.print(yMin, 2);
-    Serial.print(" m | Y max = ");
-    Serial.print(yMax, 2);
-    Serial.println(" m");
+    Serial.write((const uint8_t*)outBuf, n);
 }
