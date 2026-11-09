@@ -25,17 +25,45 @@ ctest --test-dir build      # tests unitaires
 | A / E | Rotation gauche / droite |
 | R / F | Monter / descendre |
 | H | Stationnaire |
+| P | Relancer le script |
 | Espace | Arrêt d'urgence |
 | Échap | Quitter |
+
+## Scripts de commandes
+
+Le drone peut suivre une mission écrite dans un fichier texte :
+
+```bash
+./build/drone_pilot missions/carre.txt
+```
+
+Une commande par ligne, avec une durée optionnelle en secondes :
+
+```
+# commentaire
+TAKEOFF          # attend que le drone soit en vol
+UP 1.5
+FORWARD 1.2      # avancer pendant 1,2 s
+YAW_RIGHT 1      # 90° vers la droite
+WAIT 0.5
+LAND             # attend que le drone soit posé
+```
+
+Commandes : `TAKEOFF`, `LAND`, `UP`, `DOWN`, `FORWARD`, `BACKWARD`, `LEFT`, `RIGHT`,
+`YAW_LEFT`, `YAW_RIGHT`, `HOVER`, `EMERGENCY`, `WAIT`. Sans durée, les mouvements durent 1 s.
+Le clavier reste actif pendant le script ; un arrêt d'urgence l'interrompt.
 
 ## Structure
 
 ```
 src/command.[ch]  liste des commandes, conversion nom <-> commande
+src/script.[ch]   lecture et exécution des scripts de mission
+src/font.[ch]     police bitmap intégrée
 src/drone.[ch]    modèle et simulation du drone (sans SDL, testable)
 src/render.[ch]   dessin SDL (carte, drone, jauges)
 src/main.c        fenêtre, boucle principale, clavier
-tests/            tests unitaires de la logique de vol
+tests/            tests unitaires (vol, scripts)
+missions/         exemples de scripts
 ```
 
 ## Version

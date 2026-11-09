@@ -5,6 +5,16 @@ Format: [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), versions follo
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-11-09
+
+### Added
+- Command scripts: `./build/drone_pilot missions/carre.txt` runs a mission file
+  (one command per line, optional duration in seconds, `WAIT`, `#` comments).
+- Script status box on the map (current step, progress, done / aborted).
+- `P` key restarts the script; an emergency stop aborts it.
+- Example missions: `missions/carre.txt` (5 m square), `missions/urgence.txt`.
+- Unit tests for script parsing and execution.
+
 ## [0.2.0] - 2026-11-09
 
 ### Changed

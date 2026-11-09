@@ -3,6 +3,7 @@
 
 #include "command.h"
 #include "drone.h"
+#include "script.h"
 
 static int failures = 0;
 
@@ -97,6 +98,65 @@ static void test_command_parsing(void)
     CHECK(command_from_name(NULL) == CMD_NONE);
 }
 
+static void test_script_parsing(void)
+{
+    ScriptStep st;
+    char err[128];
+    CHECK(script_parse_line("  # just a comment", 1, &st, err, sizeof(err)) == 0);
+    CHECK(script_parse_line("", 1, &st, err, sizeof(err)) == 0);
+    CHECK(script_parse_line("forward 2.5  # go", 3, &st, err, sizeof(err)) == 1);
+    CHECK(st.cmd == CMD_FORWARD && st.duration == 2.5 && st.line == 3);
+    CHECK(script_parse_line("WAIT", 1, &st, err, sizeof(err)) == 1);
+    CHECK(st.cmd == CMD_NONE && st.duration == 1.0);
+    CHECK(script_parse_line("TAKEOFF", 1, &st, err, sizeof(err)) == 1);
+    CHECK(st.cmd == CMD_TAKEOFF && st.duration == 0.0);
+    CHECK(script_parse_line("JUMP 2", 7, &st, err, sizeof(err)) == -1);
+    CHECK(script_parse_line("UP -1", 1, &st, err, sizeof(err)) == -1);
+    CHECK(script_parse_line("UP 2x", 1, &st, err, sizeof(err)) == -1);
+    CHECK(script_parse_line("UP 1 2", 1, &st, err, sizeof(err)) == -1);
+
+    Script s;
+    CHECK(script_load_string(&s, "# empty\n\n", err, sizeof(err)) == -1);
+    CHECK(script_load_string(&s, "TAKEOFF\nBOOM\n", err, sizeof(err)) == -1);
+}
+
+static void run_script(Script *s, Drone *d, double max_seconds)
+{
+    for (double t = 0; t < max_seconds && s->status == SCRIPT_RUNNING; t += 0.01) {
+        script_update(s, d, 0.01);
+        drone_update(d, 0.01);
+    }
+}
+
+static void test_script_mission(void)
+{
+    static Script s;
+    char err[128];
+    Drone d;
+    drone_init(&d);
+    CHECK(script_load_string(&s, "TAKEOFF\nFORWARD 1\nHOVER\nLAND\n", err, sizeof(err)) == 0);
+    CHECK(s.count == 4);
+    script_start(&s);
+    run_script(&s, &d, 30.0);
+    CHECK(s.status == SCRIPT_DONE);
+    CHECK(d.state == DRONE_LANDED);
+    CHECK(d.y > 2.0);                 /* moved north */
+}
+
+static void test_script_aborts_on_emergency(void)
+{
+    static Script s;
+    char err[128];
+    Drone d;
+    drone_init(&d);
+    CHECK(script_load_string(&s, "TAKEOFF\nFORWARD 5\nLAND\n", err, sizeof(err)) == 0);
+    script_start(&s);
+    run_script(&s, &d, 2.0);
+    drone_apply(&d, CMD_EMERGENCY);
+    script_update(&s, &d, 0.01);
+    CHECK(s.status == SCRIPT_ABORTED);
+}
+
 int main(void)
 {
     test_takeoff_and_land();
@@ -105,6 +165,9 @@ int main(void)
     test_emergency();
     test_low_battery_auto_landing();
     test_command_parsing();
+    test_script_parsing();
+    test_script_mission();
+    test_script_aborts_on_emergency();
 
     if (failures == 0) {
         printf("All tests passed (v%s)\n", APP_VERSION);

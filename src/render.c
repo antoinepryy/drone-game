@@ -520,8 +520,9 @@ static void draw_controls(SDL_Renderer *r, float x, float y, float w)
         {"ZQSD", "BOUGER"}, {"A E", "PIVOTER"},
         {"R F", "MONTER"},  {"H", "STOP"},
         {"ESP", "URGENCE"}, {"ESC", "QUITTER"},
+        {"P", "SCRIPT"},
     };
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 9; i++) {
         float kx = x + 14 + (float)(i % 2) * (w / 2 - 4);
         float ky = y + 32 + (float)(i / 2) * 22;
         keycap(r, kx, ky, keys[i][0], keys[i][1]);
@@ -541,13 +542,56 @@ static void draw_panel(SDL_Renderer *r, const Drone *d, const View *v)
     draw_controls(r, x, 404, w);
 }
 
-void render_frame(SDL_Renderer *r, const Drone *d, const View *v)
+/* Script status box, bottom-right of the map. */
+static void draw_script(SDL_Renderer *r, const Script *s, const View *v)
+{
+    float w = 230, h = 50, x = MAP_SIZE - w - 24, y = MAP_SIZE - h - 22;
+    round_rect(r, x, y, w, h, 8, rgba(9, 13, 20, 215));
+
+    Rgba c = COL_CYAN;
+    const char *status = "EN COURS";
+    switch (s->status) {
+    case SCRIPT_IDLE:    status = "PRET";     c = COL_DIM;   break;
+    case SCRIPT_RUNNING: status = "EN COURS"; c = COL_CYAN;  break;
+    case SCRIPT_DONE:    status = "TERMINE";  c = COL_GREEN; break;
+    case SCRIPT_ABORTED: status = "INTERROMPU"; c = COL_RED; break;
+    }
+    round_rect(r, x, y, 3, h, 1.5f, c);
+
+    char buf[48];
+    snprintf(buf, sizeof(buf), "SCRIPT  %d/%d", s->current + 1, s->count);
+    text(r, x + 12, y + 9, 1, COL_DIM, buf);
+    text_right(r, x + w - 12, y + 9, 1, c, status);
+
+    const ScriptStep *st = &s->steps[s->current];
+    if (st->cmd == CMD_TAKEOFF || st->cmd == CMD_LAND || st->cmd == CMD_HOVER || st->cmd == CMD_EMERGENCY) {
+        snprintf(buf, sizeof(buf), "%s", script_step_name(st));
+    } else {
+        snprintf(buf, sizeof(buf), "%s %.1fS", script_step_name(st), st->duration);
+    }
+    text(r, x + 12, y + 23, 2, COL_TEXT, buf);
+
+    /* Overall progress */
+    float done = (float)s->current;
+    if (s->status == SCRIPT_RUNNING && st->duration > 0) {
+        float f = (float)(s->elapsed / st->duration);
+        done += f > 1 ? 1 : f;
+    }
+    if (s->status == SCRIPT_DONE) done = (float)s->count;
+    float ratio = done / (float)s->count;
+    rect(r, x + 12, y + h - 7, w - 24, 2, rgba(255, 255, 255, 20));
+    rect(r, x + 12, y + h - 7, (w - 24) * ratio, 2, c);
+    (void)v;
+}
+
+void render_frame(SDL_Renderer *r, const Drone *d, const View *v, const Script *script)
 {
     SDL_SetRenderDrawBlendMode(r, SDL_BLENDMODE_BLEND);
     set_color(r, COL_BG);
     SDL_RenderClear(r);
     draw_map(r, d, v);
     draw_drone(r, d, v);
+    if (script) draw_script(r, script, v);
     draw_panel(r, d, v);
     SDL_RenderPresent(r);
 }

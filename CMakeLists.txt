@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 
 # Single source of truth for the version number: bump it here.
-project(drone_pilot VERSION 0.2.0 LANGUAGES C)
+project(drone_pilot VERSION 0.3.0 LANGUAGES C)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
@@ -12,7 +12,7 @@ if(NOT MSVC)
 endif()
 
 # Core logic (no SDL dependency, unit-testable)
-add_library(dronecore STATIC src/drone.c src/command.c)
+add_library(dronecore STATIC src/drone.c src/command.c src/script.c)
 target_include_directories(dronecore PUBLIC src)
 target_compile_definitions(dronecore PUBLIC APP_VERSION="${PROJECT_VERSION}")
 if(NOT WIN32)

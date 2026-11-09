@@ -1,10 +1,12 @@
 #include <stdio.h>
+#include <string.h>
 
 #include <SDL.h>
 
 #include "command.h"
 #include "drone.h"
 #include "render.h"
+#include "script.h"
 
 static void print_help(void)
 {
@@ -16,6 +18,7 @@ static void print_help(void)
     printf("  A/E        yaw left / yaw right\n");
     printf("  R/F        up / down\n");
     printf("  H          hover (stop)\n");
+    printf("  P          (re)start the command script\n");
     printf("  SPACE      EMERGENCY stop\n");
     printf("  ESC        quit\n");
 }
@@ -50,8 +53,23 @@ static void apply_held_keys(Drone *d)
 
 int main(int argc, char *argv[])
 {
-    (void)argc;
-    (void)argv;
+    if (argc > 2 || (argc == 2 && (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0))) {
+        printf("usage: %s [script.txt]\n", argv[0]);
+        return argc > 2 ? 1 : 0;
+    }
+
+    /* Optional command script, started automatically */
+    static Script script;
+    int has_script = 0;
+    if (argc == 2) {
+        char err[160];
+        if (script_load_file(&script, argv[1], err, sizeof(err)) != 0) {
+            fprintf(stderr, "script error: %s\n", err);
+            return 1;
+        }
+        has_script = 1;
+        printf("Script '%s': %d steps\n", argv[1], script.count);
+    }
 
     if (SDL_Init(SDL_INIT_VIDEO) != 0) {
         fprintf(stderr, "SDL_Init failed: %s\n", SDL_GetError());
@@ -79,6 +97,10 @@ int main(int argc, char *argv[])
     View view;
     view_init(&view);
 
+    if (has_script) script_start(&script);
+    int last_step = -1;
+    ScriptStatus last_status = script.status;
+
     Uint64 last = SDL_GetPerformanceCounter();
     int running = 1;
 
@@ -90,6 +112,12 @@ int main(int argc, char *argv[])
             } else if (e.type == SDL_KEYDOWN && !e.key.repeat) {
                 if (e.key.keysym.scancode == SDL_SCANCODE_ESCAPE) {
                     running = 0;
+                    continue;
+                }
+                if (e.key.keysym.scancode == SDL_SCANCODE_P && has_script) {
+                    printf("> SCRIPT restart\n");
+                    script_start(&script);
+                    last_step = -1;
                     continue;
                 }
                 Command cmd = command_from_scancode(e.key.keysym.scancode);
@@ -105,6 +133,20 @@ int main(int argc, char *argv[])
         last = now;
         if (dt > 0.1) dt = 0.1;   /* avoid big jumps after a pause */
 
+        if (has_script) {
+            script_update(&script, &drone, dt);
+            if (script.status == SCRIPT_RUNNING && script.current != last_step) {
+                const ScriptStep *st = &script.steps[script.current];
+                printf("[script %d/%d] %s %.1fs (line %d)\n", script.current + 1, script.count,
+                       script_step_name(st), st->duration, st->line);
+                last_step = script.current;
+            }
+            if (script.status != last_status) {
+                if (script.status == SCRIPT_DONE) printf("[script] done\n");
+                if (script.status == SCRIPT_ABORTED) printf("[script] aborted (emergency)\n");
+                last_status = script.status;
+            }
+        }
         apply_held_keys(&drone);
         drone_update(&drone, dt);
 
@@ -115,7 +157,7 @@ int main(int argc, char *argv[])
         }
 
         view_update(&view, &drone, dt);
-        render_frame(renderer, &drone, &view);
+        render_frame(renderer, &drone, &view, has_script ? &script : NULL);
     }
 
     SDL_DestroyRenderer(renderer);

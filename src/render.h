@@ -4,6 +4,7 @@
 #include <SDL.h>
 
 #include "drone.h"
+#include "script.h"
 
 #define WINDOW_WIDTH  900
 #define WINDOW_HEIGHT 600
@@ -22,6 +23,7 @@ typedef struct {
 
 void view_init(View *v);
 void view_update(View *v, const Drone *d, double dt);
-void render_frame(SDL_Renderer *r, const Drone *d, const View *v);
+/* script may be NULL when no command script is loaded. */
+void render_frame(SDL_Renderer *r, const Drone *d, const View *v, const Script *script);
 
 #endif
