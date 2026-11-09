@@ -6,6 +6,7 @@
 #include <cstdint>
 #include <cstdio>
 #include <cstddef>
+#include <cstring>
 
 #define SERIAL_8N1 0x800001c
 #define A0 0
@@ -30,5 +31,7 @@ public:
 private:
     int uart_;
 };
+
+unsigned long millis();
 
 extern HardwareSerial Serial;
