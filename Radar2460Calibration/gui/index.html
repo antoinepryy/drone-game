@@ -135,13 +135,13 @@ td:first-child, th:first-child { text-align: left; }
           <label for="zymin">Y min</label><input type="range" id="zymin" min="0" max="8" step="0.1" value="0"><span class="val" id="zyminVal"></span>
           <label for="zymax">Y max</label><input type="range" id="zymax" min="0" max="8" step="0.1" value="8"><span class="val" id="zymaxVal"></span>
         </div>
-        <p class="note">Par défaut : tout le côté X &gt; 0 (à droite du radar). X : gauche (−) / droite (+). Y : distance devant le radar.</p>
+        <p class="note">Par défaut : tout le côté X &gt; 0 (moitié haute du plan). Sur le plan, Y (distance devant le radar) est à l'horizontale, X à la verticale, positif vers le haut.</p>
         <button id="resetZone" type="button">Revenir à X &gt; 0</button>
       </section>
     </aside>
   </div>
 
-  <div class="card history"><canvas id="history" aria-label="Distance Y de chaque cible sur les 30 dernières secondes"></canvas></div>
+  <div class="card history"><canvas id="history" aria-label="Position X de chaque cible sur les 30 dernières secondes"></canvas></div>
 </div>
 
 <script>
@@ -205,7 +205,7 @@ function associate(points, now) {
     t.x = p[0]; t.y = p[1]; t.seen = now;
     t.trail.push([p[0], p[1]]);
     if (t.trail.length > TRAIL_LEN) t.trail.shift();
-    t.history.push([now, p[1], inZone(zone(), p[0], p[1])]);
+    t.history.push([now, p[0], inZone(zone(), p[0], p[1])]);
   }
 }
 
@@ -273,62 +273,68 @@ function fit(canvas) {
 }
 const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 
+// Plan axes: Y (distance from the radar) horizontal, to the right; X vertical, positive up.
+// The radar sits on the left edge, looking right.
 function drawPlan(now) {
   const [ctx, W, H] = fit($("plan"));
   ctx.clearRect(0, 0, W, H);
-  const pad = 28;
-  const scale = Math.min((W - 2 * pad) / (2 * HALF_WIDTH_M), (H - 2 * pad) / RANGE_M);
-  const ox = W / 2, oy = H - pad;
-  const px = x => ox + x * scale, py = y => oy - y * scale;
+  const pad = 30;
+  const scale = Math.min((W - 2 * pad - 20) / RANGE_M, (H - 2 * pad) / (2 * HALF_WIDTH_M));
+  const ox = pad + 20, oy = H / 2;
+  const sx = y => ox + y * scale;   // metres along Y -> screen x
+  const sy = x => oy - x * scale;   // metres along X -> screen y (X up)
+  planView = { ox, oy, scale };
 
-  // field of view
+  // field of view, opening to the right
   const a = FOV_DEG * Math.PI / 180;
   ctx.fillStyle = css("--fov");
   ctx.beginPath(); ctx.moveTo(ox, oy);
-  ctx.arc(ox, oy, RANGE_M * scale, -Math.PI / 2 - a, -Math.PI / 2 + a); ctx.closePath(); ctx.fill();
+  ctx.arc(ox, oy, RANGE_M * scale, -a, a); ctx.closePath(); ctx.fill();
 
-  // range rings and X grid
+  // range rings (Y labels on the axis) and X grid lines
   ctx.strokeStyle = css("--grid"); ctx.lineWidth = 1;
   ctx.fillStyle = css("--muted"); ctx.font = "11px " + css("--mono");
   for (let r = 1; r <= RANGE_M; r++) {
-    ctx.beginPath(); ctx.arc(ox, oy, r * scale, Math.PI, 2 * Math.PI); ctx.stroke();
-    ctx.fillText(r + " m", ox + 4, py(r) - 3);
+    ctx.beginPath(); ctx.arc(ox, oy, r * scale, -Math.PI / 2, Math.PI / 2); ctx.stroke();
   }
   for (let x = -HALF_WIDTH_M; x <= HALF_WIDTH_M; x++) {
-    ctx.beginPath(); ctx.moveTo(px(x), oy); ctx.lineTo(px(x), py(RANGE_M)); ctx.stroke();
-    if (x) ctx.fillText((x > 0 ? "+" : "") + x, px(x) - 6, oy + 16);
+    ctx.strokeStyle = x === 0 ? "#3a4a5b" : css("--grid");
+    ctx.beginPath(); ctx.moveTo(ox, sy(x)); ctx.lineTo(sx(RANGE_M), sy(x)); ctx.stroke();
+    ctx.fillText((x > 0 ? "+" : "") + x, 6, sy(x) + 4);
   }
+  for (let r = 1; r <= RANGE_M; r++) ctx.fillText(r + " m", sx(r) - 10, sy(-HALF_WIDTH_M) + 16);
+  ctx.fillText("X (m)", 6, sy(HALF_WIDTH_M) - 12);
+  ctx.fillText("Y (m) →", sx(RANGE_M) - 40, sy(-HALF_WIDTH_M) + 28);
 
-  // monitored zone
+  // danger zone
   const z = zone(), present = lastPresenceAt !== null && now - lastPresenceAt < 250;
+  const zl = sx(z.ymin), zt = sy(z.xmax), zw = (z.ymax - z.ymin) * scale, zh = (z.xmax - z.xmin) * scale;
   ctx.fillStyle = present ? "rgba(229,83,75,.24)" : "rgba(229,83,75,.08)";
   ctx.strokeStyle = css("--present");
   ctx.setLineDash([6, 4]); ctx.lineWidth = 1.5;
-  ctx.fillRect(px(z.xmin), py(z.ymax), (z.xmax - z.xmin) * scale, (z.ymax - z.ymin) * scale);
-  ctx.strokeRect(px(z.xmin), py(z.ymax), (z.xmax - z.xmin) * scale, (z.ymax - z.ymin) * scale);
+  ctx.fillRect(zl, zt, zw, zh);
+  ctx.strokeRect(zl, zt, zw, zh);
   ctx.setLineDash([]);
-  ctx.fillStyle = ctx.strokeStyle; ctx.fillText(present ? "zone de danger : PRÉSENCE" : "zone de danger", px(z.xmin) + 6, py(z.ymax) + 16);
+  ctx.fillStyle = ctx.strokeStyle; ctx.fillText(present ? "zone de danger : PRÉSENCE" : "zone de danger", zl + 6, zt + 16);
 
-  planView = { ox, oy, scale };
-
-  // radar
+  // radar, on the left edge, facing right
   ctx.fillStyle = css("--ink");
-  ctx.fillRect(ox - 12, oy - 4, 24, 8);
-  ctx.fillStyle = css("--muted"); ctx.fillText("radar", ox + 16, oy + 4);
+  ctx.fillRect(ox - 4, oy - 12, 8, 24);
+  ctx.fillStyle = css("--muted"); ctx.fillText("radar", ox - 14, oy + 26);
 
   // trails and targets
   for (const t of tracks.values()) {
     if (now - t.seen > TRACK_TIMEOUT_MS) continue;
     ctx.strokeStyle = t.color; ctx.lineWidth = 2;
     for (let i = 1; i < t.trail.length; i++) {
+      const [x0, y0] = t.trail[i - 1], [x1, y1] = t.trail[i];
       ctx.globalAlpha = i / t.trail.length * 0.6;
-      ctx.beginPath(); ctx.moveTo(px(t.trail[i - 1][0]), py(t.trail[i - 1][1])); ctx.lineTo(px(t.trail[i][0]), py(t.trail[i][1])); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(sx(y0), sy(x0)); ctx.lineTo(sx(y1), sy(x1)); ctx.stroke();
     }
-    ctx.globalAlpha = 1;
-    const stale = now - t.seen > 300;
-    ctx.fillStyle = t.color; ctx.globalAlpha = stale ? 0.35 : 1;
-    ctx.beginPath(); ctx.arc(px(t.x), py(t.y), 7, 0, 2 * Math.PI); ctx.fill();
-    ctx.fillStyle = css("--ink"); ctx.fillText("#" + t.id, px(t.x) + 10, py(t.y) - 8);
+    ctx.globalAlpha = now - t.seen > 300 ? 0.35 : 1;
+    ctx.fillStyle = t.color;
+    ctx.beginPath(); ctx.arc(sx(t.y), sy(t.x), 7, 0, 2 * Math.PI); ctx.fill();
+    ctx.fillStyle = css("--ink"); ctx.fillText("#" + t.id, sx(t.y) + 10, sy(t.x) - 8);
     ctx.globalAlpha = 1;
   }
 }
@@ -337,41 +343,44 @@ function drawCrosshair() {
   if (!mouse || !planView) return;
   const ctx = $("plan").getContext("2d");
   const { ox, oy, scale } = planView;
-  const x = ox + mouse.x * scale, y = oy - mouse.y * scale;
+  const cx = ox + mouse.y * scale, cy = oy - mouse.x * scale;
   ctx.strokeStyle = "rgba(227,235,242,.35)"; ctx.lineWidth = 1; ctx.setLineDash([3, 3]);
-  ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, $("plan").clientHeight); ctx.moveTo(0, y); ctx.lineTo($("plan").clientWidth, y); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(cx, 0); ctx.lineTo(cx, $("plan").clientHeight); ctx.moveTo(0, cy); ctx.lineTo($("plan").clientWidth, cy); ctx.stroke();
   ctx.setLineDash([]);
   const label = `X ${mouse.x.toFixed(2)}  Y ${mouse.y.toFixed(2)} m${inZone(zone(), mouse.x, mouse.y) ? "  (danger)" : ""}`;
   ctx.font = "12px " + css("--mono");
   const w = ctx.measureText(label).width + 12;
-  const lx = Math.min(x + 12, $("plan").clientWidth - w - 4), ly = Math.max(y - 28, 4);
+  const lx = Math.min(cx + 12, $("plan").clientWidth - w - 4), ly = Math.max(cy - 28, 4);
   ctx.fillStyle = "rgba(11,17,23,.85)"; ctx.fillRect(lx, ly, w, 20);
   ctx.fillStyle = css("--ink"); ctx.fillText(label, lx + 6, ly + 14);
 }
 
+// History: X of each target over time, X up like on the plan, so the danger side
+// (X > 0 by default) is the upper half.
 function drawHistory(now) {
   const [ctx, W, H] = fit($("history"));
   ctx.clearRect(0, 0, W, H);
   const l = 44, r = 12, top = 22, bottom = 24;
   const tx = t => l + (1 - (now - t) / (HISTORY_S * 1000)) * (W - l - r);
-  const ty = y => top + (1 - y / RANGE_M) * (H - top - bottom);
+  const ty = x => top + (HALF_WIDTH_M - x) / (2 * HALF_WIDTH_M) * (H - top - bottom);
   ctx.font = "11px " + css("--mono");
   ctx.fillStyle = css("--muted");
-  ctx.fillText("Distance Y (m) de chaque cible, 30 dernières secondes (trait rouge : dans la zone de danger)", l, 14);
+  ctx.fillText("Position X (m) de chaque cible, 30 dernières secondes (bande rouge : X de la zone de danger, trait rouge : cible dans la zone)", l, 14);
 
-  // zone band on Y
+  // danger band on X
   const z = zone();
-  ctx.fillStyle = "rgba(229,83,75,.06)";
-  ctx.fillRect(l, ty(z.ymax), W - l - r, ty(z.ymin) - ty(z.ymax));
+  ctx.fillStyle = "rgba(229,83,75,.08)";
+  ctx.fillRect(l, ty(z.xmax), W - l - r, ty(z.xmin) - ty(z.xmax));
   ctx.strokeStyle = css("--present"); ctx.setLineDash([5, 4]);
-  for (const y of [z.ymin, z.ymax]) { ctx.beginPath(); ctx.moveTo(l, ty(y)); ctx.lineTo(W - r, ty(y)); ctx.stroke(); }
+  for (const x of [z.xmin, z.xmax]) { ctx.beginPath(); ctx.moveTo(l, ty(x)); ctx.lineTo(W - r, ty(x)); ctx.stroke(); }
   ctx.setLineDash([]);
 
   // grid
-  ctx.strokeStyle = css("--grid"); ctx.fillStyle = css("--muted");
-  for (let y = 0; y <= RANGE_M; y += 2) {
-    ctx.beginPath(); ctx.moveTo(l, ty(y)); ctx.lineTo(W - r, ty(y)); ctx.stroke();
-    ctx.fillText(y + " m", 6, ty(y) + 4);
+  ctx.fillStyle = css("--muted");
+  for (let x = -HALF_WIDTH_M; x <= HALF_WIDTH_M; x += 2) {
+    ctx.strokeStyle = x === 0 ? "#3a4a5b" : css("--grid");
+    ctx.beginPath(); ctx.moveTo(l, ty(x)); ctx.lineTo(W - r, ty(x)); ctx.stroke();
+    ctx.fillText((x > 0 ? "+" : "") + x + " m", 4, ty(x) + 4);
   }
   for (let s = 0; s <= HISTORY_S; s += 10) {
     const x = tx(now - s * 1000);
@@ -383,19 +392,18 @@ function drawHistory(now) {
     ctx.strokeStyle = t.color; ctx.lineWidth = 1.8;
     ctx.beginPath();
     let prev = null;
-    for (const [time, y] of t.history) {
-      if (prev && time - prev > 600) ctx.moveTo(tx(time), ty(y));
-      else if (!prev) ctx.moveTo(tx(time), ty(y));
-      else ctx.lineTo(tx(time), ty(y));
+    for (const [time, x] of t.history) {
+      if (!prev || time - prev > 600) ctx.moveTo(tx(time), ty(x));
+      else ctx.lineTo(tx(time), ty(x));
       prev = time;
     }
     ctx.stroke();
     // samples taken inside the danger zone get a red tick under the line
     ctx.fillStyle = css("--present");
-    for (const [time, y, danger] of t.history) if (danger) ctx.fillRect(tx(time) - 1, ty(y) + 3, 2, 3);
+    for (const [time, x, danger] of t.history) if (danger) ctx.fillRect(tx(time) - 1, ty(x) + 3, 2, 3);
     if (t.history.length && now - t.seen < TRACK_TIMEOUT_MS) {
-      const [time, y] = t.history[t.history.length - 1];
-      ctx.fillStyle = t.color; ctx.beginPath(); ctx.arc(tx(time), ty(y), 3.5, 0, 2 * Math.PI); ctx.fill();
+      const [time, x] = t.history[t.history.length - 1];
+      ctx.fillStyle = t.color; ctx.beginPath(); ctx.arc(tx(time), ty(x), 3.5, 0, 2 * Math.PI); ctx.fill();
     }
   }
 }
@@ -464,7 +472,7 @@ const plan = $("plan");
 plan.addEventListener("mousemove", e => {
   if (!planView) return;
   const r = plan.getBoundingClientRect();
-  mouse = { x: (e.clientX - r.left - planView.ox) / planView.scale, y: (planView.oy - (e.clientY - r.top)) / planView.scale };
+  mouse = { x: (planView.oy - (e.clientY - r.top)) / planView.scale, y: (e.clientX - r.left - planView.ox) / planView.scale };
 });
 plan.addEventListener("mouseleave", () => { mouse = null; });
 showSliderValues();
