@@ -1,5 +1,0 @@
-# Mission qui déclenche un arrêt d'urgence en plein vol.
-TAKEOFF
-UP 3
-FORWARD 2
-EMERGENCY

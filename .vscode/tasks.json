@@ -1,0 +1,74 @@
+{
+  // Cmd+Shift+P > "Run Task" to pick a task; Cmd+Shift+B builds the radar image.
+  // Step-by-step explanations: COMMANDES.md
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Radar : compiler",
+      "type": "shell",
+      "command": "docker build -t radar2460-calibration .",
+      "options": {
+        "cwd": "${workspaceFolder}/Radar2460Calibration"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Radar : exécuter",
+      "type": "shell",
+      "command": "docker run --rm -e SIM_FRAMES=${input:simFrames} -e SIM_TARGETS=${input:simTargets} radar2460-calibration",
+      "options": {
+        "cwd": "${workspaceFolder}/Radar2460Calibration"
+      },
+      "dependsOn": "Radar : compiler",
+      "problemMatcher": []
+    },
+    {
+      "label": "Radar : tester avec trames défectueuses",
+      "type": "shell",
+      "command": "docker run --rm -e SIM_FAULTS=1 -e SIM_FRAMES=12 radar2460-calibration",
+      "options": {
+        "cwd": "${workspaceFolder}/Radar2460Calibration"
+      },
+      "dependsOn": "Radar : compiler",
+      "problemMatcher": []
+    },
+    {
+      "label": "Radar : exporter le firmware",
+      "type": "shell",
+      "command": "docker build --target firmware-export -o out . && ls -l out",
+      "options": {
+        "cwd": "${workspaceFolder}/Radar2460Calibration"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Git : où en suis-je ?",
+      "type": "shell",
+      "command": "git fetch --prune && git status -sb && echo && git log --oneline -10",
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "simFrames",
+      "type": "promptString",
+      "description": "Nombre de trames radar",
+      "default": "10"
+    },
+    {
+      "id": "simTargets",
+      "type": "pickString",
+      "description": "Cibles par trame",
+      "options": [
+        "1",
+        "2",
+        "3"
+      ],
+      "default": "2"
+    }
+  ]
+}
