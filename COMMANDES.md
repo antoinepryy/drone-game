@@ -121,16 +121,15 @@ esptool.py --chip esp32c3 write_flash 0x0 out/Radar2460Calibration.ino.merged.bi
 
 ---
 
-## 2. Git et versioning
+## 2. Git
 
-Le sujet de la démo. Chaque version publiée est un **tag** (`v0.1.0`, `v0.2.0`, `v0.3.0`) et est décrite dans `CHANGELOG.md`.
+Le sujet de la démo : chaque modification passe par une branche, un commit et une pull request.
 
 ### 2.1 Se situer
 
 ```bash
 git status                  # fichiers modifiés, branche actuelle
 git log --oneline -10       # les 10 derniers commits
-git tag -l                  # les versions publiées
 ```
 
 ### 2.2 Récupérer les dernières modifications
@@ -159,32 +158,17 @@ gh pr create                             # 5. ouvrir une pull request
 
 Préfixes de message utilisés ici : `feat:` (nouveauté), `fix:` (correction), `perf:` (performance), `test:`, `docs:`, `ci:`, `chore:` (maintenance).
 
-### 2.4 Publier une nouvelle version
+### 2.4 Revenir à un état précédent (pour le consulter)
 
-Selon [SemVer](https://semver.org/lang/fr/) : `x.y.z` → `z+1` pour une correction, `y+1` pour une nouveauté, `x+1` si l'on casse la compatibilité.
-
-1. Dans `CHANGELOG.md`, renommer `## [Unreleased]` en `## [0.4.0] - AAAA-MM-JJ` et rajouter un `## [Unreleased]` vide au-dessus.
-2. Vérifier que tout compile et tourne : `cd Radar2460Calibration && docker build -t radar2460-calibration . && docker run --rm radar2460-calibration`, puis `cd ..`.
-3. Enregistrer et marquer la version :
-
-   ```bash
-   git add CHANGELOG.md
-   git commit -m "chore: release 0.4.0"
-   git tag -a v0.4.0 -m "v0.4.0"
-   git push --follow-tags
-   ```
-
-Le tag est l'étiquette posée sur le commit : `git switch --detach v0.4.0` ramènera toujours le code exact de cette version.
-
-### 2.5 Revenir à une version précédente (pour la consulter)
+Chaque commit a un identifiant, affiché par `git log --oneline` (par exemple `6cf44c9`) :
 
 ```bash
-git switch --detach v0.3.0     # le code tel qu'il était en 0.3.0
-ls                             # on y retrouve l'ancienne application drone (src/, missions/…)
+git switch --detach 6cf44c9    # le code tel qu'il était à ce commit
+ls                             # ici, on retrouve l'ancienne application drone (src/, missions/…)
 git switch main                # revenir au présent
 ```
 
-Rien n'est perdu : un fichier supprimé dans une version récente reste dans les anciennes.
+Rien n'est perdu : un fichier supprimé aujourd'hui reste dans les commits plus anciens.
 
 ---
 

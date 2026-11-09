@@ -48,7 +48,7 @@
     {
       "label": "Git : où en suis-je ?",
       "type": "shell",
-      "command": "git fetch --prune && git status -sb && echo && git log --oneline -10 && echo && git tag -l",
+      "command": "git fetch --prune && git status -sb && echo && git log --oneline -10",
       "problemMatcher": []
     }
   ],

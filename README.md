@@ -1,7 +1,7 @@
 # Radar LD2460
 
 Croquis Arduino de calibration X/Y du radar LD2460 sur carte ESP32-C3 XIAO, compilé et exécuté dans Docker.
-Sert de support pour une démonstration de versionning (git, branches, pull requests, SemVer, changelog).
+Sert de support pour une démonstration de versionning (git, branches, pull requests).
 
 ## Démarrer
 
@@ -27,9 +27,8 @@ Radar2460Calibration/
   Dockerfile                 compilation du firmware et de la version ordinateur
 .vscode/tasks.json           commandes lançables depuis VS Code
 COMMANDES.md                 guide des commandes pour débutant
-CHANGELOG.md                 historique des versions
 ```
 
 ## Historique
 
-Les versions 0.1.0 à 0.3.0 (tags `v0.1.0` à `v0.3.0`) contenaient une application de pilotage de drone en C/SDL2, retirée depuis. Elle reste consultable avec `git switch --detach v0.3.0`.
+Le dépôt a d'abord contenu une application de pilotage de drone en C/SDL2, retirée depuis. Sa dernière version reste consultable dans l'historique git : `git switch --detach 6cf44c9`.
