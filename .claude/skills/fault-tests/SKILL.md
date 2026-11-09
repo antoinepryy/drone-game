@@ -40,8 +40,8 @@ Nombre attendu : les trames valides envoyées, plus le préfixe s'il est lui-mê
 
 ## Défauts connus à ce jour
 
-- Longueur corrompue mais plausible : le croquis attend autant d'octets que la longueur annoncée et avale les trames suivantes (0 trame sur 3 retrouvée).
-- Trame tronquée par une coupure de ligne : la trame suivante est perdue.
-- Longueur qui ne vaut pas 11 + 4 × n pour une trame de cibles : non rejetée tout de suite, la trame suivante est perdue.
+Aucun. Les trois défauts d'origine (longueur corrompue mais plausible, trame tronquée, longueur hors format 11 + 4 × n) sont corrigés et leurs scénarios protègent le correctif :
 
-Cause commune : après un rejet, le croquis repart de zéro au lieu de chercher un header dans les octets déjà reçus.
+- après un rejet, le croquis réanalyse les octets déjà reçus à partir du deuxième (`receiveRadarByte`), une trame valide qui commence dedans est retrouvée ;
+- une trame de cibles dont la longueur ne vaut pas 11 + 4 × n est rejetée dès que la longueur est lue (`[RADAR] invalid data size dropped: N`) ;
+- une trame interrompue plus de 50 ms est abandonnée (`[RADAR] frame timeout, dropped after N bytes`). Ce cas dépend du temps : il est testé par `host/tests/golden_tests.sh` (horloge virtuelle), pas par ce fichier où `millis()` vaut toujours 0.

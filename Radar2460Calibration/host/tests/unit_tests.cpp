@@ -1,4 +1,5 @@
-// Tests unitaires des fonctions du croquis : formatDm, processFrame, loop, setup.
+// Tests unitaires des fonctions du croquis : formatDm, processFrame, parseByte,
+// receiveRadarByte, loop, setup.
 // Le croquis est inclus tel quel ; seule la couche Arduino est remplacée (test_support.h).
 // Lancement : docker build --target tests .
 #include "test_support.h"
@@ -134,6 +135,67 @@ void testLoopReportsBadFooter() {
     CHECK_INT(test::count(out, "--- TARGETS"), 1);
 }
 
+void testProcessFrameRejectsBadDataSize() {
+    std::vector<uint8_t> f = ONE_TARGET;
+    f.insert(f.begin() + 11, {0xAA, 0xBB});   // 6 octets de données au lieu de 4
+    f[5] = static_cast<uint8_t>(f.size());
+    CHECK_EQ(process(f), "[RADAR] invalid data size dropped: 6\n");
+}
+
+// Résultats de parseByte octet par octet, sous forme de lettres : m(ore), d(one), x (dropped).
+std::string parseAll(const std::vector<uint8_t>& bytes) {
+    std::string r;
+    test::capture([&] {
+        for (uint8_t b : bytes) {
+            ParseResult p = parseByte(b);
+            r += p == PARSE_MORE ? 'm' : p == PARSE_DONE ? 'd' : 'x';
+            if (p == PARSE_DROPPED) frameIndex = 0;
+        }
+    });
+    return r;
+}
+
+void testParseByteValidFrame() {
+    frameIndex = 0;
+    CHECK_EQ(parseAll(ONE_TARGET), std::string(ONE_TARGET.size() - 1, 'm') + "d");
+    CHECK_INT(frameIndex, 0);
+}
+
+void testParseByteDropsAsSoonAsLengthIsKnown() {
+    frameIndex = 0;
+    CHECK_EQ(parseAll({0xF4, 0xF3, 0xF2, 0xF1, 0x04, 0x02, 0x00}), "mmmmmmx");        // longueur 2
+    CHECK_EQ(parseAll({0xF4, 0xF3, 0xF2, 0xF1, 0x04, 0x0D, 0x00}), "mmmmmmx");        // 13 : pas 11 + 4n
+    CHECK_EQ(parseAll({0xF4, 0xF3, 0xF2, 0xF1, 0x07, 0x0D, 0x00}), "mmmmmmm");        // autre type : accepté
+}
+
+void testParseByteKeepsDroppedBytes() {
+    // Sur rejet, les octets restent dans frame[] pour que l'appelant les rejoue.
+    std::vector<uint8_t> bad = ONE_TARGET;
+    bad.back() = 0x00;
+    frameIndex = 0;
+    test::capture([&] { for (uint8_t b : bad) parseByte(b); });
+    CHECK_INT(frameIndex, bad.size());
+    frameIndex = 0;
+}
+
+void testReceiveRadarByteReplaysDroppedFrame() {
+    // Trame tronquée suivie d'une trame valide, octet par octet : la trame valide,
+    // dont le header est dans les octets rejetés, est retrouvée.
+    std::vector<uint8_t> cut = test::targetsFrame({{1, 2}, {3, 4}, {5, 6}});
+    cut.resize(15);
+    frameIndex = 0;
+    std::string out = test::capture([&] { for (uint8_t b : concat({cut, ONE_TARGET})) receiveRadarByte(b); });
+    CHECK_INT(test::count(out, "[RADAR] bad footer, frame dropped\n"), 1);
+    CHECK_INT(test::count(out, "--- TARGETS"), 1);
+    CHECK_INT(frameIndex, 0);
+}
+
+void testLoopRejectsBadDataSizeAndResyncs() {
+    std::string out = runLoop(concat({test::targetsFrame({}, 13), ONE_TARGET}));
+    CHECK_INT(test::count(out, "[RADAR] invalid data size dropped: 2\n"), 1);
+    CHECK_INT(test::count(out, "--- TARGETS"), 1);
+}
+
 void testSetupBanner() {
     std::string out = test::capture([] { setup(); });
     CHECK_INT(test::count(out, "=== LD2460 X / Y CALIBRATION ===\n"), 1);
@@ -156,6 +218,12 @@ int main() {
         {"loop : octets parasites avant le header", testLoopSkipsGarbageBeforeHeader},
         {"loop : longueur impossible signalée", testLoopReportsInvalidLength},
         {"loop : footer corrompu signalé", testLoopReportsBadFooter},
+        {"processFrame : taille des données hors format rejetée", testProcessFrameRejectsBadDataSize},
+        {"parseByte : trame valide", testParseByteValidFrame},
+        {"parseByte : rejet dès la longueur connue", testParseByteDropsAsSoonAsLengthIsKnown},
+        {"parseByte : octets rejetés conservés pour le rejeu", testParseByteKeepsDroppedBytes},
+        {"receiveRadarByte : trame valide retrouvée dans une trame rejetée", testReceiveRadarByteReplaysDroppedFrame},
+        {"loop : taille des données hors format, puis resynchronisation", testLoopRejectsBadDataSizeAndResyncs},
         {"setup : bannière de démarrage", testSetupBanner},
     };
 
